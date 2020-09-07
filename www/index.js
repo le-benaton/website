@@ -27,7 +27,6 @@ const linkScroll = () => {
   }
 }
 
-
 const openModal = (selector) => {
   const innerHtml = document.querySelector(selector).innerHTML;
   console.log(innerHtml);
@@ -45,6 +44,26 @@ const closeModal = () => {
   modal.style.display = 'none';
 }
 
+const viewTimerHandler = () => {
+  const elements = document.querySelectorAll('.view_timer');
+  elements.forEach((element) => {
+    const start = element.getAttribute('data-start-date');
+    const end =  element.getAttribute('data-end-date');
+    if (!start && !end) {
+      return;
+    }
+
+    if (new Date().getTime() > new Date(start).getTime()) {
+      element.style.display = 'block';
+    }
+
+    if (new Date().getTime() < new Date(end).getTime()) {
+      element.style.display = 'block';
+    }
+  });
+}
+
 window.onload = () => {
   linkScroll();
+  viewTimerHandler();
 };

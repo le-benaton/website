@@ -289,25 +289,6 @@ ul.reserved-system li {
 }
 
 
-section.modal-wine-list > div.modal-wine-list-inner {
-  width: calc(100% - 32px);
-  padding: 16px;
-  max-height: calc(100% - 100px);
-  overflow: scroll;
-}
-
-section.modal-wine-list > div.modal-wine-list-inner .accshow {
-  display: block !important;
-}
-
-section.modal-wine-list > div.modal-wine-list-inner button {
-  display: none !important;
-}
-
-section.modal-wine-list > .modal-wine-list-inner > button {
-}
-
-
 #menu-voyage p.parenthesis::first-letter {
   font-size: 200%;
   color: #4E342E;
