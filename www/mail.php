@@ -4,7 +4,7 @@
 #
 #  PHPメールプログラム　フリー版 最終更新日2014/12/12
 #　改造や改変は自己責任で行ってください。
-#	
+#
 #  今のところ特に問題点はありませんが、不具合等がありましたら下記までご連絡ください。
 #  MailAddress: info@php-factory.net
 #  name: K.Numata
@@ -109,7 +109,7 @@ $thanksPage = "http://xxx.xxxxxxxxx/thanks.html";
 $requireCheck = 1;
 
 /* 必須入力項目(入力フォームで指定したname属性の値を指定してください。（上記で1を設定した場合のみ）
-値はシングルクォーテーションで囲み、複数の場合はカンマで区切ってください。フォーム側と順番を合わせると良いです。 
+値はシングルクォーテーションで囲み、複数の場合はカンマで区切ってください。フォーム側と順番を合わせると良いです。
 配列の形「name="○○[]"」の場合には必ず後ろの[]を取ったものを指定して下さい。*/
 $require = array('お名前','Email');
 
@@ -230,9 +230,9 @@ if(empty($errm)){
 		}
 	}
 }
-  
+
 if(($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1){
-	
+
 	//差出人に届くメールをセット
 	if($remail == 1) {
 		$userBody = mailToUser($_POST,$dsp_name,$remail_text,$mailFooterDsp,$mailSignature,$encode);
@@ -243,11 +243,11 @@ if(($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1){
 	$adminBody = mailToAdmin($_POST,$subject,$mailFooterDsp,$mailSignature,$encode,$confirmDsp);
 	$header = adminHeader($userMail,$post_mail,$BccMail,$to);
 	$subject = "=?iso-2022-jp?B?".base64_encode(mb_convert_encoding($subject,"JIS",$encode))."?=";
-	
+
 	mail($to,$subject,$adminBody,$header);
 	if($remail == 1) mail($post_mail,$re_subject,$userBody,$reheader);
 }
-else if($confirmDsp == 1){ 
+else if($confirmDsp == 1){
 
 /*　▼▼▼送信確認画面のレイアウト※編集可　オリジナルのデザインも適用可能▼▼▼　*/
 ?>
@@ -259,7 +259,7 @@ else if($confirmDsp == 1){
 <meta name="Description" content="西宮・夙川のフレンチレストラン「ル&nbsp;ベナトン」。ミシュランガイド兵庫版掲載店。ジビエ料理、ブルゴーニュワイン。フランス「食の都」ボーヌ仕込みの味をご堪能ください"。>
 <meta name="Keywords" content="夙川フレンチ,西宮フレンチ,兵庫フレンチ,神戸フレンチ,阪神間フランチ,ブルゴーニュワイン,ブルゴーニュ料理,ブルゴーニュ,ボーヌ,黄金の丘,神戸ジビエ,西宮ジビエ,関西フレンチ,関西ジビエ,ジビエ料理,夙川ランチ,夙川ディナー,西宮ランチ,西宮ディナー,神戸ランチ,神戸ディナー">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<meta name="format-detection" content="telephone=no"> 
+<meta name="format-detection" content="telephone=no">
 <meta name="google-site-verification" content="sf9tNhZ_bJR_c-OXC3qO63Jy3NWsoq_70XZmgZAcYQg" />
 <link rel="stylesheet" href="./css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -281,10 +281,10 @@ else if($confirmDsp == 1){
           $(function(){
        $("#container").sliphover({
     duration: 100
-   
-    
+
+
 });
-      
+
 		});
         </script>
 
@@ -306,7 +306,7 @@ else if($confirmDsp == 1){
 <script>
 (function($) {
     $(function() {
-        var $header = $('#top-head');
+        var $header = $('header');
         // Nav Fixed
         $(window).scroll(function() {
             if ($(window).scrollTop() > 350) {
@@ -366,7 +366,7 @@ $(function() {
 <meta name="Description" content="西宮・夙川のフレンチレストラン「ル&nbsp;ベナトン」。ミシュランガイド兵庫版掲載店。ジビエ料理、ブルゴーニュワイン。フランス「食の都」ボーヌ仕込みの味をご堪能ください"。>
 <meta name="Keywords" content="夙川フレンチ,西宮フレンチ,兵庫フレンチ,神戸フレンチ,阪神間フランチ,ブルゴーニュワイン,ブルゴーニュ料理,ブルゴーニュ,ボーヌ,黄金の丘,神戸ジビエ,西宮ジビエ,関西フレンチ,関西ジビエ,ジビエ料理,夙川ランチ,夙川ディナー,西宮ランチ,西宮ディナー,神戸ランチ,神戸ディナー">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<meta name="format-detection" content="telephone=no"> 
+<meta name="format-detection" content="telephone=no">
 <meta name="google-site-verification" content="sf9tNhZ_bJR_c-OXC3qO63Jy3NWsoq_70XZmgZAcYQg" />
 <link rel="stylesheet" href="./css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -388,10 +388,10 @@ $(function() {
           $(function(){
        $("#container").sliphover({
     duration: 100
-   
-    
+
+
 });
-      
+
 		});
         </script>
 
@@ -413,7 +413,7 @@ $(function() {
 <script>
 (function($) {
     $(function() {
-        var $header = $('#top-head');
+        var $header = $('header');
         // Nav Fixed
         $(window).scroll(function() {
             if ($(window).scrollTop() > 350) {
@@ -468,11 +468,11 @@ $(function() {
  <div id="topPage"></div>
 
 <header id="top-head">
-    <div class="innerNav">
+    <div class="nav-inner">
         <div id="mobile-head">
             <h1 class="logo"><a href="index.html"><img src="./images/logoBenaton.png" alt="夙川フレンチ｜ル&nbsp;ベナトン"></a></h1>
-            
-          
+
+
             <div id="nav-toggle">
                 <div>
                     <span></span>
@@ -496,7 +496,7 @@ $(function() {
     </div>
 </header>
 
- 
+
 
 <div class="confirm">
 <p><strong>入力にエラーがあります。<br class="br-sp">下記をご確認の上<br class="br-sp">「戻る」ボタンにて修正をお願い致します。</strong>
@@ -513,7 +513,7 @@ $(function() {
 <meta name="Description" content="西宮・夙川のフレンチレストラン「ル&nbsp;ベナトン」。ミシュランガイド兵庫版掲載店。ジビエ料理、ブルゴーニュワイン。フランス「食の都」ボーヌ仕込みの味をご堪能ください"。>
 <meta name="Keywords" content="夙川フレンチ,西宮フレンチ,兵庫フレンチ,神戸フレンチ,阪神間フランチ,ブルゴーニュワイン,ブルゴーニュ料理,ブルゴーニュ,ボーヌ,黄金の丘,神戸ジビエ,西宮ジビエ,関西フレンチ,関西ジビエ,ジビエ料理,夙川ランチ,夙川ディナー,西宮ランチ,西宮ディナー,神戸ランチ,神戸ディナー">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<meta name="format-detection" content="telephone=no"> 
+<meta name="format-detection" content="telephone=no">
 <meta name="google-site-verification" content="sf9tNhZ_bJR_c-OXC3qO63Jy3NWsoq_70XZmgZAcYQg" />
 <link rel="stylesheet" href="./css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -535,10 +535,10 @@ $(function() {
           $(function(){
        $("#container").sliphover({
     duration: 100
-   
-    
+
+
 });
-      
+
 		});
         </script>
 
@@ -560,7 +560,7 @@ $(function() {
 <script>
 (function($) {
     $(function() {
-        var $header = $('#top-head');
+        var $header = $('header');
         // Nav Fixed
         $(window).scroll(function() {
             if ($(window).scrollTop() > 350) {
@@ -615,11 +615,11 @@ $(function() {
  <div id="topPage"></div>
 
 <header id="top-head">
-    <div class="innerNav">
+    <div class="nav-inner">
         <div id="mobile-head">
             <h1 class="logo"><a href="index.html"><img src="./images/logoBenaton.png" alt="夙川フレンチ｜ル&nbsp;ベナトン"></a></h1>
-            
-          
+
+
             <div id="nav-toggle">
                 <div>
                     <span></span>
@@ -654,7 +654,7 @@ $(function() {
 </table></div>
 <p class="confirm"><input type="hidden" name="mail_set" value="confirm_submit">
 <input type="hidden" name="httpReferer" value="<?php echo h($_SERVER['HTTP_REFERER']);?>">
-<input type="submit" value="送信" class="submitButton" class="submitButton">
+<input type="submit" value="送信" class="submitButton">
 <input type="button" value="戻る" onclick="history.back()" class="submitButton"></p>
 </form>
 <?php } ?>
@@ -668,7 +668,7 @@ $(function() {
 /* ▲▲▲送信確認画面のレイアウト　※オリジナルのデザインも適用可能▲▲▲　*/
 }
 
-if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 && $sendmail == 0))) { 
+if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 && $sendmail == 0))) {
 
 /* ▼▼▼送信完了画面のレイアウト　編集可 ※送信完了後に指定のページに移動しない場合のみ表示▼▼▼　*/
 ?>
@@ -680,7 +680,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 <meta name="Description" content="西宮・夙川のフレンチレストラン「ル&nbsp;ベナトン」。ミシュランガイド兵庫版掲載店。ジビエ料理、ブルゴーニュワイン。フランス「食の都」ボーヌ仕込みの味をご堪能ください"。>
 <meta name="Keywords" content="夙川フレンチ,西宮フレンチ,兵庫フレンチ,神戸フレンチ,阪神間フランチ,ブルゴーニュワイン,ブルゴーニュ料理,ブルゴーニュ,ボーヌ,黄金の丘,神戸ジビエ,西宮ジビエ,関西フレンチ,関西ジビエ,ジビエ料理,夙川ランチ,夙川ディナー,西宮ランチ,西宮ディナー,神戸ランチ,神戸ディナー">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<meta name="format-detection" content="telephone=no"> 
+<meta name="format-detection" content="telephone=no">
 <meta name="google-site-verification" content="sf9tNhZ_bJR_c-OXC3qO63Jy3NWsoq_70XZmgZAcYQg" />
 <link rel="stylesheet" href="./css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -702,10 +702,10 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
           $(function(){
        $("#container").sliphover({
     duration: 100
-   
-    
+
+
 });
-      
+
 		});
         </script>
 
@@ -727,7 +727,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 <script>
 (function($) {
     $(function() {
-        var $header = $('#top-head');
+        var $header = $('header');
         // Nav Fixed
         $(window).scroll(function() {
             if ($(window).scrollTop() > 350) {
@@ -782,11 +782,11 @@ $(function() {
  <div id="topPage"></div>
 
 <header id="top-head">
-    <div class="innerNav">
+    <div class="nav-inner">
         <div id="mobile-head">
             <h1 class="logo"><a href="index.html"><img src="./images/logoBenaton.png" alt="夙川フレンチ｜ル&nbsp;ベナトン"></a></h1>
-            
-          
+
+
             <div id="nav-toggle">
                 <div>
                     <span></span>
@@ -812,7 +812,7 @@ $(function() {
 
 
 
- 
+
 <div class="confirm">
 <?php if($empty_flag == 1){ ?>
 <h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
@@ -828,12 +828,12 @@ $(function() {
 <!--  CV率を計測する場合ここにAnalyticsコードを貼り付け -->
 </body>
 </html>
-<?php 
+<?php
 /* ▲▲▲送信完了画面のレイアウト 編集可 ※送信完了後に指定のページに移動しない場合のみ表示▲▲▲　*/
   }
 }
 //確認画面無しの場合の表示、指定のページに移動する設定の場合、エラーチェックで問題が無ければ指定ページヘリダイレクト
-else if(($jumpPage == 1 && $sendmail == 1) || $confirmDsp == 0) { 
+else if(($jumpPage == 1 && $sendmail == 1) || $confirmDsp == 0) {
 	if($empty_flag == 1){ ?>
      <nav id="mainNav">
       <p id="logo"><a href="index.html"><img src="./images/logo.png" alt="Tomofumi Nakano photography"></a></p>
@@ -842,12 +842,12 @@ else if(($jumpPage == 1 && $sendmail == 1) || $confirmDsp == 0) {
       <p class="col2"><a href="contact.html">contact</a></p>
       <p class="col2"><a href="news.html">news</a></p>
    </nav>
- 
+
   </header>
 
  <h2><span>confirm</span></h2>
 <div class="confirm"><h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。<br>Error.Please check the contents that you fill in and press the back button.</h4><div style="color:red"><?php echo $errm; ?></div><input type="button" value="Back / 戻る" onClick="history.back()" class="submitButton"></div>
-<?php 
+<?php
 	}else{ header("Location: ".$thanksPage); }
 }
 
@@ -889,7 +889,7 @@ function postToMail($arr){
 	foreach($arr as $key => $val) {
 		$out = '';
 		if(is_array($val)){
-			foreach($val as $key02 => $item){ 
+			foreach($val as $key02 => $item){
 				//連結項目の処理
 				if(is_array($item)){
 					$out .= connect2val($item);
@@ -898,10 +898,10 @@ function postToMail($arr){
 				}
 			}
 			$out = rtrim($out,', ');
-			
+
 		}else{ $out = $val; }//チェックボックス（配列）追記ここまで
 		if(get_magic_quotes_gpc()) { $out = stripslashes($out); }
-		
+
 		//全角→半角変換
 		if($hankaku == 1){
 			$out = zenkaku2hankaku($key,$out,$hankaku_array);
@@ -919,7 +919,7 @@ function confirmOutput($arr){
 	foreach($arr as $key => $val) {
 		$out = '';
 		if(is_array($val)){
-			foreach($val as $key02 => $item){ 
+			foreach($val as $key02 => $item){
 				//連結項目の処理
 				if(is_array($item)){
 					$out .= connect2val($item);
@@ -928,17 +928,17 @@ function confirmOutput($arr){
 				}
 			}
 			$out = rtrim($out,', ');
-			
+
 		}else{ $out = $val; }//チェックボックス（配列）追記ここまで
 		if(get_magic_quotes_gpc()) { $out = stripslashes($out); }
 		$out = nl2br(h($out));//※追記 改行コードを<br>タグに変換
 		$key = h($key);
-		
+
 		//全角→半角変換
 		if($hankaku == 1){
 			$out = zenkaku2hankaku($key,$out,$hankaku_array);
 		}
-		
+
 		$html .= "<tr><th>".$key."</th><td>".$out;
 		$html .= '<input type="hidden" name="'.$key.'" value="'.str_replace(array("<br />","<br>"),"",$out).'" />';
 		$html .= "</td></tr>\n";
@@ -1043,7 +1043,7 @@ function requireCheck($require){
 		$existsFalg = '';
 		foreach($_POST as $key => $val) {
 			if($key == $requireVal) {
-				
+
 				//連結指定の項目（配列）のための必須チェック
 				if(is_array($val)){
 					$connectEmpty = 0;
@@ -1055,7 +1055,7 @@ function requireCheck($require){
 								}
 							}
 						}
-						
+
 					}
 					if($connectEmpty > 0){
 						$res['errm'] .= "<p class=\"error_messe\">【".h($key)."】は必須項目です。</p>\n";
@@ -1067,18 +1067,18 @@ function requireCheck($require){
 					$res['errm'] .= "<p class=\"error_messe\">【".h($key)."】は必須項目です。</p>\n";
 					$res['empty_flag'] = 1;
 				}
-				
+
 				$existsFalg = 1;
 				break;
 			}
-			
+
 		}
 		if($existsFalg != 1){
 				$res['errm'] .= "<p class=\"error_messe\">【".$requireVal."】が未選択です。</p>\n";
 				$res['empty_flag'] = 1;
 		}
 	}
-	
+
 	return $res;
 }
 //リファラチェック
