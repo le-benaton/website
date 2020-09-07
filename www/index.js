@@ -41,6 +41,7 @@ const closeModal = () => {
   const modal = document.querySelector('section.modal-wine-list');
   const modalInner = document.querySelector('section.modal-wine-list > div.modal-wine-list-inner');
   modalInner.innerHTML = '';
+  modalInner.scrollTop = 0;
   modal.style.display = 'none';
 }
 
