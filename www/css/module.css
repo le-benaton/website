@@ -6,14 +6,22 @@ html {
 }
 
 body {
-  color: #333333;
-  --dark-color: #333333;
-  --medium-color: #666666;
-  --light-color: #f0f0f0;
-  --border-color: #cccccc;
+  color: #3e2723;
+  --dark-color: #3e2723;
+  --medium-color: #6d4c41;
+  --light-color: #efebe9;
+  --border-color: #d7ccc8;
   --background-color: #efebe9;
   --background-shade-color: #4e342e;
-  --dangar-color: red;
+  --dangar-color: #eb445a;
+}
+
+body a {
+  color: var(--medium-color);
+}
+
+body a:hover {
+  color: var(--dark-color);
 }
 
 img {

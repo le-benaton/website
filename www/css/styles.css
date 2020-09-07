@@ -1,17 +1,4 @@
 /**
- * カラーリング
- */
-#menu-lunch,
-#menu-wine,
-#menu-access,
-#menu-voyage,
-#menu-contact {
-  background-color: var(--background-color);
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-}
-
-/**
  * モバイル対応
  */
 @media screen and (min-width: 800px) {
@@ -38,6 +25,19 @@
     padding-left: 16px;
     padding-right: 16px;
   }
+}
+
+/**
+ * 背景色の設定
+ */
+#menu-lunch,
+#menu-wine,
+#menu-access,
+#menu-voyage,
+#menu-contact {
+  background-color: var(--background-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 /**
@@ -148,6 +148,11 @@ ul.list-news > li:first-line {
   margin: 4px 0 0 16px;
 }
 
+#menu-wine button {
+  position: relative;
+  top: 16px;
+}
+
 button.button-wine-list {
   display: inline-block;
   margin-top: 8px;
@@ -192,10 +197,5 @@ ul.reserved-system li {
 
 #menu-voyage p.parenthesis::first-letter {
   font-size: 200%;
-  color: var(--background-shade-color);
-}
-
-#menu-voyage p.parenthesis a,
-#menu-voyage p.parenthesis a:hover {
   color: var(--background-shade-color);
 }
