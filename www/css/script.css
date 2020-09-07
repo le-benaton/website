@@ -1,21 +1,20 @@
 .view_timer {
-    display: none;
+  display: none;
 }
 
-
 section.modal-wine-list > div.modal-wine-list-inner {
-    width: calc(100% - 32px);
-    padding: 16px;
-    max-height: calc(100% - 100px);
-    overflow: scroll;
+  width: calc(100% - 32px);
+  padding: 16px;
+  max-height: calc(100% - 100px);
+  overflow: scroll;
 }
 
 section.modal-wine-list > div.modal-wine-list-inner .accshow {
-    display: block !important;
+  display: block !important;
 }
 
 section.modal-wine-list > div.modal-wine-list-inner button {
-    display: none !important;
+  display: none !important;
 }
 
 section.modal-wine-list > .modal-wine-list-inner > button {

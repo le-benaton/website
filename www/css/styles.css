@@ -54,11 +54,12 @@ main > section > .wrap {
 
 .no-list-style {
   list-style: none;
-  padding:0;
+  padding: 0;
   margin: 0;
 }
 
-h2, h3,
+h2,
+h3,
 nav ul li a {
   font-family: 'Droid Serif', serif;
 }
@@ -77,16 +78,18 @@ button:hover {
   outline: 0;
 }
 
-
 /**
  * カラーリング
  */
-#menu-lunch, #menu-wine, #menu-access, #menu-voyage, #menu-contact {
-  background-color: #EFEBE9;
+#menu-lunch,
+#menu-wine,
+#menu-access,
+#menu-voyage,
+#menu-contact {
+  background-color: #efebe9;
   border-top: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
 }
-
 
 /**
  * モバイル対応
@@ -117,12 +120,9 @@ button:hover {
   }
 }
 
-
-
 /**
  * Main
  */
-
 
 h2 {
   font-size: 2rem;
@@ -164,7 +164,7 @@ ul.description-list {
   margin: 4px 4px 0 0;
   display: flex;
 }
-ul.description-list  li {
+ul.description-list li {
   margin-left: 4px;
   margin-right: 16px;
   font-size: 0.9rem;
@@ -175,10 +175,9 @@ svg {
   top: 3px;
   width: 16px;
   height: 16px;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
-
 
 .hero-image {
   background-color: #000;
@@ -205,13 +204,13 @@ svg {
 }
 
 .hero-image > a > button {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 8px 8px 0 0 / 8px 8px 0 0;
   color: #fff;
 }
 
 .hero-image > a > button:hover {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 ul.list-news {
@@ -244,8 +243,8 @@ ul.list-news > li:first-line {
 button.button-wine-list {
   display: inline-block;
   margin-top: 8px;
-  color: #4E342E;
-  border-color: #4E342E;
+  color: #4e342e;
+  border-color: #4e342e;
 }
 
 .accshow {
@@ -268,7 +267,6 @@ section.modal-wine-list {
   display: none;
 }
 
-
 @media screen and (max-width: 800px) {
   section.modal-wine-list {
     max-width: 100%;
@@ -288,12 +286,12 @@ ul.reserved-system li {
   margin: 8px;
 }
 
-
 #menu-voyage p.parenthesis::first-letter {
   font-size: 200%;
-  color: #4E342E;
+  color: #4e342e;
 }
 
-#menu-voyage p.parenthesis a, #menu-voyage p.parenthesis a:hover {
-  color: #4E342E;
+#menu-voyage p.parenthesis a,
+#menu-voyage p.parenthesis a:hover {
+  color: #4e342e;
 }
