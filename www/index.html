@@ -1045,7 +1045,7 @@
           </li>
         </ul>
         <h4>問い合わせフォーム</h4>
-        <form method="post" action="mail.php">
+        <form method="post" action="./complete.html" netlify>
           <div class="form-line">
             <label for="name"><span class="form-label required">必須</span>お名前</label>
             <input id="name" type="text" name="お名前"
@@ -1054,12 +1054,17 @@
           <div class="form-line">
             <label for="mail"><span class="form-label required">必須</span>メールアドレス（半角）</label>
             <input type="text" name="mail" id="mail"
+                   inputmode="email"
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
                    required placeholder="例）info@example.com" />
           </div>
 
           <div class="form-line">
             <label for="tel">お電話番号（半角）</label>
-            <input type="text" name="電話番号" placeholder="例）09012345678" id="tel" />
+            <input type="text" name="電話番号" placeholder="例）09012345678"
+                   inputmode="tel"
+                   pattern="\d{2,4}-?\d{3,4}-?\d{3,4}"
+                   id="tel" />
           </div>
 
           <div class="form-line">
