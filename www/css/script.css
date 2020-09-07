@@ -2,6 +2,10 @@
   display: none;
 }
 
+.accshow {
+  display: none;
+}
+
 section.modal-wine-list > div.modal-wine-list-inner {
   width: calc(100% - 32px);
   padding: 16px;

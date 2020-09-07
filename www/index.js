@@ -54,11 +54,11 @@ const viewTimerHandler = () => {
     }
 
     if (new Date().getTime() > new Date(start).getTime()) {
-      element.style.display = 'block';
+      element.style.display = 'list-item';
     }
 
     if (new Date().getTime() < new Date(end).getTime()) {
-      element.style.display = 'block';
+      element.style.display = 'list-item';
     }
   });
 }

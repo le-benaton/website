@@ -1,84 +1,4 @@
 /**
- * 全体に効果をきかせるためのCSS
- */
-html {
-  font-size: 88%;
-  color: #333333;
-}
-
-img {
-  max-width: 100%;
-}
-
-address {
-  font-style: normal;
-}
-
-img.radius {
-  border-radius: 100%;
-  display: block;
-  margin: auto;
-  width: 60%;
-}
-
-.padding {
-  padding: 16px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-hr {
-  margin-top: 40px;
-  margin-bottom: 32px;
-}
-
-body {
-  --base-color: #666666;
-  --border-color: #cccccc;
-}
-
-main > section {
-}
-
-iframe {
-  max-width: 100%;
-}
-
-main > section > .wrap {
-  margin: auto;
-  max-width: 1200px;
-  padding: 20px 0 40px;
-}
-
-.no-list-style {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-h2,
-h3,
-nav ul li a {
-  font-family: 'Droid Serif', serif;
-}
-
-button {
-  border-radius: 8px;
-  padding: 6px 12px 4px;
-  border: 1px solid #333333;
-  font-size: 1rem;
-  background: transparent;
-  margin: 0 !important;
-}
-
-button:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  outline: 0;
-}
-
-/**
  * カラーリング
  */
 #menu-lunch,
@@ -86,9 +6,9 @@ button:hover {
 #menu-access,
 #menu-voyage,
 #menu-contact {
-  background-color: #efebe9;
-  border-top: 1px solid #cccccc;
-  border-bottom: 1px solid #cccccc;
+  background-color: var(--background-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 /**
@@ -145,17 +65,14 @@ h5 {
   font-size: 1rem;
 }
 
-/**
- * 個別デザイン
- */
-
 .main-visual h1.title {
   font-size: 0.9rem;
   line-height: 200%;
   padding: 6px 10px 4px;
   font-weight: normal;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid var(--light-color);
 }
+
 ul.description-list {
   position: absolute;
   right: 0;
@@ -170,19 +87,10 @@ ul.description-list li {
   font-size: 0.9rem;
 }
 
-svg {
-  position: relative;
-  top: 3px;
-  width: 16px;
-  height: 16px;
-  margin: 0;
-  padding: 0;
-}
-
 .hero-image {
-  background-color: #000;
-  border-top: 4px solid #000;
-  border-bottom: 4px solid #000;
+  background-color: var(--dark-color);
+  border-top: 4px solid var(--dark-color);
+  border-bottom: 4px solid var(--dark-color);
   height: 300px;
   overflow: hidden;
   display: flex;
@@ -243,12 +151,8 @@ ul.list-news > li:first-line {
 button.button-wine-list {
   display: inline-block;
   margin-top: 8px;
-  color: #4e342e;
-  border-color: #4e342e;
-}
-
-.accshow {
-  display: none;
+  color: var(--background-shade-color);
+  border-color: var(--background-shade-color);
 }
 
 section.modal-wine-list {
@@ -262,7 +166,7 @@ section.modal-wine-list {
   max-width: 600px;
   max-height: 600px;
   padding-top: 16px;
-  border: 1px solid #f0f0f0;
+  border: 1px solid var(--light-color);
   box-shadow: 0 0 8px gray;
   display: none;
 }
@@ -288,10 +192,10 @@ ul.reserved-system li {
 
 #menu-voyage p.parenthesis::first-letter {
   font-size: 200%;
-  color: #4e342e;
+  color: var(--background-shade-color);
 }
 
 #menu-voyage p.parenthesis a,
 #menu-voyage p.parenthesis a:hover {
-  color: #4e342e;
+  color: var(--background-shade-color);
 }
