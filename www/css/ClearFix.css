@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* CSS Document */
+/*----------------------
+クラスセレクタ
+-----------------------*/
+
+/* ClearFix */
+.clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+* html .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
