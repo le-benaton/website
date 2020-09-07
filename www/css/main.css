@@ -1,161 +1,152 @@
 @charset "UTF-8";
 
-
-
 /*//////////////////////////////////////////////////////////////////////////////////////*/
 /*architecture page*/
 /*//////////////////////////////////////////////////////////////////////////////////////*/
-@media screen and (max-width:600px) {
-#gallery img{
-	width:230px;
-	}
+@media screen and (max-width: 600px) {
+  #gallery img {
+    width: 230px;
+  }
 }
-@media screen and (min-width:600px) {
-#gallery img{
-	width:100%;
-	}
+@media screen and (min-width: 600px) {
+  #gallery img {
+    width: 100%;
+  }
 }
 
-
-
-
-
-
-
-
- h1 { font-size: 100%; margin: 0; }
- img { vertical-align: middle; }
-.clearfix:before, #architecture .clearfix:after { content: " "; display: table; }
-.clearfix:after { clear: both; }
+h1 {
+  font-size: 100%;
+  margin: 0;
+}
+img {
+  vertical-align: middle;
+}
+.clearfix:before,
+#architecture .clearfix:after {
+  content: ' ';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
 
 /* Page header */
-#architecture{
-	
-	width:92%;
-	margin:0 auto;
-	}
-
-
-
+#architecture {
+  width: 92%;
+  margin: 0 auto;
+}
 
 #architecture .gallery {
-    margin: 0 auto;
-    padding:20px 0 0 0;
+  margin: 0 auto;
+  padding: 20px 0 0 0;
 }
 
-.galleryHeader{
-	padding-top:20px;
-	display:none;
-	}
+.galleryHeader {
+  padding-top: 20px;
+  display: none;
+}
 
 #architecture .gallery-item {
-    list-style: none;
-    margin-top: 10px;
+  list-style: none;
+  margin-top: 10px;
 }
 #architecture .gallery-item.is-loading {
-    opacity: 0;
+  opacity: 0;
 }
 #architecture .gallery-item a {
-    display: block;
-    /* 外側に配置された子孫要素を隠す */
-    overflow: hidden;
-    position: relative;
+  display: block;
+  /* 外側に配置された子孫要素を隠す */
+  overflow: hidden;
+  position: relative;
 }
 #architecture .gallery-item .caption {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    text-align: center;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    /* 親要素と同じサイズに */
-    width: 100%;
-    height: 100%;
-    /* 親要素の領域外に絶対配置 */
-    position: absolute;
-    left: 100%;
-    top: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 親要素と同じサイズに */
+  width: 100%;
+  height: 100%;
+  /* 親要素の領域外に絶対配置 */
+  position: absolute;
+  left: 100%;
+  top: 100%;
 }
 #architecture .gallery-item .caption:before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 #architecture .gallery-item .caption > .inner {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 #architecture .gallery-item .title {
-    display: block;
-    font-saptionize: 18px;
-    line-height: 1.17;
+  display: block;
+  font-saptionize: 18px;
+  line-height: 1.17;
 }
 #architecture .gallery-item .date {
-    display: block;
-    font-family: "Georgia", serif;
-    font-size: 12px;
-    font-style: italic;
-    line-height: 1.75;
+  display: block;
+  font-family: 'Georgia', serif;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.75;
 }
 
 /* フィルター */
 #architecture .filter-form {
-     margin-top:1%;
+  margin-top: 1%;
 }
 #architecture .filter-form label {
-    cursor: pointer;
-    display: inline-block;
-    font-weight: bold;
-    margin: 0 0 0 0;
-    padding: 0 0.25em;
-  
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 0 0 0;
+  padding: 0 0.25em;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
-
-
 
 #architecture .filter-form label.ui-state-focus {
-    outline: 1px dotted;
+  outline: 1px dotted;
 }
 #architecture .filter-form label .ui-icon {
-    background: url(../images/sprites.png) no-repeat 0 0;
-    display: inline-block;
-    height: 17px;
-    margin-right: 0.5em;
-    width: 17px;
-    vertical-align: top;
+  background: url(../images/sprites.png) no-repeat 0 0;
+  display: inline-block;
+  height: 17px;
+  margin-right: 0.5em;
+  width: 17px;
+  vertical-align: top;
 }
 #architecture .filter-form label.ui-state-active .ui-icon {
-    background-position: -20px 0;
+  background-position: -20px 0;
 }
 
 /* 追加読み込みボタン */
 #architecture .load-more {
-	
-	
-	border:none;
-    display: block;
-    padding: 1em 0;
-    width: 100%;
-    margin:40px 0 10px 0;
-	border-radius:5px 5px 5px 5px;
-	
-	
+  border: none;
+  display: block;
+  padding: 1em 0;
+  width: 100%;
+  margin: 40px 0 10px 0;
+  border-radius: 5px 5px 5px 5px;
 }
 
 /* jQuery UI helper */
 #architecture .ui-helper-hidden-accessible {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
-

@@ -6,8 +6,8 @@
 
 /* ClearFix */
 .clearfix:after {
-  content: ".";  /* 新しい要素を作る */
-  display: block;  /* ブロックレベル要素に */
+  content: '.'; /* 新しい要素を作る */
+  display: block; /* ブロックレベル要素に */
   clear: both;
   height: 0;
   visibility: hidden;
@@ -19,7 +19,7 @@
 
 * html .clearfix {
   height: 1px;
-  /*\*//*/
+  /*\*/ /*/
   height: auto;
   overflow: hidden;
   /**/
