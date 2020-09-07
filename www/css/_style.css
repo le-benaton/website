@@ -421,8 +421,6 @@ img {
 
 h1,
 .font {
-  font-family: 'Hammersmith One', sans-serif;
-  font-family: 'Roboto Slab', serif;
   font-family: 'Droid Serif', serif;
   font-size: 18px;
   line-height: 2em;
@@ -565,14 +563,14 @@ iframe {
 }
 
 @media screen and (min-width: 600px) {
-  .col3 {
+  .equidistant-container {
     width: 100%;
   }
-  .col3inner {
+  .equidistant-container-inner {
     float: left;
     width: calc(100% / 3);
   }
-  .col3inner p {
+  .equidistant-container-inner p {
     width: 90%;
     margin: 0 5%;
   }
