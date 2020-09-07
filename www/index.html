@@ -975,7 +975,7 @@
             </p>
             <address>
               〒662-0047　兵庫県西宮市寿町4-12<br />
-              電話　　<a href="tel:0798-37-2655">0798-37-2655</a>（番号をクリックすると電話がかかります）<br />
+              電話　<a href="tel:0798-37-2655">0798-37-2655</a>（番号をクリックすると電話がかかります）<br />
               ＦＡＸ　0798-37-2656
             </address>
             <p>テイクアウト、ケータリング等遠慮なくお問い合わせください。</p>
@@ -1028,7 +1028,6 @@
     <div class="wrap">
       <h2>お問い合わせフォーム</h2>
 
-
       <div class="leading-container">
         <h4>お問い合わせについて</h4>
         <ul>
@@ -1046,39 +1045,35 @@
         </ul>
         <h4>問い合わせフォーム</h4>
         <form method="post" action="mail.php">
-          <div class="formTable">
-            <div class="contactCell">
-              <label>
-                お名前<span>*</span>
-                <input size="19" type="text" name="お名前" />
-              </label>
-            </div>
-            <div class="contactCell">
-              <label>メールアドレス（半角）<span>*</span>
-                <input size="19" type="text" name="Email" />
-              </label>
-            </div>
+          <div class="form-line">
+            <label for="name"><span class="form-label required">必須</span>お名前</label>
+            <input id="name" type="text" name="お名前"
+                   required placeholder="例）山田太郎" />
+          </div>
+          <div class="form-line">
+            <label for="mail"><span class="form-label required">必須</span>メールアドレス（半角）</label>
+            <input type="text" name="mail" id="mail"
+                   required placeholder="例）info@example.com" />
+          </div>
 
-            <div class="contactCell">
-              <label>お電話番号（半角）
-                <input size="19" type="text" name="電話番号" placeholder="例）09012345678" />
-              </label>
-            </div>
+          <div class="form-line">
+            <label for="tel">お電話番号（半角）</label>
+            <input type="text" name="電話番号" placeholder="例）09012345678" id="tel" />
+          </div>
 
-            <div class="contactCell">
-              <label>
-                メッセージ<span>*</span>
-                <textarea
-                        name="ご質問内容"
-                        cols="50"
-                        rows="5"
-                        placeholder="※ご予約は、電話または予約サイトより承ります。"
-                ></textarea>
-              </label>
-            </div>
+          <div class="form-line">
+            <label for="message"><span class="form-label required">必須</span>メッセージ</label>
+            <textarea
+                    id="message"
+                    name="ご質問内容"
+                    cols="50"
+                    rows="5"
+                    required
+                    placeholder="※ご予約は、電話または予約サイトより承ります。"
+            ></textarea>
           </div>
           <p class="text-center">
-            <button type="submit" class="submitButton">送信内容の確認</button>
+            <button type="submit" class="submitButton">問い合わせ送信</button>
           </p>
         </form>
       </div>
@@ -1087,8 +1082,10 @@
 
   <section>
     <div class="wrap">
-      <h4>スタッフ募集</h4>
-      <p>ベナトンで一緒に働きませんか？やる気のあるあなたを募集しています。詳しくはお店までお問い合わせください</p>
+      <div class="leading-container">
+        <h4>スタッフ募集</h4>
+        <p>ベナトンで一緒に働きませんか？やる気のあるあなたを募集しています。詳しくはお店までお問い合わせください</p>
+      </div>
       <ul class="no-list-style equidistant-container">
         <li class="equidistant-container-inner container-half">
           <div class="parenthesis">

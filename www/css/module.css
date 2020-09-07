@@ -153,7 +153,7 @@ nav ul li a:hover::after {
 }
 
 .equidistant-container > .equidistant-container-inner ul {
-    padding: 0 0 0 16px;
+    padding: 0 0 0 20px;
 }
 
 .equidistant-container > .equidistant-container-inner img {
@@ -189,3 +189,25 @@ nav ul li a:hover::after {
 /**
 * </leadingcontainer>
 */
+
+form .form-line label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+form .form-line input,
+form .form-line textarea {
+    width: calc(100% - 16px);
+    margin-bottom: 16px;
+    padding: 8px 8px 6px;
+}
+
+.form-label {
+    background-color: red;
+    color: #ffffff;
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    margin-right: 0.5rem;
+    border-radius: 3px;
+    position:relative; top: -1px;
+}

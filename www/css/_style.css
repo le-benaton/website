@@ -665,10 +665,10 @@ footer {
   text-align: center;
 }
 
-#contact .contactCell span {
+#contact .form-line span {
   color: #f00;
 }
-.contactCell {
+.form-line {
   border-bottom: #ccc 1px solid;
 }
 
@@ -702,7 +702,7 @@ footer {
 	}	*/
 
 @media screen and (min-width: 980px) {
-  .contactCell {
+  .form-line {
     width: 100%;
     display: table;
   }
@@ -724,7 +724,7 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-  .contactCell {
+  .form-line {
     width: 100%;
     /*display:table;*/
   }
