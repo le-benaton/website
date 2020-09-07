@@ -76,7 +76,7 @@ button:hover {
 /**
  * カラーリング
  */
-#menu-lunch, #menu-wine, #menu-access, #menu-voyage {
+#menu-lunch, #menu-wine, #menu-access, #menu-voyage, #menu-contact {
   background-color: #EFEBE9;
   border-top: 1px solid #cccccc;
 }
@@ -132,11 +132,6 @@ h2.subtitle > span {
   margin: 8px;
 }
 
-h2.subtitle > span > ion-icon {
-  position: relative;
-  top: 2px;
-}
-
 h5 {
   margin: 0;
   padding: 0;
@@ -167,9 +162,14 @@ ul.description-list  li {
   margin-right: 16px;
   font-size: 0.9rem;
 }
-ul.description-list li .icon {
+
+svg {
   position: relative;
-  top: 1px;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  margin:0;
+  padding:0;
 }
 
 
@@ -267,6 +267,19 @@ section.modal-wine-list {
     max-width: 100%;
     max-height: 100%;
   }
+}
+
+ul.reserved-system {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+ul.reserved-system li button {
+  margin: 16px;
+  background-color: #fff;
 }
 
 
