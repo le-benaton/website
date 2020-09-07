@@ -301,6 +301,7 @@ form .form-line textarea {
   width: calc(100% - 16px);
   margin-bottom: 16px;
   padding: 8px 8px 6px;
+  box-shadow: none !important;
 }
 
 .form-label {
