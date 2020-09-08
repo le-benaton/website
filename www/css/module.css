@@ -240,9 +240,56 @@ nav ul li a:hover::after {
   width: 60%;
 }
 
-/**
- * <parenthesis>
- */
+ul.link-list {
+  max-width: 100%;
+  overflow: scroll;
+  list-style-type: none;
+  display: flex;
+  margin: 0; padding: 0;
+}
+
+ul.link-list > li {
+  padding: 18px 0 16px;
+  min-width: 200px;
+  border: 1px solid var(--light-color);
+  border-right: none;
+  text-align: center;
+  color: var(--dark-color);
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+ul.link-list > li a {
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+ul.link-list > li img {
+  max-width: 180px;
+  max-height: 24px;
+  margin-top: 4px;
+}
+
+ul.link-list > li img {
+  color: #e1e1e1;
+}
+
+ul.link-list li:hover {
+  background-color: var(--light-color);
+}
+
+ul.link-list li:first-child {
+  border-left: none;
+}
+
+ul.link-list li:last-child {
+  border-right: none;
+}
+
+  /**
+   * <parenthesis>
+   */
 .parenthesis > p {
   margin-top: 0;
 }

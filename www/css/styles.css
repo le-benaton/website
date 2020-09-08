@@ -73,20 +73,6 @@ h1.title {
   border-top: 1px solid var(--light-color);
 }
 
-ul.description-list {
-  position: absolute;
-  right: 0;
-  list-style-type: none;
-  padding: 0;
-  margin: 4px 4px 0 0;
-  display: flex;
-}
-ul.description-list li {
-  margin-left: 4px;
-  margin-right: 16px;
-  font-size: 0.9rem;
-}
-
 .hero-image {
   background-color: var(--dark-color);
   border-top: 4px solid var(--dark-color);
