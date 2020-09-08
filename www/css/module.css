@@ -102,59 +102,102 @@ svg {
  * Header
  */
 header {
-  padding: 0 8px;
   display: flex;
   justify-content: space-between;
 }
 
 header h1 {
   width: 160px;
-  margin-top: 20px;
+  margin: 20px 0 0 8px;
 }
 
 nav {
 }
 
-nav ul {
-  margin-top: 50px;
-  display: flex;
-  list-style-type: none;
+@media screen and (min-width: 800px) {
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 50px 8px 0 0;
+  }
+
+  nav ul li a {
+    width: 100px;
+    text-align: center;
+    color: var(--medium-color);
+    font-size: 1rem;
+
+    position: relative;
+    padding-bottom: 7px;
+  }
+
+  nav ul li a img {
+    opacity: 0.4;
+    position: relative;
+    top: -6px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    padding-top: 92.39px;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  nav {
+    display: none;
+    position: absolute;
+    top: 92.39px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    z-index: 999;
+    animation: slide-in 0.1s;
+  }
+  nav > ul {
+    margin: 8px 0;
+    padding: 0;
+  }
+  nav > ul > li {
+    text-align: center;
+    padding: 14px 0 12px;
+  }
+  nav > ul > li > a {
+    color: #ffffff;
+  }
+  nav > ul > li > a:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  nav > ul > li img {
+    filter: invert(100%);
+  }
+
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 nav ul li a {
-  width: 100px;
-  text-align: center;
-  color: var(--medium-color);
-  text-decoration: none;
-  font-size: 1rem;
-
-  position: relative;
   display: inline-block;
   transition: 0.3s;
-  padding-bottom: 7px;
+  text-decoration: none;
 }
 
 nav ul li a:focus {
   outline: 0;
 }
 
-@media screen and (max-width: 1024px) {
-  nav ul li a {
-    width: 80px;
-  }
-}
-
-@media screen and (max-width: 860px) {
-  nav ul li a {
-    width: 72px;
-  }
-}
-
-nav ul li a img {
-  opacity: 0.4;
-  position: relative;
-  top: -6px;
-}
 nav ul li a::after {
   position: absolute;
   bottom: 0;
@@ -167,6 +210,7 @@ nav ul li a::after {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+
 nav ul li a:hover::after {
   width: 60%;
 }
@@ -317,3 +361,66 @@ form .form-line textarea {
 /**
 * </form>
 */
+
+/**
+ * ハンバーガーメニュー
+ */
+
+.btn-trigger {
+  position: relative;
+  right: 16px;
+  top: 32px;
+  width: 32px;
+  height: 26px;
+  cursor: pointer;
+}
+.btn-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark-color);
+  border-radius: 4px;
+}
+.btn-trigger,
+.btn-trigger span {
+  display: inline-block;
+  transition: all 0.5s;
+  box-sizing: border-box;
+}
+.btn-trigger span:nth-of-type(1) {
+  top: 0;
+}
+.btn-trigger span:nth-of-type(2) {
+  top: 12px;
+}
+.btn-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+#mobile-menu-button.active span:nth-of-type(1) {
+  -webkit-transform: translateY(12px) rotate(-45deg);
+  transform: translateY(12px) rotate(-45deg);
+}
+#mobile-menu-button.active span:nth-of-type(2) {
+  left: 200%;
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+  -webkit-animation: active-btn06-bar02 0.8s forwards;
+  animation: active-btn06-bar02 0.8s forwards;
+}
+@-webkit-keyframes active-btn06-bar02 {
+  100% {
+    height: 0;
+  }
+}
+@keyframes active-btn06-bar02 {
+  100% {
+    height: 0;
+  }
+}
+#mobile-menu-button.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-12px) rotate(45deg);
+  transform: translateY(-12px) rotate(45deg);
+}

@@ -15,11 +15,19 @@ const linkScroll = () => {
         return p * (2 - p);
       };
       const move = () => {
-        progress++;
+        progress ++;
         position = target * easeOut(progress / 20);
         window.scrollTo(0, position);
         if (position < target) {
           requestAnimationFrame(move);
+        }
+
+        // Mobileの場合はMenuをtoggle
+        if (position === target) {
+          const mobileMenu = document.querySelector('#mobile-menu-button');
+          if (mobileMenu.classList.contains('active')) {
+            toggleNav(mobileMenu);
+          }
         }
       };
       requestAnimationFrame(move);
@@ -63,7 +71,27 @@ const viewTimerHandler = () => {
   });
 }
 
+const toggleNav = (link) => {
+  const nav = document.querySelector('nav');
+  if (link.classList.contains('active')) {
+    link.classList.remove('active');
+    nav.style.display = 'none';
+  } else {
+    link.classList.add('active');
+    nav.style.display = 'block';
+  }
+}
+
+const mobileMenu = () => {
+  const link = document.querySelector('#mobile-menu-button');
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleNav(link);
+  });
+}
+
 window.onload = () => {
   linkScroll();
   viewTimerHandler();
+  mobileMenu();
 };
