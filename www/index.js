@@ -37,7 +37,6 @@ const linkScroll = () => {
 
 const openModal = (selector) => {
   const innerHtml = document.querySelector(selector).innerHTML;
-  console.log(innerHtml);
   const modal = document.querySelector('section.modal-wine-list');
   const modalInner = document.querySelector('section.modal-wine-list > div.modal-wine-list-inner');
   modalInner.innerHTML = innerHtml;
@@ -125,4 +124,4 @@ document.addEventListener('scroll', (e) => {
     });
     ticking = true;
   }
-}, {passive: true});
+}, { passive: true });
