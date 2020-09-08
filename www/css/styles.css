@@ -77,7 +77,7 @@ h1.title {
   background-color: var(--dark-color);
   border-top: 4px solid var(--dark-color);
   border-bottom: 4px solid var(--dark-color);
-  height: 300px;
+  height: 266px;
   overflow: hidden;
   display: flex;
   flex-wrap: nowrap;
@@ -86,9 +86,9 @@ h1.title {
 
 .hero-image > div {
   width: 533px;
-  height: 300px;
+  height: 266px;
   flex-shrink: 0;
-  background-size: cover;
+  /*background-size: cover;*/
 }
 
 .hero-image > a {
