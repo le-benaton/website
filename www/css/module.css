@@ -245,7 +245,8 @@ ul.link-list {
   overflow: scroll;
   list-style-type: none;
   display: flex;
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ul.link-list > li {
@@ -288,7 +289,7 @@ ul.link-list li:last-child {
   border-right: none;
 }
 
-  /**
+/**
    * <parenthesis>
    */
 .parenthesis > p {
