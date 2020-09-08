@@ -425,7 +425,10 @@ form .form-line textarea {
   margin-bottom: 16px;
   padding: 8px 8px 6px;
   box-shadow: none !important;
+  border: 1px solid var(--medium-color);
+  outline: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .form-label {
