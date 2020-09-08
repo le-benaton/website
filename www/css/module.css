@@ -106,9 +106,10 @@ header {
   justify-content: space-between;
 }
 
-header h1 {
+header div.logo {
   width: 160px;
   margin: 20px 0 0 8px;
+  transition: all 0.5s;
 }
 
 nav {
@@ -151,19 +152,19 @@ nav {
 
 @media screen and (max-width: 800px) {
   body {
-    padding-top: 92.39px;
+    padding-top: 91.39px;
   }
   header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
   }
   nav {
     display: none;
     position: absolute;
-    top: 92.39px;
+    top: 91.39px;
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     z-index: 999;
@@ -179,6 +180,7 @@ nav {
   }
   nav > ul > li > a {
     color: #ffffff;
+    font-size: 1.1rem;
   }
   nav > ul > li > a:hover {
     color: rgba(255, 255, 255, 0.8);
@@ -196,6 +198,18 @@ nav {
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  header.minimum div.logo {
+    width: 120px;
+    margin: 6px 0 0 8px;
+    transition: all 0.5s;
+  }
+  header.minimum .btn-trigger {
+    top: 16px;
+  }
+  header.minimum nav {
+    top: 61.3px;
   }
 }
 

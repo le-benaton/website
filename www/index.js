@@ -8,7 +8,7 @@ const linkScroll = () => {
       e.preventDefault();
       const element = document.querySelector(link.hash);
       const rect = element.getBoundingClientRect();
-      const target = rect.top + window.pageYOffset;
+      const target = rect.top + window.pageYOffset - 12;
       let position = 0;
       let progress = 0;
       const easeOut = (p) => {
@@ -107,3 +107,22 @@ window.addEventListener("resize", (event) => {
     nav.style.display = 'none';
   }
 }, { passive: true });
+
+
+document.addEventListener('scroll', (e) => {
+  const nav = document.querySelector('header');
+  let ticking = false;
+  if (!ticking) {
+    requestAnimationFrame(function() {
+      ticking = false;
+      const scrollAmount = document.documentElement.scrollTop;
+
+      if (scrollAmount > 90) {
+        nav.classList.add('minimum');
+      } else {
+        nav.classList.remove('minimum');
+      }
+    });
+    ticking = true;
+  }
+}, {passive: true});
