@@ -136,6 +136,17 @@ nav {
     position: relative;
     top: -6px;
   }
+
+  @media screen and (max-width: 1024px) {
+    nav ul li a {
+      width: 80px;
+    }
+  }
+  @media screen and (max-width: 860px) {
+    nav ul li a {
+      width: 74px;
+    }
+  }
 }
 
 @media screen and (max-width: 800px) {

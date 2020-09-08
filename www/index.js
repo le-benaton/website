@@ -95,3 +95,15 @@ window.onload = () => {
   viewTimerHandler();
   mobileMenu();
 };
+
+// Windowがリサイズされたら初期化
+window.addEventListener("resize", (event) => {
+  const nav = document.querySelector('nav');
+  const link = document.querySelector('#mobile-menu-button');
+  link.classList.remove('active');
+  if (document.body.clientWidth > 800) {
+    nav.style.display = 'block';
+  } else {
+    nav.style.display = 'none';
+  }
+}, { passive: true });
