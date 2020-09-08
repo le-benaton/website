@@ -13,7 +13,7 @@ body {
   --border-color: #d7ccc8;
   --background-color: #efebe9;
   --background-shade-color: #4e342e;
-  --dangar-color: #eb445a;
+  --dangar-color: #cf3c4f;
 }
 
 body a {
@@ -347,6 +347,10 @@ ul.link-list li:last-child {
   font-weight: bold;
   font-size: 1.3rem;
   line-height: 200%;
+}
+
+.leading-container h3.text-left {
+  text-align: left;
 }
 
 /**
