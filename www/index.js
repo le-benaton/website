@@ -8,7 +8,7 @@ const linkScroll = () => {
       e.preventDefault();
       const element = document.querySelector(link.hash);
       const rect = element.getBoundingClientRect();
-      const target = rect.top + window.pageYOffset - 12;
+      const target = rect.top + window.pageYOffset - 40;
       let position = 0;
       let progress = 0;
       const easeOut = (p) => {
