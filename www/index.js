@@ -36,6 +36,10 @@ const linkScroll = () => {
 }
 
 const openModal = (selector) => {
+  try {
+    ga('send', 'event', 'click', 'modal' + selector);
+  } catch (e) { }
+
   const innerHtml = document.querySelector(selector).innerHTML;
   const modal = document.querySelector('section.modal-wine-list');
   const modalInner = document.querySelector('section.modal-wine-list > div.modal-wine-list-inner');
