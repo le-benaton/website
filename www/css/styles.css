@@ -65,8 +65,11 @@ h2.subtitle > span {
   margin: 8px;
 }
 
-h4 {
+.container-extend > h4 {
   font-size: 1.2rem;
+  padding-bottom: 12px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 h4 svg {
@@ -124,9 +127,6 @@ h1.title {
 }
 
 div.wrap-table {
-  border-top: 1px dotted var(--border-color);
-  border-bottom: 1px dotted var(--border-color);
-  padding: 16px 0;
   margin-bottom: 32px;
 }
 
@@ -167,8 +167,6 @@ ul.list-news {
   list-style: none;
   padding: 0;
   margin: 0 !important;
-  position: relative;
-  top: -12px;
 }
 
 ul.list-news > li {
@@ -182,8 +180,8 @@ ul.list-news > li p {
   margin: 0;
 }
 
-ul.list-news > li:first-child {
-  border-top: 1px dotted var(--border-color);
+ul.list-news > li:last-child {
+  border: none;
 }
 
 ul.list-news {
