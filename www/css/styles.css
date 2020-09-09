@@ -32,8 +32,6 @@
  */
 #menu-lunch,
 #menu-wine,
-#menu-access,
-#menu-voyage,
 #menu-contact {
   background-color: var(--background-color);
   border-top: 1px solid var(--border-color);
@@ -57,6 +55,16 @@ h2.subtitle > span {
   display: block;
   font-size: 1.1rem;
   margin: 8px;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h4 svg {
+  width: 20px;
+  height: 20px;
+  margin: 0 4px;
 }
 
 h5 {
@@ -107,31 +115,72 @@ h1.title {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+div.wrap-table {
+  border-top: 1px dotted var(--border-color);
+  border-bottom: 1px dotted var(--border-color);
+  padding: 16px 0;
+  margin-bottom: 32px;
+}
+
+table {
+  width: 100%;
+}
+
+table th {
+  width: 64px;
+  padding-right: 32px;
+  text-align: right;
+  vertical-align: top;
+  font-weight: normal;
+}
+
+table th span {
+  padding-right: 32px;
+  border-right: 4px dotted var(--medium-color);
+}
+
+table td {
+}
+
+table th,
+table td {
+  font-size: 1.1rem;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+table td button {
+  position: relative;
+  top: 8px;
+}
+
 ul.list-news {
   max-width: 800px;
-  margin: auto;
   list-style: none;
   padding: 0;
+  margin: 0 !important;
+  position: relative;
+  top: -12px;
 }
 
 ul.list-news > li {
-  padding: 8px 0;
+  padding: 8px;
   line-height: 200%;
   border-bottom: 1px dotted var(--border-color);
 }
 
-ul.list-news > li:last-child {
-  text-align: center;
-  padding-top: 16px;
-  border: none;
+ul.list-news > li p {
+  padding: 0;
+  margin: 0;
 }
 
-ul.list-news > li:first-line {
-  font-weight: bold;
+ul.list-news > li:first-child {
+  border-top: 1px dotted var(--border-color);
 }
 
-#menu-news button {
-  margin: 4px 0 0 16px;
+ul.list-news {
+  margin: 0 0 0 16px;
+  padding: 0;
 }
 
 #menu-wine button {
