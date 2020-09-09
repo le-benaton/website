@@ -89,10 +89,16 @@ const mobileMenu = () => {
   });
 }
 
+// 店舗プロフィールをコピー
+const copyReserved = () => {
+  document.querySelector('#copy-reserved').innerHTML = document.querySelector('#menu-reserved').innerHTML;
+}
+
 window.onload = () => {
   linkScroll();
   viewTimerHandler();
   mobileMenu();
+  copyReserved();
 };
 
 // Windowがリサイズされたら初期化

@@ -85,6 +85,8 @@ h2,
 h3,
 nav ul li a {
   font-family: 'Droid Serif', serif;
+  font-feature-settings: "palt";
+  letter-spacing: 1px;
 }
 
 button {

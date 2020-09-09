@@ -32,7 +32,8 @@
  */
 #menu-lunch,
 #menu-wine,
-#menu-contact {
+#menu-contact,
+#menu-voyage {
   background-color: var(--background-color);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
