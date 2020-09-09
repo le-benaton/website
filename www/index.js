@@ -131,3 +131,14 @@ document.addEventListener('scroll', (e) => {
     ticking = true;
   }
 }, { passive: true });
+
+document.addEventListener('click', (event) => {
+  try {
+    const aTag = event.path.find(e => e.localName === 'a');
+    if (!aTag || !aTag.href) {
+      return;
+    }
+    const target = aTag.hash ? aTag.hash : aTag.href;
+    ga('send', 'event', 'click', target);
+  } catch (e) { }
+}, { passive: true });
