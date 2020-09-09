@@ -85,7 +85,7 @@ h2,
 h3,
 nav ul li a {
   font-family: 'Droid Serif', serif;
-  font-feature-settings: "palt";
+  font-feature-settings: 'palt';
   letter-spacing: 1px;
 }
 
@@ -130,37 +130,39 @@ header div.logo {
 nav {
 }
 
+nav > ul > li svg {
+  margin-top: -10px; padding: 0;
+  width: 32px;
+  height: 32px;
+}
+
 @media screen and (min-width: 800px) {
   nav ul {
     display: flex;
     list-style-type: none;
-    margin: 50px 8px 0 0;
+    margin: 46px 8px 0 0;
   }
 
   nav ul li a {
-    width: 100px;
     text-align: center;
     color: var(--medium-color);
     font-size: 1rem;
 
     position: relative;
-    padding-bottom: 7px;
+    padding: 0 20px 7px;
   }
 
-  nav ul li a img {
-    opacity: 0.4;
-    position: relative;
-    top: -6px;
+  nav > ul > li svg path {
+    fill: var(--medium-color);
   }
 
   @media screen and (max-width: 1024px) {
     nav ul li a {
-      width: 80px;
+      padding: 0 15px 7px;
     }
-  }
-  @media screen and (max-width: 860px) {
-    nav ul li a {
-      width: 74px;
+
+    nav ul li:last-child a {
+      padding: 0 10px 7px;
     }
   }
 }
@@ -200,7 +202,8 @@ nav {
   nav > ul > li > a:hover {
     color: rgba(255, 255, 255, 0.8);
   }
-  nav > ul > li img {
+
+  nav > ul > li svg {
     filter: invert(100%);
   }
 
