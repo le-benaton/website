@@ -135,10 +135,9 @@ table {
 }
 
 table th {
-  width: 64px;
+  width: 92px;
   padding-right: 32px;
   text-align: right;
-  vertical-align: top;
   font-weight: normal;
 }
 
@@ -152,6 +151,7 @@ table td {
 
 table th,
 table td {
+  vertical-align: top;
   font-size: 1.1rem;
   padding-top: 12px;
   padding-bottom: 12px;

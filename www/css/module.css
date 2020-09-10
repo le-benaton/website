@@ -131,7 +131,8 @@ nav {
 }
 
 nav > ul > li svg {
-  margin-top: -10px; padding: 0;
+  margin-top: -10px;
+  padding: 0;
   width: 32px;
   height: 32px;
 }

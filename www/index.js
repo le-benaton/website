@@ -64,11 +64,10 @@ const viewTimerHandler = () => {
       return;
     }
 
-    if (new Date().getTime() > new Date(start).getTime()) {
-      element.style.display = 'list-item';
-    }
-
-    if (new Date().getTime() < new Date(end).getTime()) {
+    if (
+      new Date().getTime() > new Date(start).getTime() &&
+      new Date().getTime() < new Date(end).getTime()
+    ) {
       element.style.display = 'list-item';
     }
   });
