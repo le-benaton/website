@@ -83,6 +83,7 @@ main > section > .wrap {
 h1,
 h2,
 h3,
+.container-extend > h4,
 nav ul li a {
   font-family: 'Droid Serif', serif;
   font-feature-settings: 'palt';
