@@ -142,6 +142,6 @@ document.addEventListener('click', (event) => {
       return;
     }
     const target = aTag.hash ? aTag.hash : aTag.href;
-    ga('send', 'event', 'click', target);
-  } catch (e) { }
+    gtag('event', 'select_content', { 'content_type': target });
+  } catch (e) { console.log(e); }
 }, { passive: true });
