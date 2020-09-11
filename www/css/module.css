@@ -115,11 +115,23 @@ svg {
 }
 
 /**
- * Header
+ * <Header>
  */
 header {
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+header.minimum div.logo {
+  width: 120px;
+  margin: 6px 0 0 8px;
+  transition: all 0.5s;
 }
 
 header div.logo {
@@ -143,6 +155,11 @@ nav > ul > li svg {
     display: flex;
     list-style-type: none;
     margin: 46px 8px 0 0;
+  }
+
+  header.minimum nav ul {
+    margin-top: 20px;
+    transition: all 0.5s;
   }
 
   nav ul li a {
@@ -170,16 +187,6 @@ nav > ul > li svg {
 }
 
 @media screen and (max-width: 800px) {
-  body {
-    padding-top: 91.39px;
-  }
-  header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    background-color: rgba(255, 255, 255, 0.9);
-  }
   nav {
     display: none;
     position: absolute;
@@ -204,7 +211,6 @@ nav > ul > li svg {
   nav > ul > li > a:hover {
     color: rgba(255, 255, 255, 0.8);
   }
-
   nav > ul > li svg {
     filter: invert(100%);
   }
@@ -218,12 +224,6 @@ nav > ul > li svg {
       opacity: 1;
       transform: translateY(0);
     }
-  }
-
-  header.minimum div.logo {
-    width: 120px;
-    margin: 6px 0 0 8px;
-    transition: all 0.5s;
   }
   header.minimum .btn-trigger {
     top: 16px;
@@ -308,6 +308,9 @@ ul.link-list li:first-child {
 ul.link-list li:last-child {
   border-right: none;
 }
+/**
+ * </Header>
+ */
 
 /**
    * <parenthesis>
