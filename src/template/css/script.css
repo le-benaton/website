@@ -2,7 +2,7 @@
   display: none;
 }
 
-.accshow {
+.modal-show {
   display: none;
 }
 
@@ -13,7 +13,7 @@ section.modal-wine-list > div.modal-wine-list-inner {
   overflow: scroll;
 }
 
-section.modal-wine-list > div.modal-wine-list-inner .accshow {
+section.modal-wine-list > div.modal-wine-list-inner .modal-show {
   display: block !important;
 }
 
