@@ -20,7 +20,7 @@ const linkScroll = () => {
       // スクロール量を計算
       const element = document.querySelector(link.hash);
       const rect = element.getBoundingClientRect();
-      const target = rect.top + window.pageYOffset - 40;
+      const target = rect.top + window.pageYOffset - 60;
       let position = 0;
       let progress = 0;
       const easeOut = (p) => {
