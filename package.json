@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "西宮・夙川のフレンチレストラン「ル・ベナトン」Webサイト",
   "scripts": {
+    "build": "ts-node -P tsconfig.json scripts/build-data",
+    "watch": "watch \"npm run build\" ./src",
     "format": "npm run format:typescript && npm run format:html && npm run format:css",
     "format:html": "prettier --parser html --write \"src/**/*.html\"",
     "format:css": "prettier --parser css --write \"src/**/*.css\"",
-    "format:typescript": "prettier --parser typescript --write \"scripts/**/*.ts\"",
-    "build": "ts-node -P tsconfig.json scripts/build-data"
+    "format:typescript": "prettier --parser typescript --write \"scripts/**/*.ts\""
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "ts-node": "^9.0.0",
     "tslint": "^6.1.3",
     "tslint-ionic-rules": "0.0.21",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.2",
+    "watch": "^1.0.2"
   }
 }

@@ -43,9 +43,17 @@ le-benaton/
 
 ### インストールからビルド方法
 以下コマンドによって `www/` が生成されます。wwwが公開用ファイル一式です。
+
 ```bash
 % git clone git@github.com:le-benaton/website.git
 % cd website
 % npm install
 % npm run build
+```
+
+#### 開発用コマンド
+以下コマンドを実行すると、 `src` 以下を監視して、変更があった時 `npm run build` を実行します。
+
+```bash
+% npm run watch
 ```
