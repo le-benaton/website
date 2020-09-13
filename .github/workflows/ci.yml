@@ -1,0 +1,39 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      # パッケージのキャッシュ
+      - name: Use cached node_modules
+        uses: actions/cache@v1
+        with:
+          path:
+            node_modules
+          key: ${{ runner.os }}-v1-dependencies-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-v1-dependencies-
+
+      # Lintとテストの実行
+      - name: npm install, build, and test
+        run: |
+          npm ci
+          npm run build
+
+      # デプロイ
+      - name: deploy
+        run: |
+          npx netlify-cli deploy \
+            --site ${{ secrets.NETLIFY_SITE_ID }} \
+            --dir www/ \
+            --auth ${{ secrets.NETLIFY_TOKEN }} \
+            --prod
