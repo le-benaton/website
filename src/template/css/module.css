@@ -135,9 +135,12 @@ header.minimum div.logo {
 
 header div.logo {
   width: 160px;
-  min-height: 65px;
   margin: 20px 0 0 8px;
   transition: all 0.5s;
+}
+
+header div.logo img {
+  min-height: 65px;
 }
 
 nav {
