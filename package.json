@@ -1,7 +1,7 @@
 {
   "name": "le-benaton",
   "version": "1.0.0",
-  "description": "",
+  "description": "西宮・夙川のフレンチレストラン「ル・ベナトン」Webサイト",
   "scripts": {
     "format": "npm run format:typescript && npm run format:html && npm run format:css",
     "format:html": "prettier --parser html --write \"src/**/*.html\"",
