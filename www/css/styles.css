@@ -236,6 +236,10 @@ ul.reserved-system li {
   margin: 8px;
 }
 
+ul.reserved-system li button {
+  width: 125px;
+}
+
 #menu-voyage p.parenthesis::first-letter {
   font-size: 200%;
   color: var(--background-shade-color);
