@@ -4,10 +4,26 @@ export const champagneWine: IItem = {
   selector: '<ul class="modal-show wine-list-champagne"></ul>',
   template: '<li><h4>{{ title }}</h4><div>{{ ja }}</div><div>¥{{ price }}</div></li>',
   data: [
-    { title: 'NV H.LANVIN&FILS CUVEE SELCTION', ja: 'ロンヴァン エ フィル キュベ セレクション', price: '7,000' },
-    { title: 'NV LENOBLE CUVEE RICHE DEMI-SEC', ja: 'ルノーブル キュヴェ リッシェ ドゥミ-セック', price: '7,500' },
-    { title: 'NV Thierry Triolet cuvee de reserve', ja: 'ティエリー トリオレ キュヴェ ド レゼルヴ', price: '8,500' },
-    { title: 'NV Rene Jolly BLANC DE NOIRS BRET', ja: 'ルネ ジョリー ブラン・ド・ノワール ブリュット', price: '8,700' },
+    {
+      title: 'NV H.LANVIN&FILS CUVEE SELCTION',
+      ja: 'ロンヴァン エ フィル キュベ セレクション',
+      price: '7,000',
+    },
+    {
+      title: 'NV LENOBLE CUVEE RICHE DEMI-SEC',
+      ja: 'ルノーブル キュヴェ リッシェ ドゥミ-セック',
+      price: '7,500',
+    },
+    {
+      title: 'NV Thierry Triolet cuvee de reserve',
+      ja: 'ティエリー トリオレ キュヴェ ド レゼルヴ',
+      price: '8,500',
+    },
+    {
+      title: 'NV Rene Jolly BLANC DE NOIRS BRET',
+      ja: 'ルネ ジョリー ブラン・ド・ノワール ブリュット',
+      price: '8,700',
+    },
     {
       title: 'NV Chartogne Taillet cuvee sainte Anne Brut',
       ja: 'シャルトーニュ タイエ キュヴェ・サンタンヌ ブリュット',

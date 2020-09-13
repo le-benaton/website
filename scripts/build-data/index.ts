@@ -20,14 +20,14 @@ const build = () => {
   mkdirSync(process.cwd() + '/www');
   execSync(`cp -r ${process.cwd() + '/src/template'}/* ${process.cwd() + '/www'}`);
 
-  for(const templateFile of targets) {
+  for (const templateFile of targets) {
     let template = readFileSync(process.cwd() + '/www/' + templateFile).toString('utf-8');
-    for(const item of items) {
+    for (const item of items) {
       let insertData = '';
       for (const line of item.data) {
         let template = item.template;
         for (const [key, value] of Object.entries(line)) {
-          template = template.replace(new RegExp(`{{ ${key} }}`,"g"), value as string);
+          template = template.replace(new RegExp(`{{ ${key} }}`, 'g'), value as string);
         }
         insertData += template;
       }
@@ -36,6 +36,6 @@ const build = () => {
     }
     writeFileSync(process.cwd() + '/www/' + templateFile, template);
   }
-}
+};
 
 build();

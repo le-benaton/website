@@ -34,7 +34,11 @@ export const redWine: IItem = {
       ja: `サントネ VV ドメーヌ フィリップ ジャノ`,
       price: `5,800`,
     },
-    { title: `2008 BOURGOGNE DOMAINE RENE LECLERC`, ja: `ブルゴーニュ ドメーヌ ルネ ルクレール`, price: `6,100` },
+    {
+      title: `2008 BOURGOGNE DOMAINE RENE LECLERC`,
+      ja: `ブルゴーニュ ドメーヌ ルネ ルクレール`,
+      price: `6,100`,
+    },
     {
       title: `2014 SANTENAY VIEILLES VIGNES LUCIEN MUZARD&FILS`,
       ja: `サントネイ VV リュシオン ミュザー`,
@@ -50,7 +54,11 @@ export const redWine: IItem = {
       ja: `オー コート ボーヌ ルージュ ジャイエ ジル`,
       price: `7,600`,
     },
-    { title: `2013 MARSANNAY CHATEAU DE MARSANNAY`, ja: `マルサネ シャトー ド マルサネ`, price: `8,400` },
+    {
+      title: `2013 MARSANNAY CHATEAU DE MARSANNAY`,
+      ja: `マルサネ シャトー ド マルサネ`,
+      price: `8,400`,
+    },
     {
       title: `1993 VOLNAY 1er CRU CAILLERETS BITOUZET-PRIEUR`,
       ja: `ヴォルネイ 1er カイユレ ビトゥーゼ プリウール`,
@@ -76,15 +84,31 @@ export const redWine: IItem = {
       ja: `ボーヌ レ トゥーロン シャトー ド ショレイ`,
       price: `10,100`,
     },
-    { title: `1995 Bourgogne Rouge Joseph Roty`, ja: `ブルゴーニュ パストゥーグラン ジョセフ ロティ`, price: `10,500` },
-    { title: `2013 Vosne-Romanee DOMAINE ODOUL-COQUARD`, ja: `ヴォーヌ - ロマネ オドゥール コカール`, price: `11,300` },
-    { title: `1976 Santenay LA ROUTE DES VIGNES`, ja: `サントネ ラ ルート デ ヴィーニュ`, price: `12,000` },
+    {
+      title: `1995 Bourgogne Rouge Joseph Roty`,
+      ja: `ブルゴーニュ パストゥーグラン ジョセフ ロティ`,
+      price: `10,500`,
+    },
+    {
+      title: `2013 Vosne-Romanee DOMAINE ODOUL-COQUARD`,
+      ja: `ヴォーヌ - ロマネ オドゥール コカール`,
+      price: `11,300`,
+    },
+    {
+      title: `1976 Santenay LA ROUTE DES VIGNES`,
+      ja: `サントネ ラ ルート デ ヴィーニュ`,
+      price: `12,000`,
+    },
     {
       title: `2010 MARSANNAY Philippe Charlopin`,
       ja: `マルサネ モンシュヌヴォイ シャルロパン パリゾ`,
       price: `12,100`,
     },
-    { title: `2005 VOSNE-ROMANEE DOMAINE DANIELRION&FILS`, ja: `ヴォーヌロマネ ダニエルリヨン`, price: `12,200` },
+    {
+      title: `2005 VOSNE-ROMANEE DOMAINE DANIELRION&FILS`,
+      ja: `ヴォーヌロマネ ダニエルリヨン`,
+      price: `12,200`,
+    },
     {
       title: `2005 SAVIGNY-LES-BEAUNE 1ER CRU "LES GRAVAINS" DOMAINE MICHEL & JOANNA ECARD`,
       ja: `サヴィニー レ ボーヌ ミッシェル エ ジョアンヌ エカール`,
@@ -125,7 +149,11 @@ export const redWine: IItem = {
       ja: `ジュブレ シャンベルタン シャン デュロシェ`,
       price: `15,000`,
     },
-    { title: `1989 POMMARD VV FABIEN COCHE-BOUILLOT`, ja: `ポマール VV ファビオン コシュ ‐ ブイヨ`, price: `15,000` },
+    {
+      title: `1989 POMMARD VV FABIEN COCHE-BOUILLOT`,
+      ja: `ポマール VV ファビオン コシュ ‐ ブイヨ`,
+      price: `15,000`,
+    },
     {
       title: `2007 NUITS-ST-GEORGES LES LAVIERES DOMAINE DANiEl RiON & Fils`,
       ja: `ニュイ サン ジョルジュ ダニエル リオン`,
@@ -151,7 +179,11 @@ export const redWine: IItem = {
       ja: `シャンボール ミュジニー リニエ ミシュロ`,
       price: `16,300`,
     },
-    { title: `1978 Beaune Bressandes Antnin Rodet`, ja: `ボーヌ ブレッサンド アントナン ロデ`, price: `17,500` },
+    {
+      title: `1978 Beaune Bressandes Antnin Rodet`,
+      ja: `ボーヌ ブレッサンド アントナン ロデ`,
+      price: `17,500`,
+    },
     {
       title: `2011 GEVREY-CHAMBERTIN PREMIER CRE LAVAUT-SAINT-JACQUES FREDERIC MAGNIEN`,
       ja: `ジュヴレ シャンベルタン ラヴォー サン ジャック フレデリック マニャン`,
@@ -207,7 +239,11 @@ export const redWine: IItem = {
       ja: `コルトン ペリエール デュブルイ フォンテーヌ`,
       price: `22,500`,
     },
-    { title: `1978 Aloxe-Corton Edmond Cornu`, ja: `アロース コルトン エドモンド コルヌ`, price: `22,500` },
+    {
+      title: `1978 Aloxe-Corton Edmond Cornu`,
+      ja: `アロース コルトン エドモンド コルヌ`,
+      price: `22,500`,
+    },
     {
       title: `2005 GEVREY-CHAMBERTIN DOMAINE CHARLOPIN-PARIZOT`,
       ja: `ジュブレ シャンベルタン VV シャルロパン パリゾ`,

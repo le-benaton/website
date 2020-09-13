@@ -6,7 +6,7 @@
     "format": "npm run format:typescript && npm run format:html && npm run format:css",
     "format:html": "prettier --parser html --write \"src/**/*.html\"",
     "format:css": "prettier --parser css --write \"src/**/*.css\"",
-    "format:typescript": "prettier --parser typescript --write \"src/**/*.ts\"",
+    "format:typescript": "prettier --parser typescript --write \"scripts/**/*.ts\"",
     "build": "ts-node -P tsconfig.json scripts/build-data"
   },
   "repository": {
