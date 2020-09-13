@@ -37,7 +37,7 @@ const linkScroll = () => {
 
 const openModal = (selector) => {
   try {
-    ga('send', 'event', 'click', 'modal' + selector);
+    gtag('event', 'select_content', { 'content_type': 'modal' + selector });
   } catch (e) { }
 
   const innerHtml = document.querySelector(selector).innerHTML;
