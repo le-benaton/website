@@ -1,3 +1,7 @@
+/**
+ * ナビゲーションをクリックした時、ハッシュが設定されていたら
+ * 目的のIDまでスクロールするスクリプト
+ */
 const linkScroll = () => {
   const links = document.querySelectorAll('nav a[href]');
   for(const link of links) {
@@ -6,6 +10,14 @@ const linkScroll = () => {
     }
     link.addEventListener('click', (e) => {
       e.preventDefault();
+
+      // Mobileメニューが開いてる時は閉じる
+      const mobileMenu = document.querySelector('#mobile-menu-button');
+      if (mobileMenu.classList.contains('active')) {
+        toggleNav(mobileMenu);
+      }
+
+      // スクロール量を計算
       const element = document.querySelector(link.hash);
       const rect = element.getBoundingClientRect();
       const target = rect.top + window.pageYOffset - 40;
@@ -21,20 +33,16 @@ const linkScroll = () => {
         if (position < target) {
           requestAnimationFrame(move);
         }
-
-        // Mobileの場合はMenuをtoggle
-        if (position === target) {
-          const mobileMenu = document.querySelector('#mobile-menu-button');
-          if (mobileMenu.classList.contains('active')) {
-            toggleNav(mobileMenu);
-          }
-        }
       };
       requestAnimationFrame(move);
     })
   }
 }
 
+/**
+ * モーダルを開くためのイベント
+ * @param selector
+ */
 const openModal = (selector) => {
   try {
     gtag('event', 'select_content', { 'content_type': 'modal' + selector });
@@ -47,6 +55,9 @@ const openModal = (selector) => {
   modal.style.display = 'block';
 }
 
+/**
+ * モーダルを閉じるためのイベント
+ */
 const closeModal = () => {
   const modal = document.querySelector('section.modal-wine-list');
   const modalInner = document.querySelector('section.modal-wine-list > div.modal-wine-list-inner');
@@ -55,6 +66,11 @@ const closeModal = () => {
   modal.style.display = 'none';
 }
 
+/**
+ *  クラス `.view_timer` がついていた時、
+ *  `data-start-date` 属性、`data-end-date` 属性を
+ *  チェックして表示を行う。
+ */
 const viewTimerHandler = () => {
   const elements = document.querySelectorAll('.view_timer');
   elements.forEach((element) => {
@@ -63,7 +79,6 @@ const viewTimerHandler = () => {
     if (!start && !end) {
       return;
     }
-
     if (
       new Date().getTime() > new Date(start).getTime() &&
       new Date().getTime() < new Date(end).getTime()
@@ -73,6 +88,11 @@ const viewTimerHandler = () => {
   });
 }
 
+/**
+ * モバイルデバイスでハンバーガーメニューを
+ * クリックした時にメニューをトグル
+ * @param link
+ */
 const toggleNav = (link) => {
   const nav = document.querySelector('nav');
   if (link.classList.contains('active')) {
@@ -84,19 +104,27 @@ const toggleNav = (link) => {
   }
 }
 
+/**
+ * toggleNav() をイベントリスナーで確認
+ */
 const mobileMenu = () => {
   const link = document.querySelector('#mobile-menu-button');
   link.addEventListener('click', (e) => {
-    e.preventDefault();
     toggleNav(link);
-  });
+  }, { passive: true });
 }
 
-// 店舗プロフィールをコピー
+/**
+ * `#menu-reserved` を `#copy-reserved` に
+ * まるまるコピーする
+ */
 const copyReserved = () => {
   document.querySelector('#copy-reserved').innerHTML = document.querySelector('#menu-reserved').innerHTML;
 }
 
+/**
+ * window.onloadで必要なイベントを実行
+ */
 window.onload = () => {
   linkScroll();
   viewTimerHandler();
@@ -104,7 +132,9 @@ window.onload = () => {
   copyReserved();
 };
 
-// Windowがリサイズされたら初期化
+/**
+ * Windowがリサイズされた時、モバイル用メニューの設定をリセット
+ */
 window.addEventListener("resize", (event) => {
   const nav = document.querySelector('nav');
   const link = document.querySelector('#mobile-menu-button');
@@ -116,7 +146,10 @@ window.addEventListener("resize", (event) => {
   }
 }, { passive: true });
 
-
+/**
+ * スクロール量に応じて、ヘッダーを縮小させるための
+ * Classを付与・削除
+ */
 document.addEventListener('scroll', (e) => {
   const nav = document.querySelector('header');
   let ticking = false;
@@ -135,6 +168,10 @@ document.addEventListener('scroll', (e) => {
   }
 }, { passive: true });
 
+/**
+ * aタグをクリックした時のイベントを
+ * Google Analyticsに送信
+ */
 document.addEventListener('click', (event) => {
   try {
     const aTag = event.path.find(e => e.localName === 'a');

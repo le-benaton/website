@@ -131,16 +131,14 @@ header.minimum div.logo {
   width: 120px;
   margin: 6px 0 0 8px;
   transition: all 0.5s;
+  min-height: auto;
 }
 
 header div.logo {
   width: 160px;
   margin: 20px 0 0 8px;
   transition: all 0.5s;
-}
-
-header div.logo img {
-  min-height: 65px;
+  min-height: 71px;
 }
 
 nav {
