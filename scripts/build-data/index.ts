@@ -23,15 +23,15 @@ const build = () => {
   for (const templateFile of targets) {
     let template = readFileSync(process.cwd() + '/www/' + templateFile).toString('utf-8');
     for (const item of items) {
-      let insertData = '';
+      const insertData: string[] = [];
       for (const line of item.data) {
         let template = item.template;
         for (const [key, value] of Object.entries(line)) {
           template = template.replace(new RegExp(`{{ ${key} }}`, 'g'), value as string);
         }
-        insertData += template;
+        insertData.push(template);
       }
-      const changeSelector = item.selector.replace(/></g, `>${insertData}<`);
+      const changeSelector = item.selector.replace(/></g, `>${insertData.join()}<`);
       template = template.replace(item.selector, changeSelector);
     }
     writeFileSync(process.cwd() + '/www/' + templateFile, template);
