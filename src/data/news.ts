@@ -1,4 +1,6 @@
-export const news = {
+import { IItem } from '../../scripts/build-data';
+
+export const news: IItem = {
   selector: '<ul class="list-news"></ul>',
   template: '<li><label class="form-label">{{ title }}</label><p>{{ body }}</p></li>',
   data: [
