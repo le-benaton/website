@@ -31,7 +31,7 @@ const build = () => {
         }
         insertData.push(template);
       }
-      const changeSelector = item.selector.replace(/></g, `>${insertData.join()}<`);
+      const changeSelector = item.selector.replace(/></g, `>${insertData.join('')}<`);
       template = template.replace(item.selector, changeSelector);
     }
     writeFileSync(process.cwd() + '/www/' + templateFile, template);
