@@ -19,8 +19,8 @@ const linkScroll = () => {
 
       // スクロール量を計算
       const element = document.querySelector(link.hash);
-      const rect = element.getBoundingClientRect();
-      const target = rect.top + window.pageYOffset - 60;
+      const { top } = element.getBoundingClientRect();
+      const target = top + window.pageYOffset - 60;
       let position = 0;
       let progress = 0;
       const easeOut = (p) => {
@@ -126,10 +126,10 @@ const copyReserved = () => {
  * window.onloadで必要なイベントを実行
  */
 window.onload = () => {
-  linkScroll();
   viewTimerHandler();
   mobileMenu();
   copyReserved();
+  linkScroll();
 };
 
 /**
