@@ -200,11 +200,6 @@ const reflectRecord = (record) => {
  * window.onloadで必要なイベントを実行
  */
 window.onload = async () => {
-  viewTimerHandler();
-  mobileMenu();
-  copyReserved();
-  linkScroll();
-
   try {
     firebase.initializeApp({
       apiKey: "AIzaSyDZX9RvCWbBOiRl0_heOshMEFUiI9QqD0g",
@@ -216,7 +211,29 @@ window.onload = async () => {
   } catch (e) {
     console.log(e);
   }
+
+  viewTimerHandler();
+  mobileMenu();
+  copyReserved();
+  linkScroll();
+
+  // ABテスト確認用
+  const isOptimize = getParam('optimize');
+  if (isOptimize === '1') {
+    $refinementRecord().then(data => reflectRecord(data));
+  }
 };
+
+
+function getParam(name) {
+  const url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+  const results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 
 /**
  * Windowがリサイズされた時、モバイル用メニューの設定をリセット
