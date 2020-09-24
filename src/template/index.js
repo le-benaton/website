@@ -192,7 +192,7 @@ const reflectRecord = (record) => {
   const element = document.querySelectorAll('.toast');
   for(let i = 0; i < element.length; i++) {
     setTimeout(() => element[i].style.display = 'block', 2000 * (i + 1));
-    setTimeout(() => element[i].style.display = 'none', 1000 * (i + 1) + 10000);
+    setTimeout(() => element[i].style.display = 'none', 2000 * (i + 1) + 10000);
   }
 }
 
