@@ -278,7 +278,8 @@ document.addEventListener('scroll', (e) => {
  */
 document.addEventListener('click', (event) => {
   try {
-    const aTag = event.path.find(e => e.localName === 'a');
+    const path = event.path || (event.composedPath && event.composedPath());
+    const aTag = path.find(e => e.localName === 'a');
     if (!aTag || !aTag.href) {
       return;
     }
@@ -293,7 +294,8 @@ document.addEventListener('click', (event) => {
 
 document.addEventListener('click', (event) => {
   try {
-    const toastTag = event.path.find(e => e.className === 'toast');
+    const path = event.path || (event.composedPath && event.composedPath());
+    const toastTag = path.find(e => e.className === 'toast');
     if (!toastTag) {
       return;
     }

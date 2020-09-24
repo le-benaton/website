@@ -24,7 +24,6 @@ section.modal-wine-list > div.modal-wine-list-inner button {
 section.modal-wine-list > .modal-wine-list-inner > button {
 }
 
-
 .toast-area {
   position: fixed;
   bottom: 8px;
@@ -33,7 +32,7 @@ section.modal-wine-list > .modal-wine-list-inner > button {
 }
 
 .toast-area > .toast {
-  display:none;
+  display: none;
   padding: 8px 32px 8px 10px;
   color: var(--success-color-contrast);
   background-color: var(--success-color);
