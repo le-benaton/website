@@ -54,6 +54,9 @@
     <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99005030-1"></script>
+    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-PBVT4QC"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -988,6 +991,11 @@
       <div class="padding text-center">
         <button onclick="closeModal()">閉じる</button>
       </div>
+    </section>
+
+    <section class="toast-area">
+      <div id="recordAccess" class="toast"><span class="close">×</span>現在<span class="record"></span>名のお客様が閲覧しています</div>
+      <div id="conversionAccess" class="toast"><span class="close">×</span>過去24時間でご予約が<span class="record"></span>件ありました</div>
     </section>
   </body>
 </html>

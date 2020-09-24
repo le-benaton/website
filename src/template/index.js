@@ -1,3 +1,5 @@
+let db;
+
 /**
  * ナビゲーションをクリックした時、ハッシュが設定されていたら
  * 目的のIDまでスクロールするスクリプト
@@ -122,14 +124,98 @@ const copyReserved = () => {
   document.querySelector('#copy-reserved').innerHTML = document.querySelector('#menu-reserved').innerHTML;
 }
 
+const getUserId = () => {
+  let analyticsId = localStorage.getItem('analyticsId');
+  if (!analyticsId) {
+    analyticsId = new Date().getTime();
+    localStorage.setItem('analyticsId', 'id' + analyticsId);
+  }
+  return analyticsId;
+}
+
+const $recordAccess = (userId) => {
+  const ref = db.collection('access').doc(userId);
+  return ref.set({
+    timestamp: new Date().getTime(),
+  });
+}
+
+const $recordConversion = (userId) => {
+  const ref = db.collection('conversion').doc(userId);
+  return ref.set({
+    timestamp: new Date().getTime(),
+  });
+}
+
+const $refinementRecord = async () => {
+  const accessSnapshot = await db.collection('access').get();
+  const dayAccess = accessSnapshot.docs.filter((postDoc) => {
+    // 15分
+    if (new Date(new Date() - (1000 * 60 * 15)).getTime() < postDoc.data().timestamp) {
+      return true;
+    } else {
+      db.collection('access').doc(postDoc.id).delete();
+    }
+  });
+
+  const conversionSnapshot = await db.collection('conversion').get();
+  const dayConversion = conversionSnapshot.docs.filter((postDoc) => {
+    // 24時間
+    if (new Date(new Date() - (1000 * 60 * 60 * 24)).getTime() < postDoc.data().timestamp) {
+      return true;
+    } else {
+      db.collection('conversion').doc(postDoc.id).delete();
+    }
+  });
+
+  return {
+    dayAccess: dayAccess.length,
+    dayConversion: dayConversion.length,
+  }
+}
+
+const reflectRecord = (record) => {
+  if (record.dayAccess > 0) {
+    document.querySelector('#recordAccess span.record').innerHTML = record.dayAccess;
+  } else {
+    const el = document.querySelector('#recordAccess');
+    el.parentNode.removeChild(el);
+  }
+
+  if (record.dayConversion > 0) {
+    document.querySelector('#conversionAccess span.record').innerHTML = record.dayConversion;
+  } else {
+    const el = document.querySelector('#conversionAccess');
+    el.parentNode.removeChild(el);
+  }
+
+  const element = document.querySelectorAll('.toast');
+  for(let i = 0; i < element.length; i++) {
+    setTimeout(() => element[i].style.display = 'block', 2000 * (i + 1));
+    setTimeout(() => element[i].style.display = 'none', 10000);
+  }
+}
+
 /**
  * window.onloadで必要なイベントを実行
  */
-window.onload = () => {
+window.onload = async () => {
   viewTimerHandler();
   mobileMenu();
   copyReserved();
   linkScroll();
+
+  try {
+    firebase.initializeApp({
+      apiKey: "AIzaSyDZX9RvCWbBOiRl0_heOshMEFUiI9QqD0g",
+      authDomain: "benaton-japan.firebaseapp.com",
+      projectId: "benaton-japan",
+    });
+    db = firebase.firestore();
+    $recordAccess(getUserId());
+  } catch (e) {
+    console.log(e);
+  }
 };
 
 /**
@@ -181,5 +267,19 @@ document.addEventListener('click', (event) => {
     }
     const target = aTag.hash ? aTag.hash : aTag.href;
     gtag('event', 'select_content', { 'content_type': target });
+
+    if (target.includes('reserve.resebook.jp') || target.includes('0798-37-2655')) {
+      $recordConversion(getUserId());
+    }
+  } catch (e) { console.log(e); }
+}, { passive: true });
+
+document.addEventListener('click', (event) => {
+  try {
+    const toastTag = event.path.find(e => e.className === 'toast');
+    if (!toastTag) {
+      return;
+    }
+    toastTag.style.display = 'none';
   } catch (e) { console.log(e); }
 }, { passive: true });

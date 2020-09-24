@@ -26,6 +26,8 @@ body {
   --background-color: #efebe9;
   --background-shade-color: #4e342e;
   --dangar-color: #cf3c4f;
+  --success-color: #28ba62;
+  --success-color-contrast: #ffffff;
 }
 
 body a {
