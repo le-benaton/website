@@ -128,18 +128,17 @@ header {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-header.minimum div.logo {
-  width: 120px;
-  margin: 6px 0 0 8px;
-  transition: all 0.5s;
-  min-height: auto;
-}
-
 header div.logo {
   width: 160px;
   margin: 20px 0 0 8px;
   transition: all 0.5s;
   min-height: 71px;
+}
+
+header.minimum div.logo {
+  width: 120px;
+  transition: all 0.5s;
+  min-height: auto;
 }
 
 nav {
@@ -157,6 +156,11 @@ nav > ul > li svg {
     display: flex;
     list-style-type: none;
     margin: 46px 8px 0 0;
+  }
+
+  header.minimum div.logo {
+    margin: 6px 0 0 8px;
+    min-height: auto;
   }
 
   header.minimum nav ul {
@@ -189,6 +193,13 @@ nav > ul > li svg {
 }
 
 @media screen and (max-width: 800px) {
+  header div.logo {
+    margin: 8px auto 0;
+  }
+  header.minimum div.logo {
+    margin: 6px auto 0;
+    min-height: auto;
+  }
   nav {
     display: none;
     position: absolute;
@@ -474,9 +485,9 @@ form .form-line textarea {
  */
 
 .btn-trigger {
-  position: relative;
-  right: 16px;
-  top: 32px;
+  position: absolute;
+  left: 16px;
+  top: 28px;
   width: 32px;
   height: 26px;
   cursor: pointer;
@@ -510,10 +521,9 @@ form .form-line textarea {
   transform: translateY(12px) rotate(-45deg);
 }
 #mobile-menu-button.active span:nth-of-type(2) {
-  left: 200%;
   opacity: 0;
-  -webkit-transform: translateY(10px);
-  transform: translateY(10px);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
   -webkit-animation: active-btn06-bar02 0.8s forwards;
   animation: active-btn06-bar02 0.8s forwards;
 }

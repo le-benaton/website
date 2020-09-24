@@ -59,8 +59,10 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag('js', new Date());
-      gtag('config', 'UA-99005030-1');
+      if (!location.href.includes('localhost')) {
+        gtag('js', new Date());
+        gtag('config', 'UA-99005030-1');
+      }
     </script>
     <script src="index.js" defer></script>
     <script type="application/ld+json">
