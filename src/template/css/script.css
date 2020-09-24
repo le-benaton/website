@@ -63,7 +63,13 @@ section.modal-wine-list > .modal-wine-list-inner > button {
   border-radius: 50%;
   width: 16px;
   height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toast-area > .toast > span.close > span {
   font-weight: bold;
-  text-align: center;
-  line-height: 14px
+  position: relative;
+  top: -1px;
 }
