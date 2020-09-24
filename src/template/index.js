@@ -133,8 +133,8 @@ const getUserId = () => {
   return analyticsId;
 }
 
-const $recordAccess = (userId) => {
-  const ref = db.collection('access').doc(userId);
+const $recordAccess = async (userId) => {
+  const ref = db.collection('access').doc(userId)
   return ref.set({
     timestamp: new Date().getTime(),
   });
@@ -148,29 +148,15 @@ const $recordConversion = (userId) => {
 }
 
 const $refinementRecord = async () => {
-  const accessSnapshot = await db.collection('access').get();
-  const dayAccess = accessSnapshot.docs.filter((postDoc) => {
-    // 15分
-    if (new Date(new Date() - (1000 * 60 * 15)).getTime() < postDoc.data().timestamp) {
-      return true;
-    } else {
-      db.collection('access').doc(postDoc.id).delete();
-    }
-  });
+  const accessSnapshot = await db.collection('access')
+    .where("timestamp", ">", new Date(new Date() - (1000 * 60 * 15)).getTime()).get();
 
-  const conversionSnapshot = await db.collection('conversion').get();
-  const dayConversion = conversionSnapshot.docs.filter((postDoc) => {
-    // 24時間
-    if (new Date(new Date() - (1000 * 60 * 60 * 24)).getTime() < postDoc.data().timestamp) {
-      return true;
-    } else {
-      db.collection('conversion').doc(postDoc.id).delete();
-    }
-  });
+  const conversionSnapshot = await db.collection('conversion')
+    .where("timestamp", ">", new Date(new Date() - (1000 * 60 * 60 * 24)).getTime()).get();
 
   return {
-    dayAccess: dayAccess.length,
-    dayConversion: dayConversion.length,
+    dayAccess: accessSnapshot.docs.length,
+    dayConversion: conversionSnapshot.docs.length,
   }
 }
 
