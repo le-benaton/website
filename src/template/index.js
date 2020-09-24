@@ -261,12 +261,11 @@ document.addEventListener('scroll', (e) => {
       ticking = false;
       const scrollAmount = document.documentElement.scrollTop;
 
-      if (scrollAmount > 120) {
+      if (scrollAmount > 60) {
         nav.classList.add('minimum');
-      } else if (scrollAmount < 90) {
+      } else if (scrollAmount < 30) {
         nav.classList.remove('minimum');
       }
-      // 90-120は何も処理しない
     });
     ticking = true;
   }
