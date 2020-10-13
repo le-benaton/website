@@ -202,12 +202,14 @@ window.onload = async () => {
   mobileMenu();
   copyReserved();
   linkScroll();
+  setTimeout(() => {
+    $refinementRecord().then(data => reflectRecord(data));
+  }, 5000);
 
   // ABテスト確認用
-  const isOptimize = getParam('optimize');
-  if (isOptimize === '1') {
-    $refinementRecord().then(data => reflectRecord(data));
-  }
+  // const isOptimize = getParam('optimize');
+  // if (isOptimize === '1') {
+  // }
 };
 
 
