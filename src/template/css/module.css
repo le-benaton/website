@@ -493,6 +493,8 @@ form .form-line textarea {
   width: 32px;
   height: 26px;
   cursor: pointer;
+  border: none;
+  outline: none;
 }
 .btn-trigger span {
   position: absolute;
