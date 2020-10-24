@@ -93,7 +93,9 @@ nav ul li a {
   letter-spacing: 1px;
 }
 
+a.button,
 button {
+  display: inline-block;
   border-radius: 8px;
   padding: 6px 12px 4px;
   border: 1px solid var(--dark-color);
@@ -101,8 +103,10 @@ button {
   font-size: 1rem;
   background: transparent;
   margin: 0 !important;
+  text-decoration: none;
 }
 
+a.button:hover,
 button:hover {
   background-color: rgba(0, 0, 0, 0.05);
   outline: 0;

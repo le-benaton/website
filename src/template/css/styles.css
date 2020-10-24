@@ -120,15 +120,13 @@ h1.title {
   position: absolute;
   bottom: 0;
   right: 8px;
-}
 
-.hero-image > a > button {
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 8px 8px 0 0 / 8px 8px 0 0;
   color: #fff;
 }
 
-.hero-image > a > button:hover {
+.hero-image > a:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
