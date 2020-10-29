@@ -10,7 +10,7 @@ export const news: IItem = {
     },
     {
       title: 'GoToEatひょうごキャンペーン お食事券',
-      body: '10月29日よりスタートするGoToEatひょうごキャンペーンの対象店舗になりました。詳しい内容は、https://gotoeat-hyogo.com/index.html をご確認ください。',
+      body: '10月29日よりスタートするGoToEatひょうごキャンペーンの対象店舗になりました。<br>詳しい内容は、https://gotoeat-hyogo.com/index.html をご確認ください。',
     },
     {
       title: '10月のおやすみ',
