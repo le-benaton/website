@@ -27,7 +27,10 @@ const build = () => {
       for (const line of item.data) {
         let template = item.template;
         for (const [key, value] of Object.entries(line)) {
-          template = template.replace(new RegExp(`{{ ${key} }}`, 'g'), value as string);
+          // URLリンクの置き換え
+          const re_url = /((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi;
+          const replaceText = (value as string).replace(re_url, '<a href="$1" target="_blank">$1</a>');
+          template = template.replace(new RegExp(`{{ ${key} }}`, 'g'), replaceText as string);
         }
         insertData.push(template);
       }
