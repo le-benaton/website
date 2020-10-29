@@ -9,8 +9,8 @@ export const news: IItem = {
       body: 'コロナ感染症予防対策として、間隔に余裕のある席へのご案内、接客スタッフのマスク着用などの対応をしてお客様をお迎えいたします。',
     },
     {
-      title: 'GoToEatひょうごキャンペーン お食事券',
-      body: '10月29日よりスタートするGoToEatひょうごキャンペーンの対象店舗になりました。<br>詳しい内容は、https://gotoeat-hyogo.com/index.html をご確認ください。',
+      title: 'Go To Eat ひょうごキャンペーン お食事券',
+      body: '10月29日よりスタートする「Go To Eat ひょうごキャンペーン」の対象店舗になりました。<br>詳しい内容は、https://gotoeat-hyogo.com/index.html をご確認ください。',
     },
     {
       title: '10月のおやすみ',
