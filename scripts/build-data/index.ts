@@ -5,6 +5,7 @@ import { news } from '../../src/data/news';
 import { redWine } from '../../src/data/red-wine';
 import { whiteWine } from '../../src/data/white-wine';
 import { champagneWine } from '../../src/data/champagne-wine';
+import { createWineSearchIndex } from '../../src/libs/wine-search';
 
 export interface IItem {
   selector: string;
@@ -42,3 +43,4 @@ const build = () => {
 };
 
 build();
+createWineSearchIndex();

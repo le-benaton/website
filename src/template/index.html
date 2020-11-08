@@ -64,6 +64,7 @@
       }
     </script>
     <script src="index.js" defer></script>
+    <script src="wine-search.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -920,6 +921,26 @@
         </div>
         <footer class="text-center padding">COPYRIGHT le benaton.</footer>
       </section>
+      <section id="menu-stuff">
+        <div class="wrap">
+          <div class="leading-container">
+            <h4>ワイン検索</h4>
+            <p>
+              思い付いて作ってしまった。
+            </p>
+          </div>
+          <form id="wineSearchForm">
+            <input type="search" id="wineSearchField" />
+            <select id="wineSearchType">
+              <option value="red">赤ワイン</option>
+              <option value="white">白ワイン</option>
+              <option value="champagne">シャンパーニュ・スパーリング</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+        <div id="wineSearchResult"></div>
+        </div>
+      </section>
     </main>
 
     <section class="modal-wine-list">
@@ -939,5 +960,6 @@
         過去24時間でご予約が<span class="record"></span>件ありました
       </a>
     </section>
+    <script src="https://cdn.jsdelivr.net/gh/nextapps-de/flexsearch@master/dist/flexsearch.min.js"></script>
   </body>
 </html>
