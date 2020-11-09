@@ -658,6 +658,13 @@
               <div class="text-center">
                 <button class="button-wine-list" onclick="openModal('#white-wine')">ワインリスト</button>
               </div>
+              <div class="modal-show">
+                <form class="wine-search-form">
+                  <label><input type="search" placeholder="ワイン名 / 産地" /></label>
+                  <input name="search-type" type="hidden" value="white" />
+                  <button type="submit">検索</button>
+                </form>
+              </div>
               <ul class="modal-show wine-list-white"></ul>
             </section>
 
@@ -679,6 +686,13 @@
               </h3>
               <div class="text-center">
                 <button class="button-wine-list" onclick="openModal('#champagne-wine')">ワインリスト</button>
+              </div>
+              <div class="modal-show">
+                <form class="wine-search-form">
+                  <label><input type="search" placeholder="ワイン名 / 産地" /></label>
+                  <input name="search-type" type="hidden" value="champagne" />
+                  <button type="submit">検索</button>
+                </form>
               </div>
               <ul class="modal-show wine-list-champagne"></ul>
             </section>
