@@ -117,7 +117,7 @@ form.wine-search-form input {
   margin-right: 8px;
 }
 
-form.wine-search-form button[type=submit] {
+form.wine-search-form button[type='submit'] {
   border-radius: 2px;
   display: block;
   padding: 2px 12px 2px;

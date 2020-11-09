@@ -5,9 +5,10 @@
   "scripts": {
     "build": "ts-node -P tsconfig.json scripts/build-data",
     "watch": "watch \"npm run build\" ./src",
-    "format": "npm run format:typescript && npm run format:html && npm run format:css",
+    "format": "npm run format:typescript && npm run format:html && npm run format:css && npm run format:js",
     "format:html": "prettier --parser html --write \"src/**/*.html\"",
     "format:css": "prettier --parser css --write \"src/**/*.css\"",
+    "format:js": "prettier --parser babel --write \"src/**/*.js\"",
     "format:typescript": "prettier --parser typescript --write \"scripts/**/*.ts\""
   },
   "repository": {
