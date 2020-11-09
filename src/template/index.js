@@ -55,6 +55,14 @@ const openModal = (selector) => {
   const modalInner = document.querySelector('section.modal-wine-list > div.modal-wine-list-inner');
   modalInner.innerHTML = innerHtml;
   modal.style.display = 'block';
+
+  modalInner.querySelector("form.wine-search-form").addEventListener('submit', (event) => {
+    event.preventDefault();
+    searchWine(
+      event.target.querySelector('[type=search]').value,
+      event.target.querySelector('[type=hidden]').value,
+    );
+  })
 }
 
 /**

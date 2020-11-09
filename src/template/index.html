@@ -640,6 +640,13 @@
               <div class="text-center">
                 <button class="button-wine-list" onclick="openModal('#red-wine')">ワインリスト</button>
               </div>
+              <div class="modal-show">
+              <form class="wine-search-form">
+                  <label><input type="search" placeholder="ワイン名 / 産地" /></label>
+                  <input name="search-type" type="hidden" value="red" />
+                  <button type="submit">検索</button>
+              </form>
+              </div>
               <ul class="modal-show wine-list-red"></ul>
             </section>
 
@@ -920,26 +927,6 @@
           </div>
         </div>
         <footer class="text-center padding">COPYRIGHT le benaton.</footer>
-      </section>
-      <section id="menu-stuff">
-        <div class="wrap">
-          <div class="leading-container">
-            <h4>ワイン検索</h4>
-            <p>
-              思い付いて作ってしまった。
-            </p>
-          </div>
-          <form id="wineSearchForm">
-            <input type="search" id="wineSearchField" />
-            <select id="wineSearchType">
-              <option value="red">赤ワイン</option>
-              <option value="white">白ワイン</option>
-              <option value="champagne">シャンパーニュ・スパーリング</option>
-            </select>
-            <button type="submit">Search</button>
-        </form>
-        <div id="wineSearchResult"></div>
-        </div>
       </section>
     </main>
 

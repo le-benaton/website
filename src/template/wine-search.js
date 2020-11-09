@@ -2,7 +2,7 @@
 
 /**
  * @see https://www.broadleaves.dev/posts/2019-08-03-gridsome-flexsearch/#%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%82%92%E3%82%A4%E3%83%B3%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AB%E5%90%AB%E3%82%81%E3%82%8B
- * @param str 
+ * @param str
  */
 const tokenizer = str => {
   if (!str) return []
@@ -34,28 +34,28 @@ const tokenizer = str => {
 
 /**
  * 取得するファイルのパス
- * @param {*} indexType 
+ * @param {*} indexType
  */
 function getIndexFilePath(indexType) {
     switch(indexType.toLowerCase()) {
         case 'white':
         case 'whitewine':
-            return '/whiteWine.json';
+            return './whiteWine.json';
         case 'red':
         case 'redwine':
-            return '/redWine.json';
+            return './redWine.json';
         case 'champagne':
         case 'champagneWine':
-            return '/champagneWine.json'
+            return './champagneWine.json'
         default:
-            return '/allWine.json'
+            return './allWine.json'
     }
 }
 
 /**
  * 検索実行
- * @param {string} searchWord 
- * @param {string} indexType 
+ * @param {string} searchWord
+ * @param {string} indexType
  */
 function searchWine(searchWord, indexType = 'all') {
     const SearchIndexOption = {
@@ -70,8 +70,8 @@ function searchWine(searchWord, indexType = 'all') {
           ]
       }
     }
-    const resultHTML = document.getElementById('wineSearchResult')
     const index = window.FlexSearch.create(SearchIndexOption)
+  const renderWineList = document.querySelectorAll(`ul.wine-list-${indexType} > li`);
     fetch(getIndexFilePath(indexType))
       .then(data => data.json())
       .then(data => {
@@ -80,24 +80,16 @@ function searchWine(searchWord, indexType = 'all') {
         const items = index.search(searchWord)
         return items
       }).then(data => {
-          /**
-           * @TODO ここに検索結果描画処理
-           */
-        resultHTML.innerHTML = '<pre><code>' + JSON.stringify(data, null, 2) + '</code></pre>'
+      renderWineList.forEach(element => {
+            const wineTitle = element.querySelector('h4').innerText;
+            const isDisplay = data.find(wine => {
+              return wine.title === wineTitle;
+            })
+            element.style.display = isDisplay || data.length === 0 ? 'list-item' : 'none';
+          })
       }).catch(e => {
-        /**
-         * @TODO ここにエラー描画処理
-         */
-        resultHTML.innerHTML = "Error:" + e.name + '\n' + e.message;
+      renderWineList.forEach(element => {
+        element.style.display = 'list-item';
       })
-}
-
-
-document.getElementById("wineSearchForm")
-    .addEventListener('submit', (event) => {
-        event.preventDefault()
-        const searchWord = document.getElementById('wineSearchField').value
-        const searchType = document.getElementById('wineSearchType')
-        if (!searchWord) return;
-        searchWine(searchWord, searchType.value)
     })
+}

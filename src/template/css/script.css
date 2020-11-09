@@ -17,7 +17,7 @@ section.modal-wine-list > div.modal-wine-list-inner .modal-show {
   display: block !important;
 }
 
-section.modal-wine-list > div.modal-wine-list-inner button {
+section.modal-wine-list > div.modal-wine-list-inner button.button-wine-list {
   display: none !important;
 }
 
