@@ -6,15 +6,16 @@ import { redWine } from '../../src/data/red-wine';
 import { whiteWine } from '../../src/data/white-wine';
 import { champagneWine } from '../../src/data/champagne-wine';
 import { createWineSearchIndex } from '../../src/libs/wine-search';
+import { announcement } from '../../src/data/announcement';
 
 export interface IItem {
   selector: string;
   template: string;
-  data: Array<{ title?: string; ja?: string; price?: string; body?: string }>;
+  data: Array<{ title?: string; ja?: string; price?: string; body?: string; image?: string }>;
 }
 
 const targets = ['index.html'];
-const items: IItem[] = [news, redWine, whiteWine, champagneWine];
+const items: IItem[] = [news, redWine, whiteWine, champagneWine, announcement];
 
 const build = () => {
   execSync(`rm -r -f ${process.cwd() + '/www'}`);

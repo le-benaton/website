@@ -391,6 +391,29 @@ ul.link-list li:last-child {
  * </parenthesis>
  */
 
+.announcement-container {
+}
+
+.announcement {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--medium-color);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.announcement div.announcement-image {
+  width: 160px;
+  padding: 16px;
+  background-size: cover;
+  flex-shrink: 0;
+  border-radius: 8px 0 0 8px;
+}
+
+.announcement div.announcement-explain {
+  padding: 16px 16px 12px;
+}
+
 /**
  * <leading-container>
  */
