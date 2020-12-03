@@ -6,10 +6,25 @@
 ## 更新用リンク
 |  項目  |  ファイル  |
 | ---- | ---- |
+|  お知らせ（画像あり）  |  https://github.com/le-benaton/website/edit/master/src/data/announcement.ts  |
 |  お知らせ  |  https://github.com/le-benaton/website/edit/master/src/data/news.ts  |
 |  白ワイン  |  https://github.com/le-benaton/website/edit/master/src/data/white-wine.ts  |
 |  赤ワイン  |  https://github.com/le-benaton/website/edit/master/src/data/red-wine.ts  |
 |  シャンパン  |  https://github.com/le-benaton/website/edit/master/src/data/champagne-wine.ts  |
+
+### お知らせ（画像あり）に利用する画像をアップロードする方法
+1. 画像を用意します。事前に、縦横300px程度にリサイズしてください。
+2. 画像ファイル名に日本語が使われている場合、英数字のファイル名に変更します
+3. https://github.com/le-benaton/website/tree/master/src/template/images/announcement にアクセスして、右上の `Add file` > `Upload files` からファイルをアップロードしてコミットします。
+3. URLは、 `images/announcement/` + ファイル名となります。例えば `104380ga10000003.jpg` というファイルをアップロードした場合、 `images/announcement/104380ga10000003.jpg` を以下のように `image` に指定ください。
+
+```ts
+{
+  image: 'images/announcement/104380ga10000003.jpg',
+  title: 'クリスマス限定特別セットの予約受付をはじめました',
+  body: 'クリスマスという特別な日に、ご家庭の食卓を華やかに彩る2～3人前のオードブルを予約限定で提供します。ブルゴーニュの定番料理「ジャンボン・ペルシエ」やミニサイズの鳥の丸焼きみたいな感じでライティングするんですがよく考えたらメニューわからないのでこんな感じです。電話にてご予約ください。',
+},
+```
 
 ### 更新に失敗した
 ビルドに必要な情報を間違って削除してしまったり、フォーマットを変更してしまった時、Webサイトには反映されずに更新できなかったという通知が更新を行ったユーザのメールアドレスにいきます。更新後に反映されなかった場合は、メールをご確認ください。
