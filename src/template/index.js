@@ -56,8 +56,8 @@ const openModal = (selector) => {
   modalInner.innerHTML = innerHtml;
   modal.style.display = 'block';
 
-  const wineList = modalInner.querySelectorAll('ul > li')
-  wineList.forEach(w => w.style.display = 'list-item');
+  const wineList = modalInner.querySelectorAll('ul > li');
+  wineList.forEach((w) => (w.style.display = 'list-item'));
 
   modalInner.querySelector('form.wine-search-form').addEventListener('submit', (event) => {
     event.preventDefault();
