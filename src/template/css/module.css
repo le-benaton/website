@@ -396,7 +396,7 @@ ul.link-list li:last-child {
 
 .announcement {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   border: 1px solid var(--medium-color);
   border-radius: 8px;
   margin-bottom: 16px;
@@ -407,7 +407,6 @@ ul.link-list li:last-child {
   padding: 16px;
   background-size: cover;
   background-position: center center;
-  justify-content: flex-start;
   flex-shrink: 0;
   border-radius: 8px 0 0 8px;
 }
