@@ -174,14 +174,14 @@ const $refinementRecord = async () => {
 };
 
 const reflectRecord = (record) => {
-  if (record.dayAccess > 0) {
+  if (record.dayAccess > 1) {
     document.querySelector('#recordAccess span.record').innerHTML = record.dayAccess;
   } else {
     const el = document.querySelector('#recordAccess');
     el.parentNode.removeChild(el);
   }
 
-  if (record.dayConversion > 0) {
+  if (record.dayConversion > 1) {
     document.querySelector('#conversionAccess span.record').innerHTML = record.dayConversion;
   } else {
     const el = document.querySelector('#conversionAccess');
