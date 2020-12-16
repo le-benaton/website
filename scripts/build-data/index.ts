@@ -6,6 +6,7 @@ import { redWine } from '../../src/data/red-wine';
 import { whiteWine } from '../../src/data/white-wine';
 import { champagneWine } from '../../src/data/champagne-wine';
 import { createWineSearchIndex } from '../../src/libs/wine-search';
+import { build as apiBuild } from '../build-api';
 import { announcement } from '../../src/data/announcement';
 
 export interface IItem {
@@ -45,3 +46,4 @@ const build = () => {
 
 build();
 createWineSearchIndex();
+apiBuild();
