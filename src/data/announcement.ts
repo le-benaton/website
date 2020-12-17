@@ -3,7 +3,7 @@ import { IItem } from '../../scripts/build-data';
 export const announcement: IItem = {
   selector: '<div class="announcement-container"></div>',
   template: `<section class="announcement">
-                <div class="announcement-image" style="background-image: url('{{ image }}')"></div>
+                <div class="announcement-image"><img src="{{ image }}" alt=""></div>
                 <div class="announcement-explain"><h5>{{ title }}</h5><p>{{ body }}</p></div>
              </section>`,
   data: [
