@@ -17,6 +17,12 @@ html {
   font-size: 88%;
 }
 
+.center {
+  text-align: center;
+  padding-top: 16px;
+  display: block;
+}
+
 body {
   color: #3e2723;
   --dark-color: #3e2723;
