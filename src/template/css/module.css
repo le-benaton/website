@@ -281,10 +281,6 @@ nav ul li a {
   text-decoration: none;
 }
 
-nav ul li a:focus {
-  outline: 0;
-}
-
 nav ul li a::after {
   position: absolute;
   bottom: 0;
@@ -326,7 +322,6 @@ ul.link-list > li a {
   display: block;
   min-width: 100%;
   min-height: 100%;
-  outline: 0;
 }
 
 ul.link-list > li img {
@@ -539,7 +534,6 @@ form .form-line textarea {
   padding: 8px 8px 6px;
   box-shadow: none !important;
   border: 1px solid var(--medium-color);
-  outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -570,7 +564,6 @@ form .form-line textarea {
   height: 26px;
   cursor: pointer;
   border: none;
-  outline: none;
 }
 .btn-trigger span {
   position: absolute;
