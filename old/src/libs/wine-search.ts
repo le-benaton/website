@@ -1,14 +1,14 @@
 import Flexsearch, { TokenizerFn, Index } from 'flexsearch'
 import { writeFileSync } from 'fs';
-import { whiteWine } from '../data/white-wine'
-import { redWine } from '../data/red-wine'
-import { champagneWine } from '../data/champagne-wine'
+import { whiteWine } from '../../../src/data/white-wine'
+import { redWine } from '../../../src/data/red-wine'
+import { champagneWine } from '../../../src/data/champagne-wine'
 import { IItem } from '../../scripts/build-data'
 
 export type WineTypeName = '赤ワイン' | '白ワイン' | 'シャンパーニュ'
 /**
  * @see https://www.broadleaves.dev/posts/2019-08-03-gridsome-flexsearch/#%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%82%92%E3%82%A4%E3%83%B3%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AB%E5%90%AB%E3%82%81%E3%82%8B
- * @param str 
+ * @param str
  */
 const tokenizer: TokenizerFn = str => {
     if (!str) return []
@@ -63,7 +63,7 @@ const createWineIndexs = () => {
         })
         return index
     }
-    
+
     const conditions: Array<{
         name: WineTypeName,
         datasets: IItem;
@@ -84,7 +84,7 @@ const createWineIndexs = () => {
     ] = conditions.map(condition => {
         return createIndex(condition.datasets)
     });
-    
+
     const allWineIndex = Flexsearch.create({
         tokenize: tokenizer,
         depth: 3,
@@ -127,7 +127,7 @@ export const createWineSearchIndex = () => {
         champagneWineIndex,
         allWineIndex,
     } = createWineIndexs();
-    
+
     [{
         name: '白ワイン',
         fileName: 'whiteWine',

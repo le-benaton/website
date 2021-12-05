@@ -1,4 +1,4 @@
-import { Component, Host, h, getAssetPath } from '@stencil/core';
+import { Component, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'app-header',
@@ -48,5 +48,4 @@ export class AppHeader {
       </Host>
     );
   }
-
 }

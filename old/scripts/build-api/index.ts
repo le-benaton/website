@@ -1,11 +1,11 @@
 import { mkdirSync, readFileSync, writeFileSync, rmdirSync } from 'fs';
 import { execSync } from 'child_process';
 
-import { news } from '../../src/data/news';
-import { redWine } from '../../src/data/red-wine';
-import { whiteWine } from '../../src/data/white-wine';
-import { champagneWine } from '../../src/data/champagne-wine';
-import { announcement } from '../../src/data/announcement';
+import { news } from '../../../src/data/news';
+import { redWine } from '../../../src/data/red-wine';
+import { whiteWine } from '../../../src/data/white-wine';
+import { champagneWine } from '../../../src/data/champagne-wine';
+import { announcement } from '../../../src/data/announcement';
 
 export interface IItem {
   selector: string;
