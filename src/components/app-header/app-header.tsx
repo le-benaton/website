@@ -57,7 +57,7 @@ export class AppHeader {
      */
     const element = document.querySelector(ev.srcElement.hash);
     const { top } = element.getBoundingClientRect();
-    const target = top + window.scrollY;
+    const target = top + window.scrollY - 34;
     let position = 0;
     let progress = 0;
     const easeOut = (p) => {

@@ -10,7 +10,6 @@ export class AppHome {
   render() {
     return (
     <Host>
-      <app-header></app-header>
       <main>
         <section class="main-visual">
           <h1 class="title">西宮・夙川のフレンチレストラン「ル ベナトン」</h1>
