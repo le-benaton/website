@@ -8,7 +8,9 @@
   Any global CSS variables should also be applied here.
 */
 
-@import 'style/normalize';
+@import '../shared/reset';
+@import "../shared/initialize";
 @import 'style/styles';
 @import 'style/module';
 @import 'style/script';
+@import '../shared/responsive';

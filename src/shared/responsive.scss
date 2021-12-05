@@ -1,0 +1,15 @@
+@media screen and (min-width: 800px) {
+  .mobile-only {
+    display: none !important;
+  }
+  .container-half {
+    width: calc(50% - 16px);
+    flex-shrink: 0;
+  }
+  .container-extend {
+    flex-grow: 10;
+  }
+  .laptop-padding-left {
+    padding-left: 32px !important;
+  }
+}

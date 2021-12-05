@@ -5,7 +5,6 @@ import House from '../../assets/svg/house.svg';
 import {announcement} from '../../data/announcement';
 import {news} from '../../data/news';
 
-
 @Component({
   tag: 'app-guideline',
   styleUrl: 'app-guideline.scss',

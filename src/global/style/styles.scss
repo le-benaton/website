@@ -5,24 +5,7 @@
  * https://github.com/ionic-team/ionicons
 */
 
-/**
- * モバイル対応
- */
-@media screen and (min-width: 800px) {
-  .mobile-only {
-    display: none !important;
-  }
-  .container-half {
-    width: calc(50% - 16px);
-    flex-shrink: 0;
-  }
-  .container-extend {
-    flex-grow: 10;
-  }
-  .laptop-padding-left {
-    padding-left: 32px !important;
-  }
-}
+
 
 @media screen and (max-width: 800px) {
   .laptop-only {
