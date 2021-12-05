@@ -5,16 +5,12 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { MatchResults } from "@stencil/router";
 export namespace Components {
     interface AppGuideline {
     }
     interface AppHeader {
     }
     interface AppHome {
-    }
-    interface AppProfile {
-        "match": MatchResults;
     }
     interface AppRoot {
     }
@@ -38,12 +34,6 @@ declare global {
         prototype: HTMLAppHomeElement;
         new (): HTMLAppHomeElement;
     };
-    interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {
-    }
-    var HTMLAppProfileElement: {
-        prototype: HTMLAppProfileElement;
-        new (): HTMLAppProfileElement;
-    };
     interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
     }
     var HTMLAppRootElement: {
@@ -54,7 +44,6 @@ declare global {
         "app-guideline": HTMLAppGuidelineElement;
         "app-header": HTMLAppHeaderElement;
         "app-home": HTMLAppHomeElement;
-        "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
     }
 }
@@ -65,16 +54,12 @@ declare namespace LocalJSX {
     }
     interface AppHome {
     }
-    interface AppProfile {
-        "match"?: MatchResults;
-    }
     interface AppRoot {
     }
     interface IntrinsicElements {
         "app-guideline": AppGuideline;
         "app-header": AppHeader;
         "app-home": AppHome;
-        "app-profile": AppProfile;
         "app-root": AppRoot;
     }
 }
@@ -85,7 +70,6 @@ declare module "@stencil/core" {
             "app-guideline": LocalJSX.AppGuideline & JSXBase.HTMLAttributes<HTMLAppGuidelineElement>;
             "app-header": LocalJSX.AppHeader & JSXBase.HTMLAttributes<HTMLAppHeaderElement>;
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
-            "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
         }
     }
