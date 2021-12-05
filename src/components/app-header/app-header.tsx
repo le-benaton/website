@@ -2,7 +2,7 @@ import { Component, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'app-header',
-  styleUrl: 'app-header.css',
+  styleUrl: 'app-header.scss',
   shadow: false,
 })
 export class AppHeader {

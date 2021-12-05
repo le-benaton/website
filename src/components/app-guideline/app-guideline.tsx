@@ -8,7 +8,7 @@ import {news} from '../../data/news';
 
 @Component({
   tag: 'app-guideline',
-  styleUrl: 'app-guideline.css',
+  styleUrl: 'app-guideline.scss',
   shadow: false,
 })
 export class AppGuideline {
