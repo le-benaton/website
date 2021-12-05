@@ -12,7 +12,7 @@ export class AppHeader {
     this.mobileMenu();
     this.resizeHeader();
 
-    window.addEventListener(
+    document.addEventListener(
       'resize',
       () => {
         const nav = document.querySelector('nav');
