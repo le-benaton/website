@@ -16,3 +16,83 @@ nav ul li a {
   font-feature-settings: 'palt';
   letter-spacing: 1px;
 }
+
+a {
+  color: var(--medium-color);
+}
+
+a:hover {
+  color: var(--dark-color);
+}
+
+.center {
+  text-align: center;
+  padding-top: 16px;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+img.radius {
+  border-radius: 100%;
+  display: block;
+  margin: auto;
+  width: 60%;
+}
+
+.padding {
+  padding: 16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+hr {
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+ul.no-list-style {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a.button,
+button {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 6px 12px 4px;
+  border: 1px solid var(--dark-color);
+  color: var(--dark-color);
+  font-size: 1rem;
+  background: transparent;
+  margin: 0 !important;
+  text-decoration: none;
+}
+
+a.button:hover,
+button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  outline: 0;
+}
+
+svg {
+  position: relative;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+}

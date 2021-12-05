@@ -13,3 +13,9 @@
     padding-left: 32px !important;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .laptop-only {
+    display: none !important;
+  }
+}

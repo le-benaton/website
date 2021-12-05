@@ -1,29 +1,3 @@
-.view_timer {
-  display: none;
-}
-
-.modal-show {
-  display: none;
-}
-
-section.modal-wine-list > div.modal-wine-list-inner {
-  width: calc(100% - 32px);
-  padding: 16px;
-  max-height: calc(100% - 100px);
-  overflow: scroll;
-}
-
-section.modal-wine-list > div.modal-wine-list-inner .modal-show {
-  display: block !important;
-}
-
-section.modal-wine-list > div.modal-wine-list-inner button.button-wine-list {
-  display: none !important;
-}
-
-section.modal-wine-list > .modal-wine-list-inner > button {
-}
-
 .toast-area {
   position: fixed;
   bottom: 8px;

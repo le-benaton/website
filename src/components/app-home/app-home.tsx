@@ -4,7 +4,7 @@ import Time from '../../assets/svg/time.svg';
 @Component({
   tag: 'app-home',
   styleUrl: 'app-home.scss',
-  shadow: false,
+  shadow: true,
 })
 export class AppHome {
   render() {
@@ -243,17 +243,6 @@ export class AppHome {
                   <img src="assets/images/red.jpg" class="radius" decoding="async" width="500" height="500" alt="赤ワイン"/>
                 </p>
                 <h3 class="wine-title">赤ワインリスト<br/>VIN ROUGE de Bourgogne<br/>ブルゴーニュ ( 赤 )</h3>
-                <div class="text-center">
-                  <button class="button-wine-list">ワインリスト</button>
-                </div>
-                <div class="modal-show">
-                  <form class="wine-search-form">
-                    <label><input type="search" placeholder="ワイン名 / 産地"/></label>
-                    <input name="search-type" type="hidden" value="red"/>
-                    <button type="submit">検索</button>
-                  </form>
-                </div>
-                <ul class="modal-show wine-list-red"></ul>
               </section>
 
               <section id="white-wine" class="equidistant-container-inner">
@@ -261,17 +250,6 @@ export class AppHome {
                   <img src="assets/images/white.jpg" class="radius" decoding="async" width="500" height="500" alt="白ワイン"/>
                 </p>
                 <h3 class="wine-title">白ワインリスト<br/>VIN BLANC de Bourgogne<br/>ブルゴーニュ( 白 )</h3>
-                <div class="text-center">
-                  <button class="button-wine-list">ワインリスト</button>
-                </div>
-                <div class="modal-show">
-                  <form class="wine-search-form">
-                    <label><input type="search" placeholder="ワイン名 / 産地"/></label>
-                    <input name="search-type" type="hidden" value="white"/>
-                    <button type="submit">検索</button>
-                  </form>
-                </div>
-                <ul class="modal-show wine-list-white"></ul>
               </section>
 
               <section id="champagne-wine" class="equidistant-container-inner">
@@ -290,17 +268,6 @@ export class AppHome {
                   CHAMPAGNE(シャンパーニュ)<br/>
                   VIN MOUSSEUX(ブルゴーニュ産スパークリングワイン)
                 </h3>
-                <div class="text-center">
-                  <button class="button-wine-list">ワインリスト</button>
-                </div>
-                <div class="modal-show">
-                  <form class="wine-search-form">
-                    <label><input type="search" placeholder="ワイン名 / 産地"/></label>
-                    <input name="search-type" type="hidden" value="champagne"/>
-                    <button type="submit">検索</button>
-                  </form>
-                </div>
-                <ul class="modal-show wine-list-champagne"></ul>
               </section>
             </div>
             <hr/>
