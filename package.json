@@ -11,13 +11,15 @@
     "generate": "stencil generate",
     "fmt": "npm run fmt:typescript && npm run fmt:css",
     "fmt:css": "prettier --parser scss --write \"src/**/*.scss\"",
-    "fmt:typescript": "prettier --parser typescript --write \"src/**/*.ts\""
+    "fmt:typescript": "prettier --parser typescript --write \"src/**/*.ts\"",
+    "deploy": "npm run build -- --prerender && firebase deploy -f"
   },
   "devDependencies": {
     "@stencil/core": "^2.7.0",
     "@stencil/router": "^1.0.1",
     "@stencil/sass": "^1.5.2",
     "@types/jest": "^26.0.24",
+    "firebase-tools": "^9.23.0",
     "jest": "^26.6.3",
     "jest-cli": "^26.6.3",
     "prettier": "^2.5.1",
