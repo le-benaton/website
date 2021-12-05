@@ -9,7 +9,6 @@ export class AppRoot {
   render() {
     return (
       <div>
-        <app-header></app-header>
         <main>
           <stencil-router>
             <stencil-route-switch scrollTopOffset={0}>

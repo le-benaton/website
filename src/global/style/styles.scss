@@ -14,3 +14,10 @@ body {
   --success-color: #28ba62;
   --success-color-contrast: #ffffff;
 }
+
+app-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}

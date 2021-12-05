@@ -9,11 +9,11 @@ export class AppHeader {
   @Element() el: HTMLElement;
 
   @Listen('resize', {target: 'window'})
-  resizeWindow(ev) {
+  resizeWindow() {
     const nav = this.el.shadowRoot.querySelector('nav');
     const link = this.el.shadowRoot.querySelector('#mobile-menu-button');
     link.classList.remove('active');
-    if (ev.target.body.clientWidth > 800) {
+    if (window.innerWidth > 800) {
       nav.style.display = 'block';
     } else {
       nav.style.display = 'none';
@@ -21,13 +21,13 @@ export class AppHeader {
   }
 
   @Listen('scroll', {target: 'window'})
-  resizeHeader(ev) {
+  resizeHeader() {
     const nav = this.el.shadowRoot.querySelector('header');
     let ticking = false;
     if (!ticking) {
       requestAnimationFrame(function () {
         ticking = false;
-        const scrollAmount = ev.target.documentElement.scrollTop;
+        const scrollAmount = window.scrollY;
 
         if (scrollAmount > 60) {
           nav.classList.add('minimum');
@@ -90,7 +90,7 @@ export class AppHeader {
       <Host>
         <header>
           <div class="logo">
-            <a href="index.html"><img src="assets/images/logo.png" alt="西宮・夙川のフレンチレストラン「ル・ベナトン」"/></a>
+            <a href="/"><img src="assets/images/logo.png" alt="西宮・夙川のフレンチレストラン「ル・ベナトン」"/></a>
           </div>
           <nav>
             <ul>
