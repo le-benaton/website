@@ -4,7 +4,7 @@ import Time from '../../assets/svg/time.svg';
 @Component({
   tag: 'app-home',
   styleUrl: 'app-home.scss',
-  shadow: true,
+  shadow: false,
 })
 export class AppHome {
   render() {
