@@ -6,6 +6,113 @@ import { Component, Host, h } from '@stencil/core';
   shadow: false,
 })
 export class AppHeader {
+
+  componentDidRender() {
+    this.linkScroll();
+    this.mobileMenu();
+    this.resizeHeader();
+
+    window.addEventListener(
+      'resize',
+      () => {
+        const nav = document.querySelector('nav');
+        const link = document.querySelector('#mobile-menu-button');
+        link.classList.remove('active');
+        if (document.body.clientWidth > 800) {
+          nav.style.display = 'block';
+        } else {
+          nav.style.display = 'none';
+        }
+      },
+      { passive: true },
+    );
+
+  }
+
+  private resizeHeader() {
+    document.addEventListener(
+      'scroll',
+      () => {
+        const nav = document.querySelector('header');
+        let ticking = false;
+        if (!ticking) {
+          requestAnimationFrame(function () {
+            ticking = false;
+            const scrollAmount = document.documentElement.scrollTop;
+
+            if (scrollAmount > 60) {
+              nav.classList.add('minimum');
+            } else if (scrollAmount < 30) {
+              nav.classList.remove('minimum');
+            }
+          });
+          ticking = true;
+        }
+      },
+      { passive: true },
+    );
+  }
+
+  private mobileMenu() {
+    const link = document.querySelector('#mobile-menu-button');
+    link.addEventListener(
+      'click',
+      () => {
+        this.toggleNav(link);
+      },
+      { passive: true },
+    );
+  };
+
+  private toggleNav(link) {
+    const nav = document.querySelector('nav');
+    if (link.classList.contains('active')) {
+      link.classList.remove('active');
+      nav.style.display = 'none';
+    } else {
+      link.classList.add('active');
+      nav.style.display = 'block';
+    }
+  };
+
+  private linkScroll(): void{
+    const links = document.querySelectorAll('nav a[href]');
+    // @ts-ignore
+    for (const link of links) {
+      if (!link.hash) {
+        continue;
+      }
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // Mobileメニューが開いてる時は閉じる
+        const mobileMenu = document.querySelector('#mobile-menu-button');
+        if (mobileMenu.classList.contains('active')) {
+          this.toggleNav(mobileMenu);
+        }
+
+        // スクロール量を計算
+        const element = document.querySelector(link.hash);
+        const { top } = element.getBoundingClientRect();
+        const target = top + window.pageYOffset - 60;
+        let position = 0;
+        let progress = 0;
+        const easeOut = (p) => {
+          return p * (2 - p);
+        };
+        const move = () => {
+          progress++;
+          position = target * easeOut(progress / 20);
+          window.scrollTo(0, position);
+          if (position < target) {
+            requestAnimationFrame(move);
+          }
+        };
+        requestAnimationFrame(move);
+      });
+    }
+  };
+
   render() {
     return (
       <Host>
