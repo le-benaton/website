@@ -1,20 +1,25 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "declaration": false,
-    "esModuleInterop": true,
+    "experimentalDecorators": true,
     "lib": [
-      "es2017"
+      "dom",
+      "es2015"
     ],
     "moduleResolution": "node",
-    "module": "commonjs",
-    "outDir": "build",
-    "pretty": true,
-    "resolveJsonModule": true,
-    "strict": true,
-    "target": "es2017"
+    "module": "esnext",
+    "target": "es2017",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "jsx": "react",
+    "jsxFactory": "h"
   },
   "include": [
-    "**/*.ts"
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

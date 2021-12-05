@@ -1,32 +1,26 @@
 {
-  "name": "le-benaton",
-  "version": "1.0.0",
-  "description": "西宮・夙川のフレンチレストラン「ル・ベナトン」Webサイト",
+  "name": "stencil",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Stencil App Starter",
   "scripts": {
-    "build": "ts-node -P tsconfig.json scripts/build-data",
-    "watch": "watch \"npm run build\" ./src",
-    "format": "npm run format:typescript && npm run format:html && npm run format:css && npm run format:js",
-    "format:html": "prettier --parser html --write \"src/**/*.html\"",
-    "format:css": "prettier --parser css --write \"src/**/*.css\"",
-    "format:js": "prettier --parser babel --write \"src/**/*.js\"",
-    "format:typescript": "prettier --parser typescript --write \"scripts/**/*.ts\""
+    "build": "stencil build",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/le-benaton/website.git"
-  },
-  "author": "Masahiko Sakakibara<sakakibara@rdlabo.jp>",
-  "bugs": {
-    "url": "https://github.com/le-benaton/website/issues"
-  },
-  "homepage": "https://www.benaton.net",
   "devDependencies": {
-    "prettier": "^2.1.1",
-    "ts-node": "^9.0.0",
-    "tslint": "^6.1.3",
-    "tslint-ionic-rules": "0.0.21",
-    "typescript": "^4.0.2",
-    "watch": "^1.0.2",
-    "flexsearch": "^0.6.32"
+    "@stencil/core": "^2.7.0",
+    "@stencil/router": "^1.0.1",
+    "@stencil/sass": "^1.5.2",
+    "@types/jest": "^26.0.24",
+    "jest": "^26.6.3",
+    "jest-cli": "^26.6.3",
+    "puppeteer": "^10.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "stencil-inline-svg": "^1.1.0"
   }
 }
