@@ -73,7 +73,7 @@ export class AppHome {
             <h2 class="subtitle">
               ランチ
               <span>
-              <img class="svg" src="assets/svg/time.svg" decoding="async" />
+              <img src="assets/svg/time.svg" class="svg" decoding="async" />
               11：45～14：00（ラストオーダー）
             </span>
             </h2>
@@ -154,7 +154,7 @@ export class AppHome {
             <h2 class="subtitle">
               ディナー
               <span>
-              <img class="svg" src="assets/svg/time.svg" decoding="async" />
+              <img src="assets/svg/time.svg" class="svg" decoding="async" />
               17：30～21：00（ラストオーダー）
             </span>
             </h2>

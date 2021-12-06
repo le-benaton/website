@@ -40,7 +40,7 @@ export class AppGuideline {
                   </section>
                 )}
                 <h4>
-                  <img class="svg" src="assets/svg/list.svg" decoding="async" />
+                  <img src="assets/svg/list.svg" class="svg"  decoding="async" />
                   お知らせ
                 </h4>
                 <ul class="list-news">
@@ -50,7 +50,7 @@ export class AppGuideline {
                 </ul>
 
                 <h4>
-                  <img class="svg" src="assets/svg/time.svg" decoding="async" />
+                  <img src="assets/svg/time.svg" class="svg" decoding="async" />
                   営業時間
                 </h4>
                 <div class="wrap-table">
@@ -76,7 +76,7 @@ export class AppGuideline {
                 </div>
 
                 <h4>
-                  <img class="svg" src="assets/svg/house.svg" decoding="async" />
+                  <img src="assets/svg/house.svg" class="svg" decoding="async" />
                   アクセス
                 </h4>
                 <div class="wrap-table">
