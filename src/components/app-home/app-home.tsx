@@ -1,7 +1,7 @@
 import { Component, h, Host } from '@stencil/core';
 import Time from '../../assets/svg/time.svg';
 
-import firebase from "firebase/app";
+import * as firebase from "firebase/app";
 import "firebase/firestore";
 
 @Component({
