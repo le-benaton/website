@@ -32,7 +32,7 @@ export class AppHome {
             <div>
               <img
                 src="assets/images/slides/104380ga10000008.jpg"
-                loading="lazy"
+                decoding="async"
                 width="800"
                 height="400"
                 alt="ジビエ コルベールのロースト"
@@ -41,6 +41,7 @@ export class AppHome {
             <div>
               <img
                 src="assets/images/slides/104380ga10000003.jpg"
+                decoding="async"
                 width="800"
                 height="400"
                 alt="西宮・夙川のフレンチレストラン「ル ベナトン」店内の様子"

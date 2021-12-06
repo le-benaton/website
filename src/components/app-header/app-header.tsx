@@ -90,7 +90,7 @@ export class AppHeader {
       <Host>
         <header>
           <div class="logo">
-            <a href="/"><img src="assets/images/logo.png" alt="西宮・夙川のフレンチレストラン「ル・ベナトン」"/></a>
+            <a href="/"><img src="assets/images/logo.png" alt="西宮・夙川のフレンチレストラン「ル・ベナトン」" decoding="async" /></a>
           </div>
           <nav>
             <ul>
