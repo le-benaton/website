@@ -1,7 +1,4 @@
 import { Component, h, Host } from '@stencil/core';
-import List from '../../assets/svg/list.svg';
-import Time from '../../assets/svg/time.svg';
-import House from '../../assets/svg/house.svg';
 import {announcement} from '../../data/announcement';
 import {news} from '../../data/news';
 
@@ -43,7 +40,7 @@ export class AppGuideline {
                   </section>
                 )}
                 <h4>
-                  <span innerHTML={List}></span>
+                  <img class="svg" src="assets/svg/list.svg" decoding="async" />
                   お知らせ
                 </h4>
                 <ul class="list-news">
@@ -53,7 +50,7 @@ export class AppGuideline {
                 </ul>
 
                 <h4>
-                  <span innerHTML={Time}></span>
+                  <img class="svg" src="assets/svg/time.svg" decoding="async" />
                   営業時間
                 </h4>
                 <div class="wrap-table">
@@ -79,7 +76,7 @@ export class AppGuideline {
                 </div>
 
                 <h4>
-                  <span innerHTML={House}></span>
+                  <img class="svg" src="assets/svg/house.svg" decoding="async" />
                   アクセス
                 </h4>
                 <div class="wrap-table">

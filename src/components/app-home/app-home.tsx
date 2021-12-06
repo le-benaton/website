@@ -1,5 +1,4 @@
 import { Component, h, Host } from '@stencil/core';
-import Time from '../../assets/svg/time.svg';
 
 import * as firebase from "firebase/app";
 import "firebase/firestore";
@@ -74,7 +73,7 @@ export class AppHome {
             <h2 class="subtitle">
               ランチ
               <span>
-              <span innerHTML={Time}></span>
+              <img class="svg" src="assets/svg/time.svg" decoding="async" />
               11：45～14：00（ラストオーダー）
             </span>
             </h2>
@@ -155,7 +154,7 @@ export class AppHome {
             <h2 class="subtitle">
               ディナー
               <span>
-              <span innerHTML={Time}></span>
+              <img class="svg" src="assets/svg/time.svg" decoding="async" />
               17：30～21：00（ラストオーダー）
             </span>
             </h2>
