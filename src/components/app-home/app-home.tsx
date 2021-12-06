@@ -309,7 +309,7 @@ export class AppHome {
             <div class="leading-container-flex">
               <img
                 src="assets/images/takaya.jpg"
-                loading="lazy"
+                decoding="async"
                 width="600"
                 height="600"
                 alt="西宮・夙川のフレンチレストラン「ル ベナトン」オーナー・シェフ　高谷慶"
@@ -336,7 +336,7 @@ export class AppHome {
                 <p>
                   <img
                     src="assets/images/outside.jpg"
-                    loading="lazy"
+                    decoding="async"
                     width="800"
                     height="534"
                     alt="西宮・夙川のフレンチレストラン「ル ベナトン」外観"
@@ -349,7 +349,7 @@ export class AppHome {
                 <p>
                   <img
                     src="assets/images/inside.jpg"
-                    loading="lazy"
+                    decoding="async"
                     width="800"
                     height="534"
                     alt="西宮・夙川のフレンチレストラン「ル ベナトン」内観"
@@ -362,7 +362,7 @@ export class AppHome {
                 <p>
                   <img
                     src="assets/images/inside2.jpg"
-                    loading="lazy"
+                    decoding="async"
                     width="800"
                     height="534"
                     alt="西宮・夙川のフレンチレストラン「ル ベナトン」テーブル"
@@ -490,7 +490,7 @@ export class AppHome {
             <div class="equidistant-container">
               <div class="equidistant-container-inner container-half">
                 <div class="padding">
-                  <img src="assets/images/voyage1.jpg" loading="lazy" alt=""/>
+                  <img src="assets/images/voyage1.jpg" decoding="async" alt=""/>
                   <p class="parenthesis">
                     関西国際空港を飛び立ったエールフランス291便は12時間35分後、パリのシャルル・ド・ゴール空港に滑り込んだ。11月のしっとりした曇り空に溶けているエッフェル塔に短く「ボンジュール」とあいさつをし、オーステルリッツ駅から、かつて「ル
                     ベナトン」のシェフ高谷慶が修業したブルゴーニュの食の都「ボーヌ」に向かう列車に乗り込んだ。数日後プジョーを運転し広大なブルゴーニュの牧草地を貫くD903号線を抜け、山裾に広がるエパニー村に到着。1850年代から続く村のハンティング協会の狩猟の見学許可がやっと出たのだった。
@@ -500,7 +500,7 @@ export class AppHome {
 
               <div class="equidistant-container-inner container-half">
                 <div class="padding">
-                  <img src="assets/images/voyage2.jpg" loading="lazy" width="800" height="534" alt=""/>
+                  <img src="assets/images/voyage2.jpg" decoding="async" width="800" height="534" alt=""/>
                   <p class="parenthesis">
                     早朝の集会場では約50人のハンターにもうもうと湯気の立つスープが振る舞われ、活気に満ちた作戦会議が行われる。散弾銃に、バゲットのサンドイッチ、赤ワインのボトルを手に山に向かう。「プププ、プッププー」。突然ラッパが鳴りひびく。傍らにいた会長に目くばせすると「オスのイノシシが向かった方角を、音色とリズムで伝えているんだよ」と解説してくれる。猟犬が茂みから飛び出し林道をかけて、また草むらに飛び込んでいく。「パーン」と甲高い発砲音がこだまする。200キロの大きなイノシシが横たわっていた。クレーンのついたISUZUの四輪自動車は猟場と集会場を往復し、その日の獲物をどんどん運んだ。
                   </p>
@@ -509,7 +509,7 @@ export class AppHome {
 
               <div class="equidistant-container-inner container-half">
                 <div class="padding">
-                  <img src="assets/images/voyage3.jpg" loading="lazy" width="800" height="534" alt=""/>
+                  <img src="assets/images/voyage3.jpg" decoding="async" width="800" height="534" alt=""/>
                   <p class="parenthesis">
                     この週末の成果はイノシシ、シカ合わせて20頭ほど。解体場でかいだ肉からは、ほんのりアプリコットのような香りがした。この季節、山には野生の果実が十分に実り、トリュフなどを求めキノコ採りの人が入る。そんな豊かな食べ物で動物たちは冬に備えている。フランスにはプロのハンターがいないのだという。週末にハンティングを趣味とする人たちが集まる。「俺の作ったワインだ。飲んでいけ！」とワイナリーを営むおじさんがほほ笑む。猟果を披露しながら宴会が始まる。立派なキバのついたイノシシはリビングに飾るため、腕のいい隣村の剥製職人のアランさんに依頼するのだろう。
                   </p>
@@ -518,7 +518,7 @@ export class AppHome {
 
               <div class="equidistant-container-inner container-half">
                 <div class="padding">
-                  <img src="assets/images/voyage4.jpg" loading="lazy" width="800" height="534" alt=""/>
+                  <img src="assets/images/voyage4.jpg" decoding="async" width="800" height="534" alt=""/>
                   <p class="parenthesis">
                     お肉は仲買人がハンターからレストランに卸しているのだそう。翌日アランさんが住むメッシニー・エ・ヴァントー村を訪ねた。目当ては「きのうのイノシシ」。ハンターにお土産にお肉を持たせてもらうことがあっても、地元の食文化でジビエ（野生のお肉）がどう料理されるか見てみたかった。村の教会の鐘楼が見下ろすレストランのドアを「ボンジュール！」と勢いよく開ける。
                     「さあ、きょうはどんな一品が出てくるのだろうか」

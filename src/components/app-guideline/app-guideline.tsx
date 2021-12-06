@@ -35,7 +35,7 @@ export class AppGuideline {
                 <h3>水曜日定休日</h3>
                 {announcement.map(d =>
                   <section class="announcement">
-                    <div class="announcement-image"><img src={d.image} alt=""/></div>
+                    <div class="announcement-image"><img src={d.image} alt="" decoding="async" /></div>
                     <div class="announcement-explain"><h5 innerHTML={d.title}></h5><p innerHTML={d.body}></p></div>
                   </section>
                 )}
