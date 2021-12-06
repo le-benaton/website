@@ -5,6 +5,8 @@ import { inlineSvg } from 'stencil-inline-svg';
 // https://stenciljs.com/docs/config
 
 export const config: Config = {
+  hashFileNames: false,
+  enableCache: false,
   globalStyle: 'src/global/app.scss',
   globalScript: 'src/global/app.ts',
   taskQueue: 'async',

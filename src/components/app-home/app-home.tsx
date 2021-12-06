@@ -1,12 +1,27 @@
 import { Component, h, Host } from '@stencil/core';
 import Time from '../../assets/svg/time.svg';
 
+import firebase from "firebase/app";
+import "firebase/firestore";
+
 @Component({
   tag: 'app-home',
   styleUrl: 'app-home.scss',
   shadow: false,
 })
 export class AppHome {
+  constructor() {
+    const firebaseConfig = {
+      apiKey: "AIzaSyDZX9RvCWbBOiRl0_heOshMEFUiI9QqD0g",
+      authDomain: "benaton-japan.firebaseapp.com",
+      databaseURL: "https://benaton-japan.firebaseio.com",
+      projectId: "benaton-japan",
+      storageBucket: "benaton-japan.appspot.com",
+      messagingSenderId: "1025137347365",
+      appId: "1:1025137347365:web:db7c40932f74dcf0c928cc"
+    };
+    firebase.initializeApp(firebaseConfig);
+  }
   render() {
     return (
     <Host>
