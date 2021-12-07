@@ -1,4 +1,4 @@
-import {Component, Host, h, Listen, Element} from '@stencil/core';
+import {Component, Host, h, Listen, Element, State} from '@stencil/core';
 
 @Component({
   tag: 'app-header',
@@ -7,17 +7,11 @@ import {Component, Host, h, Listen, Element} from '@stencil/core';
 })
 export class AppHeader {
   @Element() el: HTMLElement;
+  @State() isOpenMobileNav = false;
 
   @Listen('resize', {target: 'window'})
   resizeWindow() {
-    const nav = this.el.shadowRoot.querySelector('nav');
-    const link = this.el.shadowRoot.querySelector('#mobile-menu-button');
-    link.classList.remove('active');
-    if (window.innerWidth > 800) {
-      nav.style.display = 'block';
-    } else {
-      nav.style.display = 'none';
-    }
+    this.isOpenMobileNav = window.innerWidth > 800;
   }
 
   @Listen('scroll', {target: 'window'})
@@ -25,7 +19,7 @@ export class AppHeader {
     const nav = this.el.shadowRoot.querySelector('header');
     let ticking = false;
     if (!ticking) {
-      requestAnimationFrame(function () {
+      requestAnimationFrame(() => {
         ticking = false;
         const scrollAmount = window.scrollY;
 
@@ -46,10 +40,7 @@ export class AppHeader {
   linkScroll = (ev: any) => {
     ev.preventDefault();
     // Mobileメニューが開いてる時は閉じる
-    const mobileMenu = this.el.shadowRoot.querySelector('#mobile-menu-button');
-    if (mobileMenu.classList.contains('active')) {
-      this.toggleNav(mobileMenu);
-    }
+    this.isOpenMobileNav = false;
 
     /**
      * スクロール量を計算。
@@ -75,14 +66,15 @@ export class AppHeader {
   };
 
   toggleNav = (link: Element) => {
-    const nav = this.el.shadowRoot.querySelector('nav');
     if (link.classList.contains('active')) {
       link.classList.remove('active');
-      nav.style.display = 'none';
+      this.isOpenMobileNav = false;
     } else {
       link.classList.add('active');
-      nav.style.display = 'block';
+      this.isOpenMobileNav = true;
     }
+
+    console.log(this.isOpenMobileNav)
   };
 
   render() {
@@ -92,14 +84,14 @@ export class AppHeader {
           <div class="logo">
             <a href="/"><img src="assets/images/logo.png" alt="西宮・夙川のフレンチレストラン「ル・ベナトン」" decoding="async" /></a>
           </div>
-          <nav>
+          <nav class={this.isOpenMobileNav ? 'open' : 'hide'}>
             <ul>
-              <li><a href="#menu-reserved" onClick={this.linkScroll}>ご予約</a></li>
-              <li><a href="#menu-lunch" onClick={this.linkScroll}>ランチ</a></li>
-              <li><a href="#menu-dinner" onClick={this.linkScroll}>ディナー</a></li>
-              <li><a href="#menu-wine" onClick={this.linkScroll}>ワイン</a></li>
-              <li><a href="#menu-profile" onClick={this.linkScroll}>プロフィール</a></li>
-              <li><a href="#menu-contact" onClick={this.linkScroll}>お問い合わせ</a></li>
+              <li><a href="/#menu-reserved" onClick={this.linkScroll}>ご予約</a></li>
+              <li><a href="/#menu-lunch" onClick={this.linkScroll}>ランチ</a></li>
+              <li><a href="/#menu-dinner" onClick={this.linkScroll}>ディナー</a></li>
+              <li><a href="/#menu-wine" onClick={this.linkScroll}>ワイン</a></li>
+              <li><a href="/#menu-profile" onClick={this.linkScroll}>プロフィール</a></li>
+              <li><a href="/#menu-contact" onClick={this.linkScroll}>お問い合わせ</a></li>
               <li class="inatagram">
                 <a href="https://www.instagram.com/le_benaton/" rel="noopener" target="_blank">
                   <img src="assets/svg/instagram.svg" class="svg" decoding="async" />
@@ -107,7 +99,7 @@ export class AppHeader {
               </li>
             </ul>
           </nav>
-          <button class="btn-trigger mobile-only" id="mobile-menu-button" onClick={this.clickMobileMenu}>
+          <button class={this.isOpenMobileNav ? 'active btn-trigger mobile-only' : 'btn-trigger mobile-only'} onClick={this.clickMobileMenu}>
             <span></span>
             <span></span>
             <span></span>

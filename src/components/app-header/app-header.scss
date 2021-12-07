@@ -91,13 +91,19 @@ nav {
     min-height: auto;
   }
   nav {
-    display: none;
     position: absolute;
     top: 79px;
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     z-index: 999;
     animation: slide-in 0.1s;
+
+    &.open {
+      display: block;
+    }
+    &.hide {
+      display: none;
+    }
   }
   nav > ul {
     margin: 8px 0;
@@ -249,11 +255,11 @@ ul.link-list li:last-child {
 }
 
 
-#mobile-menu-button.active span:nth-of-type(1) {
+.btn-trigger.active span:nth-of-type(1) {
   -webkit-transform: translateY(12px) rotate(-45deg);
   transform: translateY(12px) rotate(-45deg);
 }
-#mobile-menu-button.active span:nth-of-type(2) {
+.btn-trigger.active span:nth-of-type(2) {
   opacity: 0;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -270,7 +276,7 @@ ul.link-list li:last-child {
     height: 0;
   }
 }
-#mobile-menu-button.active span:nth-of-type(3) {
+.btn-trigger.active span:nth-of-type(3) {
   -webkit-transform: translateY(-12px) rotate(45deg);
   transform: translateY(-12px) rotate(45deg);
 }
