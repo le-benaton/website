@@ -1,7 +1,7 @@
-@import "../../shared/normalize";
-@import "../../shared/initialize";
-@import "../../shared/responsive";
-@import "script";
+@import '../../shared/normalize';
+@import '../../shared/initialize';
+@import '../../shared/responsive';
+@import 'script';
 
 :host {
   display: block;
@@ -36,7 +36,6 @@ form.wine-search-form button[type='submit'] {
   display: block;
   padding: 2px 12px 2px;
 }
-
 
 /**
 * <parenthesis>
@@ -196,11 +195,9 @@ form .form-line textarea {
 * </form>
 */
 
-
 ul.contact-wrapper {
   padding-left: 20px;
 }
-
 
 /**
  * 背景色の設定
@@ -213,7 +210,6 @@ ul.contact-wrapper {
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
-
 
 /**
  * Main
@@ -428,4 +424,3 @@ ul.reserved-system li button {
   font-size: 200%;
   color: var(--background-shade-color);
 }
-
