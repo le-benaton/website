@@ -1,4 +1,4 @@
-import {Component, Host, h, Prop, State} from '@stencil/core';
+import {Component, Host, h, Prop, State, Event, EventEmitter} from '@stencil/core';
 import {Router} from 'stencil-router-v2';
 
 @Component({
@@ -8,11 +8,13 @@ import {Router} from 'stencil-router-v2';
 })
 export class AppContact {
   @Prop() router : Router;
-  @Prop() recordConversion : Function;
   @State() name: string = '';
   @State() email: string = '';
   @State() tel: string = '';
   @State() message: string = '';
+  @Event({
+    eventName: 'recordConversion',
+  }) recordConversion: EventEmitter<void>;
 
   handleChangeName(event) {
     this.name = event.target.value;
@@ -38,7 +40,7 @@ export class AppContact {
     const preMessage = this.tel ? `電話番号： ${this.tel}\r\n\r\n` : '';
 
     e.preventDefault()
-    this.recordConversion();
+    this.recordConversion.emit();
     await this.postData('https://api.v5.tipsys.me/thirdparty/rdlabo/mail', {
       name: this.name,
       from: this.email,

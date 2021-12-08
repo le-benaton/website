@@ -1,4 +1,4 @@
-import {Component, h, Host, Prop} from '@stencil/core';
+import {Component, Event, EventEmitter, h, Host} from '@stencil/core';
 import {announcement} from '../../data/announcement';
 import {news} from '../../data/news';
 
@@ -8,12 +8,17 @@ import {news} from '../../data/news';
   shadow: false,
 })
 export class AppGuideline {
-  @Prop() recordConversion : Function;
+  @Event({
+    eventName: 'recordConversion',
+  }) recordConversion: EventEmitter<void>;
+
+  handleConversion = () => {
+    this.recordConversion.emit();
+  }
 
   render() {
     return (
       <Host>
-        <section id="menu-reserved">
           <div class="wrap">
             <h2>ご予約</h2>
             <ul class="reserved-system">
@@ -22,13 +27,14 @@ export class AppGuideline {
                   class="button"
                   href="https://reserve.resebook.jp/resty/webrsv/rsv_vacants/vacant/s014049701/5580?show=3"
                   rel="noopener"
+                  onClick={this.handleConversion}
                   target="_blank"
                 >
                   オンライン予約
                 </a>
               </li>
               <li>
-                <a class="button" href="tel:0798-37-2655">電話予約</a>
+                <a class="button" href="tel:0798-37-2655" onClick={this.handleConversion}>電話予約</a>
               </li>
             </ul>
             <div class="leading-container">
@@ -88,7 +94,7 @@ export class AppGuideline {
                       <td><a href="tel:0798-37-2655">0798-37-2655</a></td>
                     </tr>
                     <tr>
-                      <th>ＦＡＸ</th>
+                      <th>FAX</th>
                       <td>0798-37-2656</td>
                     </tr>
                     <tr>
@@ -131,7 +137,6 @@ export class AppGuideline {
               </div>
             </div>
           </div>
-        </section>
       </Host>
     );
   }

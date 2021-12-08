@@ -10,11 +10,9 @@ export namespace Components {
     interface AppComplete {
     }
     interface AppContact {
-        "recordConversion": Function;
         "router": Router;
     }
     interface AppGuideline {
-        "recordConversion": Function;
     }
     interface AppHeader {
     }
@@ -74,11 +72,11 @@ declare namespace LocalJSX {
     interface AppComplete {
     }
     interface AppContact {
-        "recordConversion"?: Function;
+        "onRecordConversion"?: (event: CustomEvent<void>) => void;
         "router"?: Router;
     }
     interface AppGuideline {
-        "recordConversion"?: Function;
+        "onRecordConversion"?: (event: CustomEvent<void>) => void;
     }
     interface AppHeader {
     }

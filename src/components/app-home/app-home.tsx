@@ -1,4 +1,4 @@
-import {Component, h, Host, Prop, State} from '@stencil/core';
+import {Component, h, Host, Listen, Prop, State} from '@stencil/core';
 import { Router } from 'stencil-router-v2';
 
 import * as firebase from "firebase/app";
@@ -17,7 +17,8 @@ export class AppHome {
   @State() presentToastAccess = false;
   @State() presentToastConversion = false;
 
-  $recordConversion = () => {
+  @Listen('recordConversion')
+  recordConversion(_: CustomEvent<void>) {
     setDoc(doc(collection(this.db, 'conversion'), this.getUserId()), {
       timestamp: new Date().getTime(),
     }).catch((e) => console.log(e));
@@ -137,7 +138,9 @@ export class AppHome {
           </div>
         </section>
 
-        <app-guideline recordConversion={this.$recordConversion}></app-guideline>
+        <section id="menu-reserved">
+          <app-guideline></app-guideline>
+        </section>
 
         <section id="menu-lunch">
           <div class="wrap">
@@ -446,11 +449,11 @@ export class AppHome {
         </section>
 
         <section id="copy-reserved">
-          <app-guideline recordConversion={this.$recordConversion}></app-guideline>
+          <app-guideline></app-guideline>
         </section>
 
         <section id="menu-contact">
-          <app-contact recordConversion={this.$recordConversion} router={this.router}></app-contact>
+          <app-contact router={this.router}></app-contact>
         </section>
 
         <section id="menu-stuff">
