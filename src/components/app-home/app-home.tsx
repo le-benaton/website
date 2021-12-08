@@ -14,6 +14,12 @@ export class AppHome {
   @State() dayConversion: number;
   @State() presentToastAccess = false;
   @State() presentToastConversion = false;
+  $recordConversion = () => {
+    alert('呼び出し')
+    setDoc(doc(collection(this.db, 'conversion'), this.getUserId()), {
+      timestamp: new Date().getTime(),
+    }).catch((e) => console.log(e));
+  };
 
   constructor() {
     const firebaseConfig = {
@@ -38,12 +44,6 @@ export class AppHome {
       this.$refinementRecord().then((data) => this.reflectRecord(data));
     }, 5000);
   }
-
-  $recordConversion = () => {
-    setDoc(doc(collection(this.db, 'conversion'), this.getUserId()), {
-      timestamp: new Date().getTime(),
-    }).catch((e) => console.log(e));
-  };
 
   $refinementRecord = async (): Promise<IRecord> => {
     const accessQuery = query(
@@ -135,7 +135,7 @@ export class AppHome {
           </div>
         </section>
 
-        <app-guideline></app-guideline>
+        <app-guideline recordConversion={this.$recordConversion}></app-guideline>
 
         <section id="menu-lunch">
           <div class="wrap">
@@ -444,79 +444,11 @@ export class AppHome {
         </section>
 
         <section id="copy-reserved">
-          <app-guideline></app-guideline>
+          <app-guideline recordConversion={this.$recordConversion}></app-guideline>
         </section>
 
         <section id="menu-contact">
-          <div class="wrap">
-            <h2>お問い合わせ</h2>
-
-            <div class="leading-container">
-              <h3 class="text-left">お問い合わせについて</h3>
-              <ul class="contact-wrapper">
-                <li>
-                  ご予約は、<a href="tel:0798-37-2655">電話</a>または
-                  <a
-                    href="https://reserve.resebook.jp/resty/webrsv/rsv_vacants/vacant/s014049701/5580?show=3"
-                    rel="noopener"
-                  >予約サイト</a
-                  >より承ります。お急ぎの場合は、お電話ください。
-                </li>
-                <li>
-                  お申し出に対しては順次対応させていただいておりますが、受付時間外に送信いただいたものや、内容によりましてはお返事にお時間を頂戴する場合がございます。
-                </li>
-                <li>
-                  ご入力いただいたEメールアドレスや電話番号が誤っている場合やシステム障害が発生した場合等には回答ができない場合がございます。一週間以上経っても回答未着の場合、お手数ですがお電話ください。
-                </li>
-              </ul>
-              <h4>問い合わせフォーム</h4>
-              <form name="contact" method="post" action="complete.html">
-                <div class="form-line">
-                  <label htmlFor="name"><span class="form-label required">必須</span>お名前</label>
-                  <input id="name" type="text" name="お名前" required placeholder="例）山田太郎"/>
-                </div>
-                <div class="form-line">
-                  <label htmlFor="mail"><span class="form-label required">必須</span>メールアドレス（半角）</label>
-                  <input
-                    type="text"
-                    name="mail"
-                    id="mail"
-                    inputMode="email"
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                    required
-                    placeholder="例）info@example.com"
-                  />
-                </div>
-
-                <div class="form-line">
-                  <label htmlFor="tel">お電話番号（半角）</label>
-                  <input
-                    type="text"
-                    name="電話番号"
-                    placeholder="例）09012345678"
-                    inputMode="tel"
-                    pattern="\d{2,4}-?\d{3,4}-?\d{3,4}"
-                    id="tel"
-                  />
-                </div>
-
-                <div class="form-line">
-                  <label htmlFor="message"><span class="form-label required">必須</span>メッセージ</label>
-                  <textarea
-                    id="message"
-                    name="ご質問内容"
-                    cols={50}
-                    rows={5}
-                    required
-                    placeholder="※ご予約は、電話または予約サイトより承ります。"
-                  ></textarea>
-                </div>
-                <p class="text-center">
-                  <button type="submit" class="submitButton" onClick={this.$recordConversion}>問い合わせ送信</button>
-                </p>
-              </form>
-            </div>
-          </div>
+          <app-contact recordConversion={this.$recordConversion}></app-contact>
         </section>
 
         <section id="menu-stuff">

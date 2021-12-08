@@ -6,7 +6,13 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AppComplete {
+    }
+    interface AppContact {
+        "recordConversion": Function;
+    }
     interface AppGuideline {
+        "recordConversion": Function;
     }
     interface AppHeader {
     }
@@ -16,6 +22,18 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLAppCompleteElement extends Components.AppComplete, HTMLStencilElement {
+    }
+    var HTMLAppCompleteElement: {
+        prototype: HTMLAppCompleteElement;
+        new (): HTMLAppCompleteElement;
+    };
+    interface HTMLAppContactElement extends Components.AppContact, HTMLStencilElement {
+    }
+    var HTMLAppContactElement: {
+        prototype: HTMLAppContactElement;
+        new (): HTMLAppContactElement;
+    };
     interface HTMLAppGuidelineElement extends Components.AppGuideline, HTMLStencilElement {
     }
     var HTMLAppGuidelineElement: {
@@ -41,6 +59,8 @@ declare global {
         new (): HTMLAppRootElement;
     };
     interface HTMLElementTagNameMap {
+        "app-complete": HTMLAppCompleteElement;
+        "app-contact": HTMLAppContactElement;
         "app-guideline": HTMLAppGuidelineElement;
         "app-header": HTMLAppHeaderElement;
         "app-home": HTMLAppHomeElement;
@@ -48,7 +68,13 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface AppComplete {
+    }
+    interface AppContact {
+        "recordConversion"?: Function;
+    }
     interface AppGuideline {
+        "recordConversion"?: Function;
     }
     interface AppHeader {
     }
@@ -57,6 +83,8 @@ declare namespace LocalJSX {
     interface AppRoot {
     }
     interface IntrinsicElements {
+        "app-complete": AppComplete;
+        "app-contact": AppContact;
         "app-guideline": AppGuideline;
         "app-header": AppHeader;
         "app-home": AppHome;
@@ -67,6 +95,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "app-complete": LocalJSX.AppComplete & JSXBase.HTMLAttributes<HTMLAppCompleteElement>;
+            "app-contact": LocalJSX.AppContact & JSXBase.HTMLAttributes<HTMLAppContactElement>;
             "app-guideline": LocalJSX.AppGuideline & JSXBase.HTMLAttributes<HTMLAppGuidelineElement>;
             "app-header": LocalJSX.AppHeader & JSXBase.HTMLAttributes<HTMLAppHeaderElement>;
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;

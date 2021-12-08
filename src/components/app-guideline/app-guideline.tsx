@@ -1,4 +1,4 @@
-import { Component, h, Host } from '@stencil/core';
+import {Component, h, Host, Prop} from '@stencil/core';
 import {announcement} from '../../data/announcement';
 import {news} from '../../data/news';
 
@@ -8,6 +8,7 @@ import {news} from '../../data/news';
   shadow: false,
 })
 export class AppGuideline {
+  @Prop() recordConversion : Function;
 
   render() {
     return (
