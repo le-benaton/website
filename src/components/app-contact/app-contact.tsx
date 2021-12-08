@@ -1,4 +1,5 @@
 import {Component, Host, h, Prop, State} from '@stencil/core';
+import {Router} from 'stencil-router-v2';
 
 @Component({
   tag: 'app-contact',
@@ -6,6 +7,7 @@ import {Component, Host, h, Prop, State} from '@stencil/core';
   shadow: false,
 })
 export class AppContact {
+  @Prop() router : Router;
   @Prop() recordConversion : Function;
   @State() name: string = '';
   @State() email: string = '';
@@ -28,7 +30,7 @@ export class AppContact {
     this.message = event.target.value;
   }
 
-  handleSubmit(e) {
+  async handleSubmit(e) {
     if (!this.name || !this.email || !this.message) {
       return alert('名前、メールアドレス、メッセージは必須入力となっています。すべてご入力してから送信ください。')
     }
@@ -37,16 +39,17 @@ export class AppContact {
 
     e.preventDefault()
     this.recordConversion();
-    this.postData('https://api.v5.tipsys.me/thirdparty/rdlabo/mail', {
+    await this.postData('https://api.v5.tipsys.me/thirdparty/rdlabo/mail', {
       name: this.name,
       from: this.email,
       message: preMessage + this.message
-    })
+    }).catch(() => undefined);
+
+    // 遷移
+    this.router.push('complete');
   }
 
-  postData = async (url = '', data = {}) => {
-    console.log(data);
-    // 既定のオプションには * が付いています
+  postData = async (url = '', data = {}): Promise<any> => {
     const response = await fetch(url, {
       method: 'POST',
       mode: 'cors',

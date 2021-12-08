@@ -1,4 +1,5 @@
-import { Component, Host, h } from '@stencil/core';
+import {Component, Host, h} from '@stencil/core';
+import { href } from 'stencil-router-v2';
 
 @Component({
   tag: 'app-complete',
@@ -6,7 +7,6 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class AppComplete {
-
   render() {
     return (
       <Host>
@@ -23,7 +23,7 @@ export class AppComplete {
                   また、ご入力いただいたEメールアドレスや電話番号が誤っている場合やシステム障害が発生した場合等には回答ができない場合がございます。一週間以上経っても回答未着の場合、お手数ですが再度お問い合わせいただけると幸いです。
                 </p>
                 <div class="text-center">
-                  <a href="/">
+                  <a {...href("/")}>
                     <button>トップページに戻る</button>
                   </a>
                 </div>

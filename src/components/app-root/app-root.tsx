@@ -14,7 +14,7 @@ export class AppRoot {
       <Host>
         <Router.Switch>
           <Route path="/">
-            <app-home></app-home>
+            <app-home router={Router}></app-home>
           </Route>
 
           <Route path={/^\/complete/}>

@@ -1,4 +1,5 @@
-import {Component, h, Host, State} from '@stencil/core';
+import {Component, h, Host, Prop, State} from '@stencil/core';
+import { Router } from 'stencil-router-v2';
 
 import * as firebase from "firebase/app";
 import { Firestore, getFirestore, setDoc, collection, doc, query, where, getDocs } from 'firebase/firestore';
@@ -10,12 +11,13 @@ import { Firestore, getFirestore, setDoc, collection, doc, query, where, getDocs
 })
 export class AppHome {
   db : Firestore;
+  @Prop() router : Router;
   @State() dayAccess: number;
   @State() dayConversion: number;
   @State() presentToastAccess = false;
   @State() presentToastConversion = false;
+
   $recordConversion = () => {
-    alert('呼び出し')
     setDoc(doc(collection(this.db, 'conversion'), this.getUserId()), {
       timestamp: new Date().getTime(),
     }).catch((e) => console.log(e));
@@ -448,7 +450,7 @@ export class AppHome {
         </section>
 
         <section id="menu-contact">
-          <app-contact recordConversion={this.$recordConversion}></app-contact>
+          <app-contact recordConversion={this.$recordConversion} router={this.router}></app-contact>
         </section>
 
         <section id="menu-stuff">

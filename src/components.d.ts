@@ -5,11 +5,13 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Router } from "stencil-router-v2";
 export namespace Components {
     interface AppComplete {
     }
     interface AppContact {
         "recordConversion": Function;
+        "router": Router;
     }
     interface AppGuideline {
         "recordConversion": Function;
@@ -17,6 +19,7 @@ export namespace Components {
     interface AppHeader {
     }
     interface AppHome {
+        "router": Router;
     }
     interface AppRoot {
     }
@@ -72,6 +75,7 @@ declare namespace LocalJSX {
     }
     interface AppContact {
         "recordConversion"?: Function;
+        "router"?: Router;
     }
     interface AppGuideline {
         "recordConversion"?: Function;
@@ -79,6 +83,7 @@ declare namespace LocalJSX {
     interface AppHeader {
     }
     interface AppHome {
+        "router"?: Router;
     }
     interface AppRoot {
     }
