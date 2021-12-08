@@ -45,16 +45,6 @@ export class AppHome {
     }).catch((e) => console.log(e));
   };
 
-  private getUserId = (): string => {
-    let analyticsId = localStorage.getItem('analyticsId');
-    if (!analyticsId) {
-      analyticsId = 'id' + String(new Date().getTime());
-      localStorage.setItem('analyticsId', analyticsId);
-    }
-    return analyticsId;
-  };
-
-
   $refinementRecord = async (): Promise<IRecord> => {
     const accessQuery = query(
       collection(this.db, "access"),
@@ -80,8 +70,8 @@ export class AppHome {
     this.dayAccess = record.dayAccess;
     this.dayConversion = record.dayConversion;
 
-    setTimeout(() => (this.presentToastAccess = true, 2000 * 1));
-    setTimeout(() => (this.presentToastAccess = false), 2000 * 1 + 10000);
+    setTimeout(() => (this.presentToastAccess = true, 2000));
+    setTimeout(() => (this.presentToastAccess = false), 2000 + 10000);
 
     setTimeout(() => (this.presentToastConversion = true, 2000 * 2));
     setTimeout(() => (this.presentToastConversion = false), 2000 * 2 + 10000);
@@ -90,6 +80,15 @@ export class AppHome {
   clickToast(event) {
     event.srcElement.parentNode.removeChild(event.srcElement)
   }
+
+  private getUserId = (): string => {
+    let analyticsId = localStorage.getItem('analyticsId');
+    if (!analyticsId) {
+      analyticsId = 'id' + String(new Date().getTime());
+      localStorage.setItem('analyticsId', analyticsId);
+    }
+    return analyticsId;
+  };
 
   render() {
     return (
