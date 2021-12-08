@@ -41,7 +41,7 @@ export class AppContact {
 
     e.preventDefault()
     this.recordConversion.emit();
-    await this.postData('https://api.v5.tipsys.me/thirdparty/rdlabo/mail', {
+    await this.postData('https://api.v5.tipsys.me/thirdparty/benaton/mail', {
       name: this.name,
       from: this.email,
       message: preMessage + this.message
