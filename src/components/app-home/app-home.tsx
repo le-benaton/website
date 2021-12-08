@@ -512,7 +512,7 @@ export class AppHome {
                   ></textarea>
                 </div>
                 <p class="text-center">
-                  <button type="submit" class="submitButton">問い合わせ送信</button>
+                  <button type="submit" class="submitButton" onClick={this.$recordConversion}>問い合わせ送信</button>
                 </p>
               </form>
             </div>

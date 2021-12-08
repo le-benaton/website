@@ -92,7 +92,9 @@ export class AppHeader {
               <li><a href="/#menu-contact" onClick={this.linkScroll}>お問い合わせ</a></li>
               <li class="inatagram">
                 <a href="https://www.instagram.com/le_benaton/" rel="noopener" target="_blank">
-                  <img src="assets/svg/instagram.svg" class="svg" decoding="async" />
+                  <svg>
+                    <use xlinkHref="assets/svg/instagram.svg#symbol"></use>
+                  </svg>
                 </a>
               </li>
             </ul>

@@ -32,7 +32,7 @@ header {
 
 nav {
   & > ul > li {
-    img.svg {
+    svg {
       margin-top: -10px;
       padding: 0;
       width: 32px;
@@ -67,7 +67,7 @@ nav {
     padding: 0 20px 7px;
   }
 
-  nav > ul > li svg path {
+  nav > ul > li svg {
     fill: var(--medium-color);
   }
 
@@ -120,7 +120,7 @@ nav {
   nav > ul > li > a:hover {
     color: rgba(255, 255, 255, 0.8);
   }
-  nav > ul > li img.svg {
+  nav > ul > li svg {
     filter: invert(100%);
   }
 
