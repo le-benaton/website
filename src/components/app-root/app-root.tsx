@@ -1,4 +1,7 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Host } from '@stencil/core';
+import { createRouter, Route } from 'stencil-router-v2';
+
+const Router = createRouter();
 
 @Component({
   tag: 'app-root',
@@ -8,16 +11,17 @@ import { Component, h } from '@stencil/core';
 export class AppRoot {
   render() {
     return (
-      <div>
-        <main>
-          <stencil-router>
-            <stencil-route-switch scrollTopOffset={0}>
-              <stencil-route url="/" component="app-home" exact={true} />
-              <stencil-route url="/complete" component="app-complete" />
-            </stencil-route-switch>
-          </stencil-router>
-        </main>
-      </div>
+      <Host>
+        <Router.Switch>
+          <Route path="/">
+            <app-home></app-home>
+          </Route>
+
+          <Route path={/^\/complete/}>
+            <app-complete></app-complete>
+          </Route>
+        </Router.Switch>
+      </Host>
     );
   }
 }
