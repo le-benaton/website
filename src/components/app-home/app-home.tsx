@@ -1,7 +1,7 @@
-import { Component, h, Host } from '@stencil/core';
+import {Component, h, Host, State} from '@stencil/core';
 
 import * as firebase from "firebase/app";
-import "firebase/firestore";
+import { Firestore, getFirestore, setDoc, collection, doc, query, where, getDocs } from 'firebase/firestore';
 
 @Component({
   tag: 'app-home',
@@ -9,6 +9,12 @@ import "firebase/firestore";
   shadow: false,
 })
 export class AppHome {
+  db : Firestore;
+  @State() dayAccess: number;
+  @State() dayConversion: number;
+  @State() presentToastAccess = false;
+  @State() presentToastConversion = false;
+
   constructor() {
     const firebaseConfig = {
       apiKey: "AIzaSyDZX9RvCWbBOiRl0_heOshMEFUiI9QqD0g",
@@ -19,8 +25,72 @@ export class AppHome {
       messagingSenderId: "1025137347365",
       appId: "1:1025137347365:web:db7c40932f74dcf0c928cc"
     };
-    firebase.initializeApp(firebaseConfig);
+    const firebaseApp = firebase.initializeApp(firebaseConfig);
+    this.db = getFirestore(firebaseApp);
   }
+
+  componentDidLoad() {
+    setDoc(doc(collection(this.db, 'access'), this.getUserId()), {
+      timestamp: new Date().getTime(),
+    }).catch((e) => console.log(e));
+
+    setTimeout(() => {
+      this.$refinementRecord().then((data) => this.reflectRecord(data));
+    }, 5000);
+  }
+
+  $recordConversion = () => {
+    setDoc(doc(collection(this.db, 'conversion'), this.getUserId()), {
+      timestamp: new Date().getTime(),
+    }).catch((e) => console.log(e));
+  };
+
+  private getUserId = (): string => {
+    let analyticsId = localStorage.getItem('analyticsId');
+    if (!analyticsId) {
+      analyticsId = 'id' + String(new Date().getTime());
+      localStorage.setItem('analyticsId', analyticsId);
+    }
+    return analyticsId;
+  };
+
+
+  $refinementRecord = async (): Promise<IRecord> => {
+    const accessQuery = query(
+      collection(this.db, "access"),
+      // @ts-ignore
+      where('timestamp', '>', new Date(new Date() - 1000 * 60 * 15).getTime()),
+    )
+    const accessSnapshot = await getDocs(accessQuery);
+
+    const conversionQuery = query(
+      collection(this.db, "conversion"),
+      // @ts-ignore
+      where('timestamp', '>', new Date(new Date() - 1000 * 60 * 60 * 24).getTime()),
+    )
+    const conversionSnapshot = await getDocs(conversionQuery);
+
+    return {
+      dayAccess: accessSnapshot.docs.length,
+      dayConversion: conversionSnapshot.docs.length,
+    };
+  };
+
+  reflectRecord = (record: IRecord) => {
+    this.dayAccess = record.dayAccess;
+    this.dayConversion = record.dayConversion;
+
+    setTimeout(() => (this.presentToastAccess = true, 2000 * 1));
+    setTimeout(() => (this.presentToastAccess = false), 2000 * 1 + 10000);
+
+    setTimeout(() => (this.presentToastConversion = true, 2000 * 2));
+    setTimeout(() => (this.presentToastConversion = false), 2000 * 2 + 10000);
+  };
+
+  clickToast(event) {
+    event.srcElement.parentNode.removeChild(event.srcElement)
+  }
+
   render() {
     return (
     <Host>
@@ -534,24 +604,26 @@ export class AppHome {
         </section>
       </main>
 
-      <section class="modal-wine-list">
-        <div class="modal-wine-list-inner"></div>
-        <div class="padding text-center">
-          <button>閉じる</button>
-        </div>
-      </section>
-
       <section class="toast-area">
-        <a id="recordAccess" class="toast">
-          <span class="close"><span>×</span></span>
-          現在<span class="record"></span>名のお客様が閲覧しています
-        </a>
-        <a id="conversionAccess" class="toast">
-          <span class="close"><span>×</span></span>
-          過去24時間でご予約が<span class="record"></span>件ありました
-        </a>
+        {this.dayAccess > 0 ?
+          <a class={this.presentToastAccess ? 'toast open' : 'toast hide'} onClick={this.clickToast}>
+            <span class="close"><span>×</span></span>
+            現在{this.dayAccess}名のお客様が閲覧しています
+          </a>
+          : ''}
+        {this.dayConversion > 0 ?
+          <a class={this.presentToastConversion ? 'toast open' : 'toast hide'} onClick={this.clickToast}>
+            <span class="close"><span>×</span></span>
+            過去24時間でご予約が{this.dayConversion}件ありました
+          </a>
+          : ''}
       </section>
     </Host>
     );
   }
+}
+
+type IRecord = {
+  dayAccess: number;
+  dayConversion: number;
 }

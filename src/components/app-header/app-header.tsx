@@ -73,8 +73,6 @@ export class AppHeader {
       link.classList.add('active');
       this.isOpenMobileNav = true;
     }
-
-    console.log(this.isOpenMobileNav)
   };
 
   render() {

@@ -16,6 +16,13 @@
   position: relative;
   animation-name: fade-in;
   animation-duration: 1s;
+
+  &.open {
+    display: block;
+  }
+  &.hide {
+    display: none;
+  }
 }
 
 @keyframes fade-in {
