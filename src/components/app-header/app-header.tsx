@@ -17,19 +17,11 @@ export class AppHeader {
   @Listen('scroll', {target: 'window'})
   resizeHeader() {
     const nav = this.el.shadowRoot.querySelector('header');
-    let ticking = false;
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        ticking = false;
-        const scrollAmount = window.scrollY;
-
-        if (scrollAmount > 60) {
-          nav.classList.add('minimum');
-        } else if (scrollAmount < 30) {
-          nav.classList.remove('minimum');
-        }
-      });
-      ticking = true;
+    const scrollAmount = window.scrollY;
+    if (scrollAmount > 60) {
+      nav.classList.add('minimum');
+    } else if (scrollAmount < 30) {
+      nav.classList.remove('minimum');
     }
   }
 
