@@ -1,6 +1,6 @@
 import {Component, Event, EventEmitter, h, Host} from '@stencil/core';
-import {announcement} from '../../data/announcement';
-import {news} from '../../data/news';
+import {announcement} from '../../../../data/announcement';
+import {news} from '../../../../data/news';
 
 @Component({
   tag: 'app-guideline',

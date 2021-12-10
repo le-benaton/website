@@ -14,11 +14,11 @@ export class AppRoot {
       <Host>
         <Router.Switch>
           <Route path="/">
-            <app-home router={Router}></app-home>
+            <page-home router={Router}></page-home>
           </Route>
 
           <Route path={/^\/complete/}>
-            <app-complete></app-complete>
+            <page-complete></page-complete>
           </Route>
         </Router.Switch>
       </Host>

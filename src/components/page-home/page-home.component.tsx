@@ -5,11 +5,11 @@ import * as firebase from "firebase/app";
 import { Firestore, getFirestore, setDoc, collection, doc, query, where, getDocs } from 'firebase/firestore';
 
 @Component({
-  tag: 'app-home',
-  styleUrl: 'app-home.scss',
+  tag: 'page-home',
+  styleUrl: 'page-home.scss',
   shadow: false,
 })
-export class AppHome {
+export class PageHome {
   db : Firestore;
   @Prop() router : Router;
   @State() dayAccess: number;

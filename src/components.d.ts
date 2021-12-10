@@ -7,8 +7,6 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Router } from "stencil-router-v2";
 export namespace Components {
-    interface AppComplete {
-    }
     interface AppContact {
         "router": Router;
     }
@@ -16,19 +14,15 @@ export namespace Components {
     }
     interface AppHeader {
     }
-    interface AppHome {
-        "router": Router;
-    }
     interface AppRoot {
+    }
+    interface PageComplete {
+    }
+    interface PageHome {
+        "router": Router;
     }
 }
 declare global {
-    interface HTMLAppCompleteElement extends Components.AppComplete, HTMLStencilElement {
-    }
-    var HTMLAppCompleteElement: {
-        prototype: HTMLAppCompleteElement;
-        new (): HTMLAppCompleteElement;
-    };
     interface HTMLAppContactElement extends Components.AppContact, HTMLStencilElement {
     }
     var HTMLAppContactElement: {
@@ -47,30 +41,34 @@ declare global {
         prototype: HTMLAppHeaderElement;
         new (): HTMLAppHeaderElement;
     };
-    interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
-    }
-    var HTMLAppHomeElement: {
-        prototype: HTMLAppHomeElement;
-        new (): HTMLAppHomeElement;
-    };
     interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
     }
     var HTMLAppRootElement: {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLPageCompleteElement extends Components.PageComplete, HTMLStencilElement {
+    }
+    var HTMLPageCompleteElement: {
+        prototype: HTMLPageCompleteElement;
+        new (): HTMLPageCompleteElement;
+    };
+    interface HTMLPageHomeElement extends Components.PageHome, HTMLStencilElement {
+    }
+    var HTMLPageHomeElement: {
+        prototype: HTMLPageHomeElement;
+        new (): HTMLPageHomeElement;
+    };
     interface HTMLElementTagNameMap {
-        "app-complete": HTMLAppCompleteElement;
         "app-contact": HTMLAppContactElement;
         "app-guideline": HTMLAppGuidelineElement;
         "app-header": HTMLAppHeaderElement;
-        "app-home": HTMLAppHomeElement;
         "app-root": HTMLAppRootElement;
+        "page-complete": HTMLPageCompleteElement;
+        "page-home": HTMLPageHomeElement;
     }
 }
 declare namespace LocalJSX {
-    interface AppComplete {
-    }
     interface AppContact {
         "onRecordConversion"?: (event: CustomEvent<void>) => void;
         "router"?: Router;
@@ -80,30 +78,32 @@ declare namespace LocalJSX {
     }
     interface AppHeader {
     }
-    interface AppHome {
-        "router"?: Router;
-    }
     interface AppRoot {
     }
+    interface PageComplete {
+    }
+    interface PageHome {
+        "router"?: Router;
+    }
     interface IntrinsicElements {
-        "app-complete": AppComplete;
         "app-contact": AppContact;
         "app-guideline": AppGuideline;
         "app-header": AppHeader;
-        "app-home": AppHome;
         "app-root": AppRoot;
+        "page-complete": PageComplete;
+        "page-home": PageHome;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-complete": LocalJSX.AppComplete & JSXBase.HTMLAttributes<HTMLAppCompleteElement>;
             "app-contact": LocalJSX.AppContact & JSXBase.HTMLAttributes<HTMLAppContactElement>;
             "app-guideline": LocalJSX.AppGuideline & JSXBase.HTMLAttributes<HTMLAppGuidelineElement>;
             "app-header": LocalJSX.AppHeader & JSXBase.HTMLAttributes<HTMLAppHeaderElement>;
-            "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "page-complete": LocalJSX.PageComplete & JSXBase.HTMLAttributes<HTMLPageCompleteElement>;
+            "page-home": LocalJSX.PageHome & JSXBase.HTMLAttributes<HTMLPageHomeElement>;
         }
     }
 }

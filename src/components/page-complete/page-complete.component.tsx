@@ -2,11 +2,11 @@ import {Component, Host, h} from '@stencil/core';
 import { href } from 'stencil-router-v2';
 
 @Component({
-  tag: 'app-complete',
-  styleUrls: ['../app-home/app-home.scss', 'app-complete.scss'],
+  tag: 'page-complete',
+  styleUrls: ['../page-home/page-home.scss', 'page-complete.scss'],
   shadow: true,
 })
-export class AppComplete {
+export class PageComplete {
   render() {
     return (
       <Host>
