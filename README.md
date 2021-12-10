@@ -1,41 +1,57 @@
-# Stencil App Starter
+# 西宮・夙川のフレンチレストラン「ル・ベナトン」
+西宮・夙川のフレンチレストラン「ル・ベナトン」Webサイトのレポジトリです。以下URLで公開しています。
 
-Stencil is a compiler for building fast web apps using Web Components.
+[benaton.net](https://www.benaton.net/)
 
-Stencil combines the best concepts of the most popular frontend frameworks into a compile-time rather than run-time tool.  Stencil takes TypeScript, JSX, a tiny virtual DOM layer, efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser supporting the Custom Elements v1 spec.
+## 更新用リンク
+|  項目  | ファイル                                                                         |
+| ---- |------------------------------------------------------------------------------|
+|  お知らせ（画像あり）  | https://github.com/le-benaton/website/edit/main/src/data/announcement.ts     |
+|  お知らせ  | https://github.com/le-benaton/website/edit/main/src/data/news.ts           |
 
-Stencil components are just Web Components, so they work in any major framework or with no framework at all. In many cases, Stencil can be used as a drop in replacement for traditional frontend frameworks given the capabilities now available in the browser, though using it as such is certainly not required.
+### お知らせ（画像あり）に利用する画像をアップロードする方法
+1. 画像を用意します。事前に、縦横300px程度にリサイズしてください。
+2. 画像ファイル名に日本語が使われている場合、英数字のファイル名に変更します
+3. https://github.com/le-benaton/website/tree/main/src/template/images/announcement にアクセスして、右上の `Add file` > `Upload files` からファイルをアップロードしてコミットします。
+3. URLは、 `images/announcement/` + ファイル名となります。例えば `104380ga10000003.jpg` というファイルをアップロードした場合、 `images/announcement/104380ga10000003.jpg` を以下のように `image` に指定ください。
 
-Stencil also enables a number of key capabilities on top of Web Components, in particular Server Side Rendering (SSR) without the need to run a headless browser, pre-rendering, and objects-as-properties (instead of just strings).
+```ts
+{
+  image: 'images/announcement/104380ga10000003.jpg',
+  title: 'クリスマス限定特別セットの予約受付をはじめました',
+  body: 'クリスマスという特別な日に、ご家庭の食卓を華やかに彩る2～3人前のオードブルを予約限定で提供します。ブルゴーニュの定番料理「ジャンボン・ペルシエ」やミニサイズの鳥の丸焼きみたいな感じでライティングするんですがよく考えたらメニューわからないのでこんな感じです。電話にてご予約ください。',
+},
+```
 
-## Getting Started
+### 更新に失敗した
+ビルドに必要な情報を間違って削除してしまったり、フォーマットを変更してしまった時、Webサイトには反映されずに更新できなかったという通知が更新を行ったユーザのメールアドレスにいきます。更新後に反映されなかった場合は、メールをご確認ください。
 
-To start a new project using Stencil, clone this repo to a new directory:
+## ライセンス
+### テキスト・写真データ
+本レポジトリにあるテキスト、写真データは著作権をル・ベナトンが有しており、**オープンソースではありません**。本レポジトリをForkすることの制限はありませんが、それ以外の場所で引用の範囲を越える利用については固くお断りしています。
+
+### ソースコード
+ソースコード（テキスト・写真データ以外）はMITライセンスで公開しています。
+
+Copyright (c) 2020 Le Benaton<br />
+Released under the MIT license
+
+## 構成
+本レポジトリはStencilJSによって出力されています。
+
+### インストールからビルド方法
+以下コマンドによって `www/` が生成されます。wwwが公開用ファイル一式です。
 
 ```bash
-npm init stencil app
+% git clone git@github.com:le-benaton/website.git
+% cd website
+% npm install
+% npm run build
 ```
 
-and run:
+#### 開発用コマンド
+以下コマンドを実行すると、 `src` 以下を監視して、変更があった時 `npm run start` を実行します。
 
 ```bash
-npm start
-```
-
-To build the app for production, run:
-
-```bash
-npm run build
-```
-
-To run the unit tests once, run:
-
-```
-npm test
-```
-
-To run the unit tests and watch for file changes during development, run:
-
-```
-npm run test.watch
+% npm run start
 ```
