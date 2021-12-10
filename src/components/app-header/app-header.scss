@@ -13,9 +13,9 @@ header {
 
   div.logo {
     width: 160px;
-    margin: 20px 0 0 8px;
+    margin: 30px 0 0 8px;
     transition: all 0.5s;
-    min-height: 71px;
+    min-height: calc(91px - 30px);
 
     img {
       max-width: 100%;
@@ -50,7 +50,7 @@ nav {
   }
 
   header.minimum div.logo {
-    margin: 6px 0 0 8px;
+    margin: 10px 0 0 8px;
     min-height: auto;
   }
 
@@ -84,10 +84,11 @@ nav {
 
 @media screen and (max-width: 800px) {
   header div.logo {
-    margin: 8px auto 0;
+    margin: 12px auto 0;
+    min-height: 58px
   }
   header.minimum div.logo {
-    margin: 6px auto 0;
+    margin: 8px auto 8px;
     min-height: auto;
   }
   nav {
@@ -135,7 +136,7 @@ nav {
     }
   }
   header.minimum .btn-trigger {
-    top: 16px;
+    top: 12px;
   }
   header.minimum nav {
     top: 61.3px;
@@ -223,7 +224,7 @@ ul.link-list li:last-child {
 .btn-trigger {
   position: absolute;
   left: 16px;
-  top: 28px;
+  top: 24px;
   width: 32px;
   height: 26px;
   cursor: pointer;
