@@ -229,8 +229,10 @@ h2.subtitle > span {
   font-size: 1.1rem;
   margin: 8px;
 
-  img {
+  img.svg {
     margin-right: 8px;
+    position: relative;
+    top: 3px;
   }
 }
 
