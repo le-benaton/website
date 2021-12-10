@@ -1,5 +1,7 @@
 import {Component, Host, h, Listen, Element, State} from '@stencil/core';
 import { href } from 'stencil-router-v2';
+import { Router } from '../router';
+import {InternalRouterState} from 'stencil-router-v2/dist/types';
 
 @Component({
   tag: 'app-header',
@@ -9,6 +11,18 @@ import { href } from 'stencil-router-v2';
 export class AppHeader {
   @Element() el: HTMLElement;
   @State() isOpenMobileNav = false;
+  @State() enableMenu = true;
+
+  componentWillLoad() {
+    if (Router.url.pathname !== '/') {
+      this.enableMenu = false;
+    }
+    Router.onChange('url', (route: InternalRouterState['url'], _) => {
+      if (route[0].pathname !== '/') {
+        this.enableMenu = false;
+      }
+    });
+  }
 
   @Listen('resize', {target: 'window'})
   resizeWindow() {
@@ -75,6 +89,7 @@ export class AppHeader {
           <div class="logo">
             <a {...href('/')}><img src="assets/images/logo.svg" alt="西宮・夙川のフレンチレストラン「ル・ベナトン」" decoding="async" /></a>
           </div>
+          { this.enableMenu ?
           <nav class={this.isOpenMobileNav ? 'open' : 'hide'}>
             <ul>
               <li><a href="/#menu-reserved" onClick={this.linkScroll}>ご予約</a></li>
@@ -90,11 +105,15 @@ export class AppHeader {
               </li>
             </ul>
           </nav>
-          <button class={this.isOpenMobileNav ? 'active btn-trigger mobile-only' : 'btn-trigger mobile-only'} onClick={this.clickMobileMenu}>
+            : '' }
+
+          { this.enableMenu ?
+            <button class={this.isOpenMobileNav ? 'active btn-trigger mobile-only' : 'btn-trigger mobile-only'} onClick={this.clickMobileMenu}>
             <span></span>
             <span></span>
             <span></span>
           </button>
+            : '' }
         </header>
       </Host>
     );
