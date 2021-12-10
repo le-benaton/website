@@ -1,7 +1,7 @@
-name: CI
+name: deploy
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 jobs:
   build:
 
@@ -27,13 +27,9 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm ci
-          npm run build
+          npm run build -- --prerender
 
       # デプロイ
       - name: deploy
         run: |
-          npx netlify-cli deploy \
-            --site ${{ secrets.NETLIFY_SITE_ID }} \
-            --dir www/ \
-            --auth ${{ secrets.NETLIFY_TOKEN }} \
-            --prod
+          npx firebase deploy --token=${{ secrets.FIREBASE_TOKEN }}
