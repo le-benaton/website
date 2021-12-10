@@ -1,4 +1,5 @@
 import {Component, Host, h, Listen, Element, State} from '@stencil/core';
+import { href } from 'stencil-router-v2';
 
 @Component({
   tag: 'app-header',
@@ -72,7 +73,7 @@ export class AppHeader {
       <Host>
         <header>
           <div class="logo">
-            <a href="/"><img src="assets/images/logo.svg" alt="西宮・夙川のフレンチレストラン「ル・ベナトン」" decoding="async" /></a>
+            <a {...href('/')}><img src="assets/images/logo.svg" alt="西宮・夙川のフレンチレストラン「ル・ベナトン」" decoding="async" /></a>
           </div>
           <nav class={this.isOpenMobileNav ? 'open' : 'hide'}>
             <ul>
@@ -84,9 +85,7 @@ export class AppHeader {
               <li><a href="/#menu-contact" onClick={this.linkScroll}>お問い合わせ</a></li>
               <li class="inatagram">
                 <a href="https://www.instagram.com/le_benaton/" rel="noopener" target="_blank">
-                  <svg>
-                    <use xlinkHref="assets/svg/instagram.svg#symbol"></use>
-                  </svg>
+                  <img class="svg" src="assets/svg/instagram.svg" alt="instagram" decoding="async" />
                 </a>
               </li>
             </ul>
