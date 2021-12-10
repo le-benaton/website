@@ -18,7 +18,7 @@ export class AppHeader {
       this.enableMenu = false;
     }
     Router.onChange('url', (route: InternalRouterState['url'], _) => {
-      if (route[0].pathname !== '/') {
+      if (route.pathname !== '/') {
         this.enableMenu = false;
       }
     });
