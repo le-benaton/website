@@ -4,6 +4,7 @@ export const config: PrerenderConfig = {
   hydrateOptions() {
     return {
       addModulePreloads: false,
+      hashAssets: undefined,
     };
   }
 };
