@@ -19,6 +19,10 @@ export class AppRoot {
           <Route path={/^\/complete/}>
             <page-complete></page-complete>
           </Route>
+
+          <Route path="/wines">
+            <page-wines></page-wines>
+          </Route>
         </Router.Switch>
       </Host>
     );

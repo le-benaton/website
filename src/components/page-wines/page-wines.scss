@@ -1,0 +1,54 @@
+@import '../../shared/normalize';
+@import '../../shared/initialize';
+@import '../../shared/responsive';
+
+.page-wines {
+  display: block;
+  margin: 0 16px;
+
+  & > h2 {
+    text-align: center;
+  }
+
+  & > p {
+    max-width: 600px;
+    margin: 32px auto 16px;
+  }
+}
+
+div.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div.buttons {
+    display: flex;
+    width: 256px;
+    margin: 0 auto;
+    padding: 4px 0 4px;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      display: block;
+      border: none !important;
+      margin-left: 4px;
+
+      &.active {
+        background-color: var(--light-color);
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+
+.wines-container {
+  margin-top: 64px;
+  app-wine {
+    margin: auto;
+  }
+}

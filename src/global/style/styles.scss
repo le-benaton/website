@@ -5,6 +5,7 @@ html {
 body {
   color: #3e2723;
   --dark-color: #3e2723;
+  --dark-color-contrast: #ffffff;
   --medium-color: #6d4c41;
   --light-color: #efebe9;
   --border-color: #d7ccc8;
@@ -13,6 +14,50 @@ body {
   --dangar-color: #cf3c4f;
   --success-color: #28ba62;
   --success-color-contrast: #ffffff;
+
+
+  /** ワイン **/
+  --ion-color-red: #D50000;
+  --ion-color-red-rgb: 213,0,0;
+  --ion-color-red-contrast: #ffffff;
+  --ion-color-red-contrast-rgb: 255,255,255;
+  --ion-color-red-shade: #bb0000;
+  --ion-color-red-tint: #d91a1a;
+
+  --ion-color-white: #424242;
+  --ion-color-white-rgb: 66,66,66;
+  --ion-color-white-contrast: #ffffff;
+  --ion-color-white-contrast-rgb: 255,255,255;
+  --ion-color-white-shade: #3a3a3a;
+  --ion-color-white-tint: #555555;
+
+  --ion-color-sparkling: #9E9D24;
+  --ion-color-sparkling-rgb: 158,157,36;
+  --ion-color-sparkling-contrast: #000000;
+  --ion-color-sparkling-contrast-rgb: 0,0,0;
+  --ion-color-sparkling-shade: #8b8a20;
+  --ion-color-sparkling-tint: #a8a73a;
+
+  --ion-color-champagne: #F9A825;
+  --ion-color-champagne-rgb: 249,168,37;
+  --ion-color-champagne-contrast: #000000;
+  --ion-color-champagne-contrast-rgb: 0,0,0;
+  --ion-color-champagne-shade: #db9421;
+  --ion-color-champagne-tint: #fab13b;
+
+  --ion-color-rose: #F4511E;
+  --ion-color-rose-rgb: 244,81,30;
+  --ion-color-rose-contrast: #ffffff;
+  --ion-color-rose-contrast-rgb: 255,255,255;
+  --ion-color-rose-shade: #d7471a;
+  --ion-color-rose-tint: #f56235;
+
+  --ion-color-other: #424242;
+  --ion-color-other-rgb: 66,66,66;
+  --ion-color-other-contrast: #ffffff;
+  --ion-color-other-contrast-rgb: 255,255,255;
+  --ion-color-other-shade: #3a3a3a;
+  --ion-color-other-tint: #555555;
 }
 
 app-header {

@@ -1,0 +1,80 @@
+:host {
+  display: block;
+  margin: auto;
+
+  .wine-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 32px;
+    width: 600px;
+
+    & > section {
+      padding: 0 16px 0 0;
+      border-right: 1px solid var(--border-color);
+      flex: 1;
+      div.wine-label {
+        display: inline-block;
+        text-align: center;
+        border-radius: 4px;
+        padding: 4px 6px 3px;
+        font-size: 0.8rem;
+
+        &.red {
+          background-color: var(--ion-color-red);
+          color: var(--ion-color-red-contrast);
+        }
+
+        &.white {
+          background-color: var(--ion-color-white);
+          color: var(--ion-color-white-contrast);
+        }
+
+        &.sparkling {
+          background-color: var(--ion-color-sparkling);
+          color: var(--ion-color-sparkling-contrast);
+        }
+
+        &.champagne {
+          background-color: var(--ion-color-champagne);
+          color: var(--ion-color-champagne-contrast);
+        }
+
+        &.rose {
+          background-color: var(--ion-color-rose);
+          color: var(--ion-color-rose-contrast);
+        }
+
+        &.other {
+          background-color: var(--ion-color-other);
+          color: var(--ion-color-other-contrast);
+        }
+
+      }
+      h3 {
+        font-size: 1.4rem;
+        margin: 8px 0 8px;
+        color: var(--dark-color);
+      }
+      h4 {
+        font-size: 1rem;
+        font-weight: normal !important;
+        color: var(--medium-color);
+        margin: 4px 0 8px 2px;
+      }
+    }
+
+    & > div {
+      padding-left: 16px;
+      text-align: center;
+      width: 100px;
+      div.year {
+        margin-bottom: 8px;
+      }
+
+      div.price {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
