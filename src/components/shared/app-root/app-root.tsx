@@ -12,16 +12,16 @@ export class AppRoot {
     return (
       <Host>
         <Router.Switch>
-          <Route path="/">
-            <page-home router={Router}></page-home>
+          <Route path={/^\/wines/}>
+            <page-wines></page-wines>
           </Route>
 
           <Route path={/^\/complete/}>
             <page-complete></page-complete>
           </Route>
 
-          <Route path="/wines">
-            <page-wines></page-wines>
+          <Route path="/">
+            <page-home router={Router}></page-home>
           </Route>
         </Router.Switch>
       </Host>
