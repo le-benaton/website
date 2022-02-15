@@ -1,3 +1,3 @@
-import {createRouter} from 'stencil-router-v2';
+import { createRouter } from 'stencil-router-v2';
 
 export const Router = createRouter();

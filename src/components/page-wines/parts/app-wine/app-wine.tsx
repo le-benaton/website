@@ -24,7 +24,11 @@ export class AppWine {
             <h4>{this.wine.label?.replace(/　/g, ' ')}</h4>
           </section>
           <div>
-            <div class="year">{this.wine.year}年</div>
+            <div class="year">
+              {
+                (this.wine.year === 0) ? 'NV': (!this.wine.year) ? '' : this.wine.year + '年'
+              }
+            </div>
             <div class="price">¥{this.wine.price.sell.toLocaleString()}</div>
           </div>
         </div>
