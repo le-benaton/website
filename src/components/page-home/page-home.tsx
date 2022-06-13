@@ -1,5 +1,5 @@
 import {Component, h, Host, Listen, Prop, State} from '@stencil/core';
-import { Router } from 'stencil-router-v2';
+import {href, Router} from 'stencil-router-v2';
 
 import * as firebase from "firebase/app";
 import { Firestore, getFirestore, setDoc, collection, doc, query, where, getDocs } from 'firebase/firestore';
@@ -326,39 +326,10 @@ export class PageHome {
               </div>
             </div>
 
-            <div class="equidistant-container">
-              <section id="red-wine" class="equidistant-container-inner">
-                <p>
-                  <img src="assets/images/red.jpg" class="radius" decoding="async" width="500" height="500" alt="赤ワイン"/>
-                </p>
-                <h3 class="wine-title">赤ワインリスト<br/>VIN ROUGE de Bourgogne<br/>ブルゴーニュ ( 赤 )</h3>
-              </section>
-
-              <section id="white-wine" class="equidistant-container-inner">
-                <p>
-                  <img src="assets/images/white.jpg" class="radius" decoding="async" width="500" height="500" alt="白ワイン"/>
-                </p>
-                <h3 class="wine-title">白ワインリスト<br/>VIN BLANC de Bourgogne<br/>ブルゴーニュ( 白 )</h3>
-              </section>
-
-              <section id="champagne-wine" class="equidistant-container-inner">
-                <p>
-                  <img
-                    src="assets/images/sparkring.jpg"
-                    class="radius"
-                    decoding="async"
-                    width="500"
-                    height="500"
-                    alt="シャンパン"
-                  />
-                </p>
-                <h3 class="wine-title">
-                  シャンパーニュ/スパークリングワインリスト<br/>
-                  CHAMPAGNE(シャンパーニュ)<br/>
-                  VIN MOUSSEUX(ブルゴーニュ産スパークリングワイン)
-                </h3>
-              </section>
+            <div>
+              <a class="btn wine-list" {...href('/wines')}>ワインリストをみる</a>
             </div>
+
             <hr/>
             <div class="leading-container">
               <p>

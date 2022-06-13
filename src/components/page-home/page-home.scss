@@ -399,6 +399,23 @@ section.modal-wine-list {
   display: none;
 }
 
+.btn.wine-list {
+  margin: auto;
+  display: block;
+  width: 80%;
+  padding: 16px 0;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 32px;
+  border: 1px solid var(--medium-color);
+
+  &:hover {
+    background: var(--medium-color);
+    color: #ffffff;
+  }
+}
+
 @media screen and (max-width: 800px) {
   section.modal-wine-list {
     max-width: 100%;
