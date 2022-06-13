@@ -23,6 +23,9 @@ export class AppRoot {
           <Route path="/">
             <page-home router={Router}></page-home>
           </Route>
+
+
+          <Route path={/^\/wine/} to="/wines" />
         </Router.Switch>
       </Host>
     );
