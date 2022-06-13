@@ -60,26 +60,6 @@ export class PageWines {
               return <app-wine wine={wines}></app-wine>
             })}
         </div>
-        {/*<table>*/}
-        {/*  {this.wines.filter(d => d.type === 'WHITE').map(wine => {*/}
-        {/*    return <tr><td>{wine.type}</td><td>{wine.name}</td><td>{wine.label}</td><td>{wine.year}年</td><td>¥{wine.price.sell}</td></tr>*/}
-        {/*  })}</table>*/}
-        {/*<table>*/}
-        {/*  {this.wines.filter(d => d.type === 'CHAMPAGNE').map(wine => {*/}
-        {/*    return <tr><td>{wine.type}</td><td>{wine.name}</td><td>{wine.label}</td><td>{wine.year}年</td><td>¥{wine.price.sell}</td></tr>*/}
-        {/*  })}</table>*/}
-        {/*<table>*/}
-        {/*  {this.wines.filter(d => d.type === 'SPARKLING').map(wine => {*/}
-        {/*    return <tr><td>{wine.type}</td><td>{wine.name}</td><td>{wine.label}</td><td>{wine.year}年</td><td>¥{wine.price.sell}</td></tr>*/}
-        {/*  })}</table>*/}
-        {/*<table>*/}
-        {/*  {this.wines.filter(d => d.type === 'ROSE').map(wine => {*/}
-        {/*    return <tr><td>{wine.type}</td><td>{wine.name}</td><td>{wine.label}</td><td>{wine.year}年</td><td>¥{wine.price.sell}</td></tr>*/}
-        {/*  })}</table>*/}
-        {/*<table>*/}
-        {/*  {this.wines.filter(d => d.type === 'OTHER').map(wine => {*/}
-        {/*    return <tr><td>{wine.type}</td><td>{wine.name}</td><td>{wine.label}</td><td>{wine.year}年</td><td>¥{wine.price.sell}</td></tr>*/}
-        {/*  })}</table>*/}
       </div>
     );
   }
