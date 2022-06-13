@@ -22,7 +22,6 @@ export class PageWines {
   types: string[] = ['RED', 'WHITE', 'SPARKLING', 'CHAMPAGNE', 'ROSE', 'OTHER'];
 
   async componentDidRender() {
-    await new Promise(resolve => setTimeout(resolve, 1000))
     const wines = await fetch('https://przhp2ejw9.execute-api.ap-northeast-1.amazonaws.com/dev/group/2362-5951/0', {
       method: 'GET',
       headers: {

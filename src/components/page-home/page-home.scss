@@ -9,7 +9,7 @@
 section > .wrap {
   margin: auto;
   max-width: 1200px;
-  padding: 20px 0 40px;
+  padding: 0 0 40px;
 }
 
 @media screen and (max-width: 800px) {
@@ -216,7 +216,8 @@ ul.contact-wrapper {
 
 h2 {
   font-size: 2rem;
-  padding: 0 0 4px;
+  padding: 100px 0 4px;
+  margin-top: 0;
   text-align: center;
 }
 
@@ -424,4 +425,58 @@ ul.reserved-system li button {
 #menu-voyage p.parenthesis::first-letter {
   font-size: 200%;
   color: var(--background-shade-color);
+}
+
+
+.toast-area {
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  width: 220px;
+}
+
+.toast-area > .toast {
+  &.hide {
+    display: none;
+  }
+  display: block;
+  padding: 8px 32px 8px 10px;
+  color: var(--success-color-contrast);
+  background-color: var(--success-color);
+  margin-bottom: 6px;
+  border-radius: 2px;
+  opacity: 0.95;
+  position: relative;
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.95;
+  }
+}
+
+.toast-area > .toast > span.close {
+  position: absolute;
+  top: 8px;
+  right: 6px;
+  color: var(--success-color);
+  background-color: var(--success-color-contrast);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toast-area > .toast > span.close > span {
+  position: relative;
+  top: -1px;
+  line-height: 0;
+  font-size: 15px;
 }
