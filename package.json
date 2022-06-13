@@ -1,8 +1,9 @@
 {
-  "name": "stencil",
+  "name": "benaton",
   "private": true,
   "version": "0.0.1",
-  "description": "Stencil App Starter",
+  "author": "Masahiko Sakakibara<sakakibara@rdlabo.jp>",
+  "description": "西宮・夙川のフレンチレストラン「ル ベナトン」のWebサイト",
   "scripts": {
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
@@ -15,7 +16,7 @@
     "deploy": "npm run build -- --prerender && firebase deploy -f"
   },
   "devDependencies": {
-    "@stencil/core": "^2.11.0",
+    "@stencil/core": "^2.16.1",
     "@stencil/sass": "^1.5.2",
     "@types/jest": "^26.0.24",
     "firebase-tools": "^9.23.0",

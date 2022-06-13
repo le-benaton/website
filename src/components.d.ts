@@ -28,6 +28,14 @@ export namespace Components {
     interface PageWines {
     }
 }
+export interface AppContactCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLAppContactElement;
+}
+export interface AppGuidelineCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLAppGuidelineElement;
+}
 declare global {
     interface HTMLAppContactElement extends Components.AppContact, HTMLStencilElement {
     }
@@ -90,11 +98,11 @@ declare global {
 }
 declare namespace LocalJSX {
     interface AppContact {
-        "onRecordConversion"?: (event: CustomEvent<void>) => void;
+        "onRecordConversion"?: (event: AppContactCustomEvent<void>) => void;
         "router"?: Router;
     }
     interface AppGuideline {
-        "onRecordConversion"?: (event: CustomEvent<void>) => void;
+        "onRecordConversion"?: (event: AppGuidelineCustomEvent<void>) => void;
     }
     interface AppHeader {
     }
