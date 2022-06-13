@@ -57,6 +57,7 @@ export class PageWines {
         </div>
 
         <div class="wines-container">
+          {this.wines.length === 0 ? <div class="text-center">Loading...</div>:<span></span>}
           {this.wines.filter(d => this.types.includes(d.type))
             .sort((a, b) => a.price.sell - b.price.sell)
             .map(wines => {
