@@ -1,4 +1,4 @@
-import {Component, Host, h, Listen, Element, State} from '@stencil/core';
+import {Component, Host, h, Listen, Element, State, getAssetPath} from '@stencil/core';
 import { href } from 'stencil-router-v2';
 import { Router } from '../router';
 import {InternalRouterState} from 'stencil-router-v2/dist/types';
@@ -57,7 +57,7 @@ export class AppHeader {
       <Host>
         <header>
           <div class="logo">
-            <a {...href('/')}><img src="assets/images/logo.svg" alt="西宮・夙川のフレンチレストラン「ル・ベナトン」" decoding="async" /></a>
+            <a {...href('/')}><img src={getAssetPath(`/assets/images/logo.svg`)} alt="西宮・夙川のフレンチレストラン「ル・ベナトン」" decoding="async" /></a>
           </div>
           { this.enableMenu ?
           <nav class={this.isOpenMobileNav ? 'open' : 'hide'}>
