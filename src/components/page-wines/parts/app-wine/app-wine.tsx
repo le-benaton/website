@@ -22,7 +22,7 @@ export class AppWine {
             <div class={'wine-label ' + this.wine.type.toLowerCase()}>{this.wine.type}</div>
             <h3>{this.wine.name}</h3>
             <h4>{this.wine.label?.replace(/　/g, ' ')}</h4>
-            <p>ご注文番号「{this.wine.type.slice(0, 2)}{this.wine.threadId}」</p>
+            <p><span class='wine-id'>{this.wine.type.slice(0, 2)}{this.wine.threadId}</span></p>
           </section>
           <div>
             <div class="year">

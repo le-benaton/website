@@ -61,6 +61,10 @@
         color: var(--medium-color);
         margin: 4px 0 8px 2px;
       }
+      p > span.wine-id {
+        background-color: #f0f0f0;
+        padding: 2px 4px;
+      }
     }
 
     & > div {
