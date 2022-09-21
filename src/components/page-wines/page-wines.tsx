@@ -22,7 +22,7 @@ export class PageWines {
   types: string[] = ['RED', 'WHITE', 'SPARKLING', 'CHAMPAGNE', 'ROSE', 'OTHER'];
 
   async componentDidRender() {
-    const wines = await fetch('https://przhp2ejw9.execute-api.ap-northeast-1.amazonaws.com/dev/group/2362-5951/0', {
+    const wines = await fetch('http://localhost:3000/group/2362-5951', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
