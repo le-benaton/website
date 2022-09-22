@@ -26,7 +26,7 @@ export class PageWines {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'gytuwze7JQTnrDtO2ucFzwqI11l2',
+        'Authorization': 'Bearer gytuwze7JQTnrDtO2ucFzwqI11l2',
       },
     }).then(response => response.json());
     this.wines = wines
