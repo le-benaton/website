@@ -180,7 +180,7 @@ export class PageHome {
                   <li>デザート</li>
                   <li>パン、コーヒー</li>
                 </ul>
-                <p>3,850円(税込)</p>
+                <p>3,850円(税込、サービス料５%別途)</p>
               </section>
 
               <div class="equidistant-container-inner">
@@ -200,7 +200,7 @@ export class PageHome {
                   <li>デザート</li>
                   <li>パン、コーヒー</li>
                 </ul>
-                <p>5,280円(税込)</p>
+                <p>5,280円(税込、サービス料５%別途)</p>
               </div>
 
               <div class="equidistant-container-inner">
@@ -217,7 +217,7 @@ export class PageHome {
                   <li>デザート</li>
                   <li>パン、コーヒー</li>
                 </ul>
-                <p>6,600円(税込)</p>
+                <p>6,600円(税込、サービス料５%別途)</p>
               </div>
             </div>
           </div>
@@ -263,7 +263,7 @@ export class PageHome {
                   <li>デザート(数種類の中からお選びいただけます)</li>
                   <li>パン、コーヒー</li>
                 </ul>
-                <p>6,600円(税込、サービス料５%別途)</p>
+                <p>6,600円(税込、サービス料１０%別途)</p>
               </section>
 
               <section class="equidistant-container-inner">
@@ -285,7 +285,7 @@ export class PageHome {
                   <li>パン、コーヒー</li>
                 </ul>
 
-                <p>9,350円(税込、サービス料５%別途)</p>
+                <p>9,350円(税込、サービス料１０%別途)</p>
               </section>
 
               <section class="equidistant-container-inner">
@@ -304,7 +304,7 @@ export class PageHome {
                   <li>パン、コーヒー</li>
                 </ul>
                 <p>
-                  13,200円(税込、サービス料５%別途)<br/>その他、お客様のご希望がございましたら、スタッフにお申し付け下さい。
+                  13,200円(税込、サービス料１０%別途)<br/>その他、お客様のご希望がございましたら、スタッフにお申し付け下さい。
                 </p>
               </section>
             </div>
