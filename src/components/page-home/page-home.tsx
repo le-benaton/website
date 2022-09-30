@@ -327,7 +327,7 @@ export class PageHome {
             </div>
 
             <div>
-              <a class="btn wine-list" {...href('/wines')}>ワインリストをみる</a>
+              <a class="btn wine-list" href="https://winecode.app/publish/2362-5951/gytuwze7JQTnrDtO2ucFzwqI11l2" target="_blank">ワインリストをみる（別窓）</a>
             </div>
 
             <hr/>
