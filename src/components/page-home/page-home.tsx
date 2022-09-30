@@ -1,5 +1,5 @@
 import {Component, h, Host, Listen, Prop, State} from '@stencil/core';
-import {href, Router} from 'stencil-router-v2';
+import {Router} from 'stencil-router-v2';
 
 import * as firebase from "firebase/app";
 import { Firestore, getFirestore, setDoc, collection, doc, query, where, getDocs } from 'firebase/firestore';
