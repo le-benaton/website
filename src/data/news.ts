@@ -3,7 +3,7 @@ import { IItem } from './item.interface';
 export const news: IItem[] = [
   {
     title: '適格請求書発行事業者登録番号',
-    body: '令和5年10月1日より始まるインボイス制度対応のため、適格請求書発行事業者登録番号をお知らせいたします。<br><br>適格請求書発行事業者登録番号：T2810243268764<br><br>また、当社の登録情報は、国税庁の<a href="https://www.invoice-kohyo.nta.go.jp/regno-search/detail?selRegNo=2810243268764">ホームページ</a>からもご確認いただけます。',
+    body: '令和5年10月1日より始まるインボイス制度対応のため、適格請求書発行事業者登録番号をお知らせいたします。<br><br>適格請求書発行事業者登録番号：T2810243268764<br><br>また、当店の登録情報は、国税庁の<a href="https://www.invoice-kohyo.nta.go.jp/regno-search/detail?selRegNo=2810243268764">ホームページ</a>からもご確認いただけます。',
   },
   {
     title: '2023年9月のおやすみ',
