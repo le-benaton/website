@@ -221,6 +221,7 @@ export class PageHome {
               </div>
             </div>
           </div>
+          <div class="attention-limit"><p>令和5年12月1日よりお料理のコース価格、種類が変わります。詳しくはお知らせをご覧ください。</p></div>
         </section>
 
         <section id="menu-dinner">
@@ -308,6 +309,7 @@ export class PageHome {
                 </p>
               </section>
             </div>
+            <div class="attention-limit"><p>令和5年12月1日よりお料理のコース価格、種類が変わります。詳しくはお知らせをご覧ください。</p></div>
           </div>
         </section>
 
