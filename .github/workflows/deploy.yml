@@ -8,20 +8,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 14.x
-
-      # パッケージのキャッシュ
+          node-version: 18
       - name: Use cached node_modules
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         with:
-          path:
-            node_modules
-          key: ${{ runner.os }}-v1-dependencies-${{ hashFiles('**/package-lock.json') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-v8-dependencies-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-v1-dependencies-
+            ${{ runner.os }}-v8-dependencies-
 
       # Lintとテストの実行
       - name: npm install, build, and test
