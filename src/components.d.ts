@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Router } from "stencil-router-v2";
 import { WineInterface } from "./components/page-wines/wine.interface";
+export { Router } from "stencil-router-v2";
+export { WineInterface } from "./components/page-wines/wine.interface";
 export namespace Components {
     interface AppContact {
         "router": Router;
@@ -37,13 +39,35 @@ export interface AppGuidelineCustomEvent<T> extends CustomEvent<T> {
     target: HTMLAppGuidelineElement;
 }
 declare global {
+    interface HTMLAppContactElementEventMap {
+        "recordConversion": void;
+    }
     interface HTMLAppContactElement extends Components.AppContact, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLAppContactElementEventMap>(type: K, listener: (this: HTMLAppContactElement, ev: AppContactCustomEvent<HTMLAppContactElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLAppContactElementEventMap>(type: K, listener: (this: HTMLAppContactElement, ev: AppContactCustomEvent<HTMLAppContactElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLAppContactElement: {
         prototype: HTMLAppContactElement;
         new (): HTMLAppContactElement;
     };
+    interface HTMLAppGuidelineElementEventMap {
+        "recordConversion": void;
+    }
     interface HTMLAppGuidelineElement extends Components.AppGuideline, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLAppGuidelineElementEventMap>(type: K, listener: (this: HTMLAppGuidelineElement, ev: AppGuidelineCustomEvent<HTMLAppGuidelineElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLAppGuidelineElementEventMap>(type: K, listener: (this: HTMLAppGuidelineElement, ev: AppGuidelineCustomEvent<HTMLAppGuidelineElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLAppGuidelineElement: {
         prototype: HTMLAppGuidelineElement;
