@@ -6,17 +6,19 @@
   display: block;
 }
 
-.attention-limit {
-  text-align: center;
-  margin-top: 32px;
-  padding: 32px 16px;
-  border-top: 1px solid var(--border-color);
-}
-
 section > .wrap {
   margin: auto;
   max-width: 1200px;
   padding: 0 0 40px;
+}
+
+.sub-course-title {
+  position: relative;
+  top: 12px;
+  margin-top: 8px;
+  font-weight: normal;
+  font-family: cursive;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 800px) {
