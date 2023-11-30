@@ -213,15 +213,12 @@ export class PageHome {
                 />
                 <h4>Ｃコース(ランチのみ)</h4>
                 <ul>
-                  <li>アミューズ</li>
-                  <li>前菜（数種類の中からお選びいただけます）</li>
-                  <li>お魚料理</li>
-                  <li>お肉料理（数種類の中からお選びいただけます）</li>
-                  <li>チーズ又は、小さなサラダ</li>
-                  <li>デザート(数種類の中からお選びいただけます)</li>
+                  <li>アミューズ、前菜、メイン（お肉、魚介）を、その日の食材でお料理を組み立てさせていただきます</li>
+                  <li>デザート</li>
                   <li>パン、コーヒー</li>
                 </ul>
-                <p>7,150円(税込、サービス料５%別途)</p>
+                <p>7,150円 / 11,000円(税込、サービス料５%別途)</p>
+                <p><span>2つのグレードからお選びください</span></p>
               </div>
             </div>
           </div>
@@ -248,6 +245,11 @@ export class PageHome {
               </div>
             </div>
 
+            <div class="leading-description">
+              <h3>プリフィックススタイル</h3>
+              <p>コースのお皿をご用意しているメニューの中からお客様にお選びいただく「プリフィックススタイル」で、お料理をご提供いたします。お好きなお料理を、お好きな組み合わせでお楽しみください。お客様のお好みにあわせて、減塩やボリュームの調整も承りますので、気軽にお申し付けください。</p>
+            </div>
+
             <div class="equidistant-container">
               <section class="equidistant-container-inner">
                 <img
@@ -257,7 +259,7 @@ export class PageHome {
                   height="534"
                   alt="西宮・夙川のフレンチレストラン「ル ベナトン」 ヴォルネイコース"
                 />
-                <h5 class="sub-course-title">Volnay Course</h5>
+                <h5 class="sub-course-title">Volnay</h5>
                 <h4>ヴォルネイコース</h4>
                 <ul>
                   <li>アミューズ</li>
@@ -279,7 +281,7 @@ export class PageHome {
                   height="534"
                   alt="西宮・夙川のフレンチレストラン「ル ベナトン」 ボーヌコース"
                 />
-                <h5 class="sub-course-title">Beaune Course</h5>
+                <h5 class="sub-course-title">Beaune</h5>
                 <h4>ボーヌコース</h4>
                 <ul>
                   <li>アミューズ</li>
@@ -293,7 +295,17 @@ export class PageHome {
 
                 <p>10,450円(税込、サービス料１０%別途)</p>
               </section>
+            </div>
 
+
+            <div class="leading-description">
+              <h3>おまかせコース</h3>
+              <p>ベナトンの料理と技術を味わい尽くすスペシャルコースです。お客様とご相談の上、その日の食材をもとに、お料理をご提案させていただきます。ご予約の状況次第では、モンラッシェコース、コルトンコースはご提供が難しい場合がございますので、事前にご相談ください。
+                {/*また、お客様のご要望にお応えして、ワインのペアリングもご用意いたします。*/}
+              </p>
+            </div>
+
+            <div class="equidistant-container">
               <section class="equidistant-container-inner">
                 <img
                   src="assets/images/dinner3.jpg"
@@ -302,40 +314,12 @@ export class PageHome {
                   height="534"
                   alt="西宮・夙川のフレンチレストラン「ル ベナトン」 ムルソーコース"
                 />
-                <h5 class="sub-course-title">Meaursault Course</h5>
+                <h5 class="sub-course-title">Meaursault</h5>
                 <h4>ムルソーコース</h4>
-                <ul>
-                  <li>アミューズ</li>
-                  <li>前菜２種（数種類の中からお選びいただけます）</li>
-                  <li>ボキャルドオマール（オマール海老のスープ仕立)</li>
-                  <li>お魚料理</li>
-                  <li>お肉料理（数種類の中からお選びいただけます）</li>
-                  <li>チーズ又は、小さなサラダ</li>
-                  <li>デザート(数種類の中からお選びいただけます)</li>
-                  <li>パン、コーヒー</li>
-                </ul>
                 <p>
                   14,850円(税込、サービス料１０%別途)
                 </p>
               </section>
-            </div>
-
-            <hr/>
-
-            <div class="leading-container">
-              <h2 class="subtitle">要予約コース<span>3日前までにご予約ください</span></h2>
-              <div class="parenthesis">
-                <p>
-                  ベナトンの料理と技術を味わい尽くすスペシャルコースです。お客様のご要望をベースに、普段のベナトンのスタイルから離れ、ショートポーションで料理を組み立てます。
-                  <strong>「いろいろなものを少しずつ味わっていただく」</strong>をコンセプトに10皿以上をご提供します。また、お客様のご要望にお応えして、ワインのペアリングもご用意いたします。
-                </p>
-                <p>
-                  料理にこだわり抜くためにシェフが料理を担当させていただきます。そのため、1日1組様のみのご予約とさせていただきます。ご予約は3日前までにお願いいたします。
-                </p>
-              </div>
-            </div>
-
-            <div class="equidistant-container">
               <section class="equidistant-container-inner">
                 <img
                   src="assets/images/dinner1.jpg"
@@ -344,14 +328,10 @@ export class PageHome {
                   height="534"
                   alt="西宮・夙川のフレンチレストラン「ル ベナトン」 ヴォルネイコース"
                 />
-                <h5 class="sub-course-title">Montrachet Course</h5>
+                <h5 class="sub-course-title">Montrachet</h5>
                 <h4>モンラッシェコース</h4>
-                <ul>
-                  <li>アミューズ、前菜、スープ、メイン（お肉、魚介）を、ご要望をお聞きしてお料理を組み立てさせていただきます</li>
-                  <li>デザート</li>
-                  <li>パン、コーヒー</li>
-                </ul>
                 <p>19,800円(税込、サービス料１０%別途)</p>
+                <p><span>事前にご相談ください</span></p>
               </section>
 
               <section class="equidistant-container-inner">
@@ -362,14 +342,10 @@ export class PageHome {
                   height="534"
                   alt="西宮・夙川のフレンチレストラン「ル ベナトン」 ボーヌコース"
                 />
-                <h5 class="sub-course-title">Corton Course</h5>
+                <h5 class="sub-course-title">Corton</h5>
                 <h4>コルトンコース</h4>
-                <ul>
-                  <li>アミューズ、前菜、スープ、メイン（お肉、魚介）を、ご要望をお聞きしてお料理を組み立てさせていただきます</li>
-                  <li>デザート</li>
-                  <li>パン、コーヒー</li>
-                </ul>
                 <p>26,400円(税込、サービス料１０%別途)</p>
+                <p><span>事前にご相談ください</span></p>
               </section>
 
             </div>

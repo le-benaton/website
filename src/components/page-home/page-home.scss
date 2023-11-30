@@ -21,6 +21,21 @@ section > .wrap {
   font-size: 16px;
 }
 
+.leading-description {
+  padding-top: 64px;
+  h3 {
+    font-size: 1.6rem;
+    padding: 0 8px 16px;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid var(--border-color);
+  }
+  p {
+    font-size: 1.1rem;
+    padding: 0 8px;
+    line-height: 1.8rem;
+  }
+}
+
 @media screen and (max-width: 800px) {
   section > .wrap {
     padding-left: 16px;
@@ -140,6 +155,13 @@ form.wine-search-form button[type='submit'] {
 
 .equidistant-container > .equidistant-container-inner img {
   border: 1px solid var(--light-color);
+}
+
+.equidistant-container > .equidistant-container-inner p span {
+  background-color: var(--medium-color);
+  color: var(--dark-color-contrast);
+  padding: 4px 6px;
+  font-size: 0.8rem !important;
 }
 
 /**
