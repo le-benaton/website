@@ -6,9 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Router } from "stencil-router-v2";
-import { WineInterface } from "./components/page-wines/wine.interface";
 export { Router } from "stencil-router-v2";
-export { WineInterface } from "./components/page-wines/wine.interface";
 export namespace Components {
     interface AppContact {
         "router": Router;
@@ -19,15 +17,10 @@ export namespace Components {
     }
     interface AppRoot {
     }
-    interface AppWine {
-        "wine": WineInterface;
-    }
     interface PageComplete {
     }
     interface PageHome {
         "router": Router;
-    }
-    interface PageWines {
     }
 }
 export interface AppContactCustomEvent<T> extends CustomEvent<T> {
@@ -85,12 +78,6 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
-    interface HTMLAppWineElement extends Components.AppWine, HTMLStencilElement {
-    }
-    var HTMLAppWineElement: {
-        prototype: HTMLAppWineElement;
-        new (): HTMLAppWineElement;
-    };
     interface HTMLPageCompleteElement extends Components.PageComplete, HTMLStencilElement {
     }
     var HTMLPageCompleteElement: {
@@ -103,21 +90,13 @@ declare global {
         prototype: HTMLPageHomeElement;
         new (): HTMLPageHomeElement;
     };
-    interface HTMLPageWinesElement extends Components.PageWines, HTMLStencilElement {
-    }
-    var HTMLPageWinesElement: {
-        prototype: HTMLPageWinesElement;
-        new (): HTMLPageWinesElement;
-    };
     interface HTMLElementTagNameMap {
         "app-contact": HTMLAppContactElement;
         "app-guideline": HTMLAppGuidelineElement;
         "app-header": HTMLAppHeaderElement;
         "app-root": HTMLAppRootElement;
-        "app-wine": HTMLAppWineElement;
         "page-complete": HTMLPageCompleteElement;
         "page-home": HTMLPageHomeElement;
-        "page-wines": HTMLPageWinesElement;
     }
 }
 declare namespace LocalJSX {
@@ -132,25 +111,18 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
-    interface AppWine {
-        "wine"?: WineInterface;
-    }
     interface PageComplete {
     }
     interface PageHome {
         "router"?: Router;
-    }
-    interface PageWines {
     }
     interface IntrinsicElements {
         "app-contact": AppContact;
         "app-guideline": AppGuideline;
         "app-header": AppHeader;
         "app-root": AppRoot;
-        "app-wine": AppWine;
         "page-complete": PageComplete;
         "page-home": PageHome;
-        "page-wines": PageWines;
     }
 }
 export { LocalJSX as JSX };
@@ -161,10 +133,8 @@ declare module "@stencil/core" {
             "app-guideline": LocalJSX.AppGuideline & JSXBase.HTMLAttributes<HTMLAppGuidelineElement>;
             "app-header": LocalJSX.AppHeader & JSXBase.HTMLAttributes<HTMLAppHeaderElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
-            "app-wine": LocalJSX.AppWine & JSXBase.HTMLAttributes<HTMLAppWineElement>;
             "page-complete": LocalJSX.PageComplete & JSXBase.HTMLAttributes<HTMLPageCompleteElement>;
             "page-home": LocalJSX.PageHome & JSXBase.HTMLAttributes<HTMLPageHomeElement>;
-            "page-wines": LocalJSX.PageWines & JSXBase.HTMLAttributes<HTMLPageWinesElement>;
         }
     }
 }

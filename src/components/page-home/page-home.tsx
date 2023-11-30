@@ -175,12 +175,12 @@ export class PageHome {
                 <h4>Aコース(ランチのみ)</h4>
                 <ul>
                   <li>アミューズ</li>
-                  <li>前菜（数種類の中らお選びいただけます）</li>
+                  <li>前菜（数種類の中からお選びいただけます）</li>
                   <li>メイン料理（本日のお魚又はお肉料理）</li>
                   <li>デザート</li>
                   <li>パン、コーヒー</li>
                 </ul>
-                <p>3,850円(税込、サービス料５%別途)</p>
+                <p>4,290円(税込、サービス料５%別途)</p>
               </section>
 
               <div class="equidistant-container-inner">
@@ -194,13 +194,13 @@ export class PageHome {
                 <h4>Ｂコース(ランチのみ)</h4>
                 <ul>
                   <li>アミューズ</li>
-                  <li>前菜（数種類の中らお選びいただけます）</li>
-                  <li>お魚料理（数種類の中らお選びいただけます）</li>
-                  <li>お肉料理（数種類の中らお選びいただけます）</li>
+                  <li>前菜（数種類の中からお選びいただけます）</li>
+                  <li>お魚料理（数種類の中からお選びいただけます）</li>
+                  <li>お肉料理（数種類の中からお選びいただけます）</li>
                   <li>デザート</li>
                   <li>パン、コーヒー</li>
                 </ul>
-                <p>5,280円(税込、サービス料５%別途)</p>
+                <p>5,830円(税込、サービス料５%別途)</p>
               </div>
 
               <div class="equidistant-container-inner">
@@ -211,17 +211,17 @@ export class PageHome {
                   height="533"
                   alt="西宮・夙川のフレンチレストラン「ル ベナトン」 Cコース"
                 />
-                <h4>Ｃ・シェフお任せコース(ランチのみ)</h4>
+                <h4>Ｃコース(ランチのみ)</h4>
                 <ul>
                   <li>アミューズ、前菜、メイン（お肉、魚介）を、その日の食材でお料理を組み立てさせていただきます</li>
                   <li>デザート</li>
                   <li>パン、コーヒー</li>
                 </ul>
-                <p>6,600円(税込、サービス料５%別途)</p>
+                <p>7,150円 / 11,000円(税込、サービス料５%別途)</p>
+                <p><span>2つのグレードからお選びください</span></p>
               </div>
             </div>
           </div>
-          <div class="attention-limit"><p>令和5年12月1日よりお料理のコース価格、種類が変わります。詳しくはお知らせをご覧ください。</p></div>
         </section>
 
         <section id="menu-dinner">
@@ -229,7 +229,7 @@ export class PageHome {
             <h2 class="subtitle">
               ディナー
               <span>
-              <img src="assets/svg/time.svg" class="svg" decoding="async" />
+              <img src="assets/svg/time.svg" class="svg" decoding="async"/>
               17：30～21：00（ラストオーダー）
             </span>
             </h2>
@@ -245,6 +245,11 @@ export class PageHome {
               </div>
             </div>
 
+            <div class="leading-description">
+              <h3>プリフィックススタイル</h3>
+              <p>コースのお皿をご用意しているメニューの中からお客様にお選びいただく「プリフィックススタイル」で、お料理をご提供いたします。お好きなお料理を、お好きな組み合わせでお楽しみください。お客様のお好みにあわせて、減塩やボリュームの調整も承りますので、気軽にお申し付けください。</p>
+            </div>
+
             <div class="equidistant-container">
               <section class="equidistant-container-inner">
                 <img
@@ -252,19 +257,20 @@ export class PageHome {
                   decoding="async"
                   width="800"
                   height="534"
-                  alt="西宮・夙川のフレンチレストラン「ル ベナトン」 ブルギニオンコース"
+                  alt="西宮・夙川のフレンチレストラン「ル ベナトン」 ヴォルネイコース"
                 />
-                <h4>ブルギニオンコース</h4>
+                <h5 class="sub-course-title">Volnay</h5>
+                <h4>ヴォルネイコース</h4>
                 <ul>
                   <li>アミューズ</li>
-                  <li>前菜（数種類の中らお選びいただけます）</li>
+                  <li>前菜（数種類の中からお選びいただけます）</li>
                   <li>お魚料理</li>
-                  <li>お肉料理（数種類の中らお選びいただけます）</li>
+                  <li>お肉料理（数種類の中からお選びいただけます）</li>
                   <li>チーズ又は、小さなサラダ</li>
                   <li>デザート(数種類の中からお選びいただけます)</li>
                   <li>パン、コーヒー</li>
                 </ul>
-                <p>6,600円(税込、サービス料１０%別途)</p>
+                <p>7,480円(税込、サービス料１０%別途)</p>
               </section>
 
               <section class="equidistant-container-inner">
@@ -273,12 +279,13 @@ export class PageHome {
                   decoding="async"
                   width="800"
                   height="534"
-                  alt="西宮・夙川のフレンチレストラン「ル ベナトン」 グルマンコース"
+                  alt="西宮・夙川のフレンチレストラン「ル ベナトン」 ボーヌコース"
                 />
-                <h4>グルマンコース</h4>
+                <h5 class="sub-course-title">Beaune</h5>
+                <h4>ボーヌコース</h4>
                 <ul>
                   <li>アミューズ</li>
-                  <li>前菜２種（数種類の中らお選びいただけます）</li>
+                  <li>前菜２種（数種類の中からお選びいただけます）</li>
                   <li>ボキャルドオマール（オマール海老のスープ仕立)</li>
                   <li>メイン料理（数種類のお肉の中からお選びいただけます)</li>
                   <li>チーズ又は、小さなサラダ</li>
@@ -286,30 +293,62 @@ export class PageHome {
                   <li>パン、コーヒー</li>
                 </ul>
 
-                <p>9,350円(税込、サービス料１０%別途)</p>
+                <p>10,450円(税込、サービス料１０%別途)</p>
               </section>
+            </div>
 
+
+            <div class="leading-description">
+              <h3>おまかせコース</h3>
+              <p>ベナトンの料理と技術を味わい尽くすスペシャルコースです。お客様とご相談の上、その日の食材をもとに、お料理をご提案させていただきます。ご予約の状況次第では、モンラッシェコース、コルトンコースはご提供が難しい場合がございますので、事前にご相談ください。
+                {/*また、お客様のご要望にお応えして、ワインのペアリングもご用意いたします。*/}
+              </p>
+            </div>
+
+            <div class="equidistant-container">
               <section class="equidistant-container-inner">
                 <img
                   src="assets/images/dinner3.jpg"
                   decoding="async"
                   width="800"
                   height="534"
-                  alt="西宮・夙川のフレンチレストラン「ル ベナトン」 デギュステコース"
+                  alt="西宮・夙川のフレンチレストラン「ル ベナトン」 ムルソーコース"
                 />
-                <h4>デギュステ・シェフお任せコース</h4>
-                <ul>
-                  <li>アミューズ</li>
-                  <li>その日の食材でお客様とお話させていただいてお料理を組み立てさせていただきます</li>
-                  <li>デザート(数種類の中からお選びいただけます)</li>
-                  <li>パン、コーヒー</li>
-                </ul>
+                <h5 class="sub-course-title">Meaursault</h5>
+                <h4>ムルソーコース</h4>
                 <p>
-                  13,200円(税込、サービス料１０%別途)<br/>その他、お客様のご希望がございましたら、スタッフにお申し付け下さい。
+                  14,850円(税込、サービス料１０%別途)
                 </p>
               </section>
+              <section class="equidistant-container-inner">
+                <img
+                  src="assets/images/dinner1.jpg"
+                  decoding="async"
+                  width="800"
+                  height="534"
+                  alt="西宮・夙川のフレンチレストラン「ル ベナトン」 ヴォルネイコース"
+                />
+                <h5 class="sub-course-title">Montrachet</h5>
+                <h4>モンラッシェコース</h4>
+                <p>19,800円(税込、サービス料１０%別途)</p>
+                <p><span>事前にご相談ください</span></p>
+              </section>
+
+              <section class="equidistant-container-inner">
+                <img
+                  src="assets/images/dinner2.jpg"
+                  decoding="async"
+                  width="800"
+                  height="534"
+                  alt="西宮・夙川のフレンチレストラン「ル ベナトン」 ボーヌコース"
+                />
+                <h5 class="sub-course-title">Corton</h5>
+                <h4>コルトンコース</h4>
+                <p>26,400円(税込、サービス料１０%別途)</p>
+                <p><span>事前にご相談ください</span></p>
+              </section>
+
             </div>
-            <div class="attention-limit"><p>令和5年12月1日よりお料理のコース価格、種類が変わります。詳しくはお知らせをご覧ください。</p></div>
           </div>
         </section>
 
@@ -329,7 +368,8 @@ export class PageHome {
             </div>
 
             <div>
-              <a class="btn wine-list" href="https://winecode.app/publish/2362-5951/gytuwze7JQTnrDtO2ucFzwqI11l2" target="_blank">ワインリストをみる（別窓）</a>
+              <a class="btn wine-list" href="https://winecode.app/publish/2362-5951/gytuwze7JQTnrDtO2ucFzwqI11l2"
+                 target="_blank">ワインリストをみる（別サイト）</a>
             </div>
 
             <hr/>
@@ -366,7 +406,7 @@ export class PageHome {
                     GLORIEUSES」と呼ばれるワインと食の祭典が催され、普段はブドウ畑に囲まれた小さな街が「フランス食の都」となります。
                   </p>
                   <p>
-                    本場ブルゴーニュの味を引き継ぎ、ヨーロッパから仕入れた食材、地元の兵庫県の食材を取り入れたりしながら、故郷である夙川の地で発展させていきたいと思っています。
+                  本場ブルゴーニュの味を引き継ぎ、ヨーロッパから仕入れた食材、地元の兵庫県の食材を取り入れたりしながら、故郷である夙川の地で発展させていきたいと思っています。
                   </p>
                   <p>オーナー・シェフ 高谷慶(Kei TAKAYA)</p>
                 </div>

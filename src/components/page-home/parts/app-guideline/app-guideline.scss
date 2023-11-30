@@ -1,5 +1,11 @@
 .button-google-map {
   margin-top: 4px !important;
+  position: relative;
+  top: 4px;
+}
+
+address {
+  line-height: 1.5rem;
 }
 
 .announcement-container {
