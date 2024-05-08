@@ -1,1 +1,1 @@
-export { home, list, logoInstagram, time } from "ionicons/icons";
+export { home, list, logoInstagram, time } from 'ionicons/icons';
