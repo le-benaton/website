@@ -75,6 +75,7 @@ section > .wrap {
 
 .leading-description {
   padding-top: 64px;
+  padding-bottom: 20px !important;
   h3 {
     font-size: 1.6rem;
     padding: 0 8px 16px;
@@ -145,6 +146,7 @@ section > .wrap {
     font-weight: bold;
     font-size: 1.3rem;
     line-height: 200%;
+    margin-bottom: 32px;
 
     &.text-left {
       text-align: left;
@@ -171,30 +173,53 @@ section > .wrap {
   }
 }
 
+section.equidistant-outer {
+  background: var(--dark-color);
+  color: var(--dark-color-contrast);
+  padding: 32px 32px 0;
+  margin: 0 32px 32px;
+  border-radius: 8px;
+}
+
 .equidistant-container {
-  padding-top: 32px;
+  max-width: 1200px;
+  margin: auto;
   @media screen and (min-width: 800px) {
     display: flex;
   }
 
   & > .equidistant-container-inner {
+    @media screen and (min-width: 800px) {
+      &.item-2 {
+        width: 40%;
+      }
+    }
+
     padding: 8px;
-
-    ul {
-      padding: 0 0 0 20px;
-    }
-
     img {
-      border: 1px solid var(--light-color);
-      height: auto;
+      border-radius: 8px 8px 0 0;
     }
 
-    p span {
-      background-color: var(--medium-color);
-      color: var(--dark-color-contrast);
-      padding: 4px 6px;
-      font-size: 0.8rem !important;
+    .equidistant-container-inner-content {
+      padding: 0 8px 0;
+
+      ul {
+        padding: 0 0 0 20px;
+        font-size: 0.9rem;
+      }
+
+      p.option {
+        margin: 4px 0 0;
+        span {
+          background-color: var(--medium-color);
+          color: var(--dark-color-contrast);
+          padding: 4px 6px;
+          font-size: 0.8rem !important;
+          border-radius: 4px;
+        }
+      }
     }
+
   }
 }
 
@@ -253,18 +278,18 @@ h2 {
   padding: 100px 0 4px;
   margin-top: 0;
   text-align: center;
-}
 
-h2.subtitle {
-  span {
-    display: block;
-    font-size: 1.1rem;
-    margin: 8px;
+  &.subtitle {
+    span {
+      display: block;
+      font-size: 1.1rem;
+      margin: 8px;
 
-    img.svg {
-      margin-right: 8px;
-      position: relative;
-      top: 3px;
+      ion-icon {
+        margin-right: 8px;
+        position: relative;
+        top: 3px;
+      }
     }
   }
 }

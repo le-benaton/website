@@ -1,4 +1,4 @@
-import { IItem } from './item.interface';
+import { IItem } from './data.interface';
 
 export const announcement: IItem[] = [
   {

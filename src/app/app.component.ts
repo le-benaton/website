@@ -3,6 +3,8 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { GuidelineComponent } from './guideline/guideline.component';
 import { IonicModule } from '@ionic/angular';
 import { IonIcon } from '@ionic/angular/standalone';
+import { launch } from '../data/lunch';
+import { dinnerChief, dinnerPrefix } from '../data/dinner';
 
 @Component({
   selector: 'app-root',
@@ -14,4 +16,7 @@ import { IonIcon } from '@ionic/angular/standalone';
 })
 export class AppComponent {
   readonly title = '西宮・夙川のフレンチレストラン「ル ベナトン」';
+  readonly launch = launch;
+  readonly dinnerPrefix = dinnerPrefix;
+  readonly dinnerChef = dinnerChief;
 }
