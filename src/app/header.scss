@@ -24,10 +24,11 @@ header {
       font-size: 1rem;
       border-radius: 0 0 8px 8px;
       text-decoration: none;
-      background-color: var(--dark-color);
+      background-color: rgba(0, 0, 0, 0.8);
       color: var(--dark-color-contrast);
       ion-icon {
-        margin-right: 2px;
+        position: relative;
+        left: -4px;
       }
     }
 
