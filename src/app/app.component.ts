@@ -13,5 +13,5 @@ import { IonIcon } from '@ionic/angular/standalone';
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
-  title = 'benaton';
+  readonly title = '西宮・夙川のフレンチレストラン「ル ベナトン」';
 }
