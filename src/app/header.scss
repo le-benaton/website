@@ -1,0 +1,76 @@
+header {
+  div.logo-area {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    a.logo-brand {
+      margin: 8px 0 8px 16px;
+      position: relative;
+      top: 4px;
+      img {
+        width: 164px;
+        height: auto;
+      }
+    }
+
+    a.logo-area-reserved {
+      position: fixed;
+      top: 0;
+      right: 8px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      padding: 14px 32px;
+      font-size: 1rem;
+      border-radius: 0 0 8px 8px;
+      text-decoration: none;
+      background-color: var(--dark-color);
+      color: var(--dark-color-contrast);
+      ion-icon {
+        margin-right: 2px;
+      }
+    }
+
+  }
+
+  h1.title {
+    font-size: 1rem;
+    margin: 0;
+    padding: 10px 16px 8px;
+    font-weight: normal;
+    //border-top: 1px solid rgb(239, 235, 233);
+    border-bottom: 1px solid rgb(239, 235, 233);
+  }
+
+  nav {
+    max-width: 1024px;
+    margin: auto;
+
+    ul {
+      list-style-type: none;
+      margin: 16px 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      li {
+        display: block;
+        margin: 0 10px;
+
+        a {
+          font-size: 1rem;
+        }
+
+        ion-icon {
+          position: relative;
+          top: 2px;
+          right: 4px;
+          color: #999999;
+        }
+      }
+    }
+  }
+}

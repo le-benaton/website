@@ -1,28 +1,43 @@
 <header>
-  <div class="logo">
-    <a href="/"
-      ><img
-        src="/assets/images/logo.svg"
+  <div class="logo-area">
+    <a href="/" class="logo-brand">
+      <img
+        ngSrc="/assets/images/logo.svg"
         alt="西宮・夙川のフレンチレストラン「ル・ベナトン」"
         decoding="async"
-    /></a>
+        height="16"
+        width="16"
+      />
+    </a>
+    <a href="/#menu-reserved" class="logo-area-reserved">
+      <ion-icon name="bookmark-outline"></ion-icon>
+      <span>ご予約</span>
+    </a>
   </div>
+  <h1 class="title">
+    <span>西宮・夙川のフレンチレストラン「ル ベナトン」</span>
+  </h1>
   <nav>
     <ul>
-      <li><a href="/#menu-reserved">ご予約</a></li>
-      <li><a href="/#menu-lunch">ランチ</a></li>
-      <li><a href="/#menu-dinner">ディナー</a></li>
-      <li><a href="/#menu-wine">ワイン</a></li>
-      <li><a href="/#menu-profile">プロフィール</a></li>
-      <li><a href="/#menu-contact">お問い合わせ</a></li>
-      <li class="inatagram">
-        <a
-          href="https://www.instagram.com/le_benaton/"
-          rel="noopener"
-          target="_blank"
+      <li>
+        <a href="/#menu-lunch"
+          ><ion-icon name="caret-down-outline"></ion-icon>ランチ</a
         >
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
+      </li>
+      <li>
+        <a href="/#menu-dinner"
+          ><ion-icon name="caret-down-outline"></ion-icon>ディナー</a
+        >
+      </li>
+      <li>
+        <a href="/#menu-profile"
+          ><ion-icon name="caret-down-outline"></ion-icon>プロフィール</a
+        >
+      </li>
+      <li>
+        <a href="/#menu-contact"
+          ><ion-icon name="caret-down-outline"></ion-icon>お問い合わせ</a
+        >
       </li>
     </ul>
   </nav>
@@ -30,11 +45,21 @@
 
 <main>
   <section class="main-visual">
-    <h1 class="title">西宮・夙川のフレンチレストラン「ル ベナトン」</h1>
+    <!--    <hgroup>-->
+    <!--      <a-->
+    <!--        class="instagram"-->
+    <!--        href="https://www.instagram.com/le_benaton/"-->
+    <!--        rel="noopener"-->
+    <!--        target="_blank"-->
+    <!--      >-->
+    <!--        <ion-icon name="logo-instagram"></ion-icon>-->
+    <!--        <span>le_benaton</span>-->
+    <!--      </a>-->
+    <!--    </hgroup>-->
     <div class="hero-image">
       <div>
         <img
-          src="assets/images/slides/104380ga10000008.jpg"
+          ngSrc="assets/images/slides/104380ga10000008.jpg"
           decoding="async"
           width="800"
           height="400"
@@ -43,7 +68,7 @@
       </div>
       <div>
         <img
-          src="assets/images/slides/104380ga10000003.jpg"
+          ngSrc="assets/images/slides/104380ga10000003.jpg"
           decoding="async"
           width="800"
           height="400"
@@ -52,7 +77,7 @@
       </div>
       <div>
         <img
-          src="assets/images/slides/104380ga10000007.jpg"
+          ngSrc="assets/images/slides/104380ga10000007.jpg"
           decoding="async"
           width="800"
           height="400"
@@ -65,7 +90,7 @@
         rel="noopener"
         target="_blank"
       >
-        食べログから写真をみる
+        食べログで写真をみる
       </a>
     </div>
   </section>
@@ -472,7 +497,6 @@
             <textarea
               id="message"
               name="message"
-              cols="50"
               rows="5"
               required
               placeholder="※ご予約は、電話または予約サイトより承ります。"

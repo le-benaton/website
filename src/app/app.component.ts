@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { GuidelineComponent } from './guideline/guideline.component';
 import { IonicModule } from '@ionic/angular';
 import { IonIcon } from '@ionic/angular/standalone';
@@ -7,9 +7,10 @@ import { IonIcon } from '@ionic/angular/standalone';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, GuidelineComponent, IonIcon],
+  imports: [CommonModule, GuidelineComponent, IonIcon, NgOptimizedImage],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrls: ['./app.component.scss', './header.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
   title = 'benaton';
