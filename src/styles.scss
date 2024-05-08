@@ -12,7 +12,7 @@
 }
 
 html {
-  font-size: 88%;
+  font-size: 93.8%;
 }
 
 body {
@@ -22,6 +22,15 @@ body {
   color: #333333;
   --dark-color: #333333;
   --dark-color-contrast: #ffffff;
+  --accent-color: #aa9652;
+  --medium-color: #6d4c41;
+  --light-color: #efebe9;
+  --border-color: #d7ccc8;
+  --background-color: #efebe9;
+  --background-shade-color: #4e342e;
+  --dangar-color: #cf3c4f;
+  --success-color: #28ba62;
+  --success-color-contrast: #ffffff;
 }
 
 h1,
@@ -34,6 +43,85 @@ nav ul li a {
   letter-spacing: 1px;
 }
 
+h4 {
+  ion-icon {
+    position: relative;
+    right: 2px;
+    top: 2px;
+  }
+}
+
 a {
   text-decoration: none;
+}
+
+address {
+  line-height: 2rem;
+  font-style: normal;
+}
+
+a.button,
+button,
+.buttons {
+  ion-icon {
+    margin-right: 4px;
+    position: relative;
+    top: 2px;
+  }
+
+  display: inline-block;
+  border-radius: 8px;
+  padding: 6px 12px 4px;
+  border: 1px solid var(--dark-color);
+  color: var(--dark-color);
+  background: var(--dark-color-contrast);
+  font-size: 1rem;
+  margin: 0;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    outline: 0;
+  }
+}
+
+
+table {
+  width: 100%;
+  margin-top: 8px;
+
+  th, td {
+    vertical-align: top;
+    font-size: 1.1rem;
+    padding: 4px 0;
+  }
+
+  tr.vertical-center {
+    th, td {
+      vertical-align: middle;
+    }
+  }
+
+  th {
+    width: 104px;
+    padding-right: 24px;
+    text-align: right;
+    font-weight: normal;
+
+    span {
+      padding-right: 32px;
+      border-right: 4px dotted var(--medium-color);
+    }
+  }
+
+  td {
+    p {
+      margin-top: 0;
+    }
+
+    button {
+      position: relative;
+      top: 8px;
+    }
+  }
 }
