@@ -4,10 +4,12 @@
 [benaton.net](https://www.benaton.net/)
 
 ## 更新用リンク
-|  項目  | ファイル                                                                         |
-| ---- |------------------------------------------------------------------------------|
-|  お知らせ（画像あり）  | https://github.com/le-benaton/website/edit/main/src/data/announcement.ts     |
-|  お知らせ  | https://github.com/le-benaton/website/edit/main/src/data/news.ts           |
+| 項目         | ファイル                                                                     |
+|------------|--------------------------------------------------------------------------|
+| お知らせ（画像あり） | https://github.com/le-benaton/website/edit/main/src/data/announcement.ts |
+| お知らせ       | https://github.com/le-benaton/website/edit/main/src/data/news.ts         |
+| ランチ        | https://github.com/le-benaton/website/edit/main/src/data/lunch.ts        |
+| ディナー      | https://github.com/le-benaton/website/edit/main/src/data/dinner.ts       |
 
 ### お知らせ（画像あり）に利用する画像をアップロードする方法
 1. 画像を用意します。事前に、縦横300px程度にリサイズしてください。
