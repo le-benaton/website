@@ -5,11 +5,12 @@ import { IonicModule } from '@ionic/angular';
 import { IonIcon } from '@ionic/angular/standalone';
 import { launch } from '../data/lunch';
 import { dinnerChief, dinnerPrefix } from '../data/dinner';
+import { CourseComponent } from './course/course.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, GuidelineComponent, IonIcon, NgOptimizedImage],
+  imports: [CommonModule, GuidelineComponent, IonIcon, NgOptimizedImage, CourseComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss', './header.scss'],
   encapsulation: ViewEncapsulation.None,

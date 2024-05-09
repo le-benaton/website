@@ -2,13 +2,15 @@ import { IItem, IMenu } from './data.interface';
 
 export const launch: IMenu[] = [
   {
-    title: 'Aコース(ランチのみ)',
+    title: 'Aコース',
+    subTitle: 'lunch only',
     image: 'assets/images/lunch1.jpg',
     price: '¥4,290 (税込、サービス料5%別途)',
     menu: ['アミューズ', '前菜（数種類の中からお選びいただけます）', 'メイン料理（本日のお魚又はお肉料理）', 'デザート', 'パン、コーヒー'],
   },
   {
-    title: 'Bコース(ランチのみ)',
+    title: 'Bコース',
+    subTitle: 'lunch only',
     image: 'assets/images/lunch2.jpg',
     price: '¥5,830 (税込、サービス料5%別途)',
     menu: [
@@ -21,7 +23,8 @@ export const launch: IMenu[] = [
     ],
   },
   {
-    title: 'Cコース(ランチのみ)',
+    title: 'Cコース',
+    subTitle: 'lunch only',
     image: 'assets/images/lunch3.jpg',
     price: '¥7,150 / ¥11,000 (税込、サービス料5%別途)',
     option: '2つのグレードからお選びください',

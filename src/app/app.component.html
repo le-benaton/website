@@ -82,7 +82,9 @@
             魚介は瀬戸内、野菜は兵庫県産をメインに、肉は各々の時期にもっともおいしいものを日本全国から仕入れ、ヨーロッパ各地からも、オマール海老、秋から冬にかけて旬をむかえるハト、カモなどのジビエも仕入れ、本格的なフランス料理を、満足のいくボリュームでご提供しています。
           </p>
           <p>
-            お客様に贅沢な時間を過ごしていただきたいという思いから、ランチでも、<strong>ディナーでご提供しているコース・ワインもご注文いただくことができます。</strong>ダークブラウンの落ち着いた空間で、思い出に残るひとときをお過ごしください。
+            お客様に贅沢な時間を過ごしていただきたいという思いから、ランチでも、<strong
+              >ディナーでご提供しているコース・ワインもご注文いただくことができます。</strong
+            >
           </p>
         </div>
       </div>
@@ -92,30 +94,12 @@
       <div class="wrap leading-description">
         <h3>選べるランチコース</h3>
         <p>
-          コースのお皿をご用意しているメニューの中からお客様にお選びいただく「プリフィックススタイル」と、「お任せコース」の両方をお選びいただけます。お客様のお好みにあわせて、減塩やボリュームの調整も承りますので、気軽にお申し付けください。
+          ランチでも、コースのお皿をご用意しているメニューの中からお客様にお選びいただく「プリフィックススタイル」と、「お任せコース」の両方をお選びいただけます。お客様のお好みにあわせて、減塩やボリュームの調整も承りますので、気軽にお申し付けください。
         </p>
       </div>
       <div class="equidistant-container">
         @for (item of launch; track item.title) {
-          <div class="equidistant-container-inner">
-            <img [src]="item.image" decoding="async" width="800" height="533" alt="{{ title }} {{ item.title }}" />
-            <div class="equidistant-container-inner-content">
-              <h4>{{ item.title }}</h4>
-              <p>{{ item.price }}</p>
-              @if (item.option) {
-                <p class="option">
-                  <span>{{ item.option }}</span>
-                </p>
-              }
-              @if (item.menu.length > 0) {
-                <ul>
-                  @for (menu of item.menu; track menu) {
-                    <li>{{ menu }}</li>
-                  }
-                </ul>
-              }
-            </div>
-          </div>
+          <app-course [item]="item" [title]="title"></app-course>
         }
       </div>
     </section>
@@ -134,7 +118,7 @@
         <h3>フランス食の都「ボーヌ」仕込みのディナーをご堪能ください</h3>
         <div class="parenthesis">
           <p>
-            フランス・ブルゴーニュ地方は食とワインの宝庫として知られています。<strong>「食の都」ボーヌの星付きレストラン</strong>で修業した当店シェフは、カモ、シカ、イノシシなどのお肉への最高の火入れの技術を有し、本場のフランス料理だけではなく<strong>ワインにも精通</strong>しています。野菜は毎週、旬の物を産地まで買い付けに行きます。ヨーロッパ各地から仕入れるハト、カモなどのジビエ料理、フランス・ブルターニュ産のオマール海老、日本近海で獲れた新鮮な魚介もお楽しみいただけます。
+            フランス・ブルゴーニュ地方は食とワインの宝庫として知られています。<strong>「食の都」ボーヌの星付きレストラン</strong>で修業した当店シェフは、カモ、シカ、イノシシなどのお肉への最高の火入れの技術を有し、本場のフランス料理だけではなく<strong>ワインにも精通</strong>しています。
           </p>
           <p>
             ブルゴーニュワインに特化したワインセラーも店内に完備。現地の風土を知り尽くした<strong>選び抜かれたブルゴーニュワイン</strong>と<strong>本格的なフランス料理</strong>は、あたかも<strong>ブルゴーニュを旅したような食体験</strong>です。旬の食材からコース料理をご提案いたしますので、ゆったりとした時間をお楽しみください。
@@ -153,26 +137,7 @@
 
       <div class="equidistant-container" style="justify-content: space-around">
         @for (item of dinnerPrefix; track item.title) {
-          <div class="equidistant-container-inner item-2">
-            <img [src]="item.image" decoding="async" width="800" height="533" alt="{{ title }} {{ item.title }}" />
-            <div class="equidistant-container-inner-content">
-              <h5 class="sub-course-title">{{ item.subTitle }}</h5>
-              <h4>{{ item.title }}</h4>
-              <p>{{ item.price }}</p>
-              @if (item.option) {
-                <p class="option">
-                  <span>{{ item.option }}</span>
-                </p>
-              }
-              @if (item.menu.length > 0) {
-                <ul>
-                  @for (menu of item.menu; track menu) {
-                    <li>{{ menu }}</li>
-                  }
-                </ul>
-              }
-            </div>
-          </div>
+          <app-course class="item-2" [item]="item" [title]="title"></app-course>
         }
       </div>
     </section>
@@ -187,26 +152,7 @@
 
       <div class="equidistant-container">
         @for (item of dinnerChef; track item.title) {
-          <div class="equidistant-container-inner item-2">
-            <img [src]="item.image" decoding="async" width="800" height="533" alt="{{ title }} {{ item.title }}" />
-            <div class="equidistant-container-inner-content">
-              <h5 class="sub-course-title">{{ item.subTitle }}</h5>
-              <h4>{{ item.title }}</h4>
-              <p>{{ item.price }}</p>
-              @if (item.option) {
-                <p class="option">
-                  <span>{{ item.option }}</span>
-                </p>
-              }
-              @if (item.menu.length > 0) {
-                <ul>
-                  @for (menu of item.menu; track menu) {
-                    <li>{{ menu }}</li>
-                  }
-                </ul>
-              }
-            </div>
-          </div>
+          <app-course [item]="item" [title]="title"></app-course>
         }
       </div>
     </section>
@@ -219,21 +165,17 @@
         <h3>ワインの名産地「黄金の丘」より選び抜いたワインをご提案いたします</h3>
         <div class="parenthesis">
           <p>
-            食の都「ボーヌ」は、ワインの名産地である黄金の丘でも知られているブルゴーニュ地方の中心部に位置しています。そこの星付きレストランで修業した当店シェフは、<strong>毎週のようにドメーヌをめぐり、作り手と、香りやマリアージュ、飲み頃について意見を交わしましてきました。</strong>そこで身につけた知識と感性で、ワインをおすすめいたします。
+            食の都「ボーヌ」は、ワインの名産地である黄金の丘でも知られているブルゴーニュ地方の中心部に位置しています。そこの星付きレストランで修業した当店シェフは、<strong>毎週のようにドメーヌを巡り、作り手と、香りやマリアージュ、飲み頃について意見を交わしましてきました。</strong>そこで身につけた知識と感性で、ワインをおすすめいたします。
           </p>
           <p>
-            当店ではブルゴーニュワインに特化したワインセラーを店内に完備し、当店シェフが選びぬいたブルゴーニュワインからお料理にあわせてワインを提案させていただきます。当店でどのようなワインがあるか、ぜひ、以下のリストをご覧ください。
+            当店ではブルゴーニュワインに特化したワインセラーを店内に完備し、当店シェフが選びぬいたブルゴーニュワインからお料理にあわせてワインを提案させていただきます。
           </p>
         </div>
       </div>
 
-      <div>
-        <a class="btn wine-list" href="https://winecode.app/publish/2362-5951/gytuwze7JQTnrDtO2ucFzwqI11l2" target="_blank"
-          >ワインリストをみる（別サイト）</a
-        >
+      <div class="winecode-guide">
+        <a class="button" href="https://winecode.app/publish/2362-5951/gytuwze7JQTnrDtO2ucFzwqI11l2" target="_blank">ワインリストをみる</a>
       </div>
-
-      <hr />
       <div class="leading-container">
         <p>
           当店ではワインのお持ち込みも歓迎しております。お客様のお気に入りのワインをお持ち下さい。
@@ -261,7 +203,7 @@
             <p>
               本場ブルゴーニュの味を引き継ぎ、ヨーロッパから仕入れた食材、地元の兵庫県の食材を取り入れたりしながら、故郷である夙川の地で発展させていきたいと思っています。
             </p>
-            <p>オーナー・シェフ 高谷慶(Kei TAKAYA)</p>
+            <p>オーナー・シェフ 高谷慶 <span class="cursive">(Kei Takaya)</span></p>
           </div>
         </div>
       </div>
@@ -299,7 +241,6 @@
     <div class="wrap">
       <h2>お問い合わせ</h2>
       <div class="leading-container">
-        <h3 class="text-left">お問い合わせについて</h3>
         <ul class="contact-wrapper">
           <li>
             ご予約は、<a href="tel:0798-37-2655">電話</a>または
@@ -313,7 +254,6 @@
             ご入力いただいたEメールアドレスや電話番号が誤っている場合やシステム障害が発生した場合等には回答ができない場合がございます。一週間以上経っても回答未着の場合、お手数ですがお電話ください。
           </li>
         </ul>
-        <h4>問い合わせフォーム</h4>
         <form>
           <div class="form-line">
             <label for="name"><span class="form-label required">必須</span>お名前</label>
@@ -341,9 +281,10 @@
             <label for="message"><span class="form-label required">必須</span>メッセージ</label>
             <textarea id="message" name="message" rows="5" required placeholder="※ご予約は、電話または予約サイトより承ります。"></textarea>
           </div>
-          <p class="text-center">
+
+          <div class="text-center">
             <button type="submit" class="submitButton">問い合わせ送信</button>
-          </p>
+          </div>
         </form>
       </div>
     </div>
