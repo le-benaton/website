@@ -2,8 +2,13 @@ section.equidistant-outer {
   background: var(--dark-color);
   color: var(--dark-color-contrast);
   padding: 16px 32px 16px;
-  margin: 0 32px 32px;
+  margin: 0 auto 32px;
   border-radius: 8px;
+  max-width: 1400px;
+
+  @media screen and (max-width: 1400px) {
+    margin: 0 32px 32px;
+  }
 
   @media screen and (max-width: 800px) {
     .wrap {
