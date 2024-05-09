@@ -343,3 +343,17 @@
     </div>
   </section>
 </footer>
+<section class="toast-area">
+  @if (this.dayAccess() > 0) {
+    <a [class]="this.presentToastAccess() ? 'toast open' : 'toast hide'" (click)="this.presentToastAccess.set(false)">
+      <span class="close"><ion-icon name="close-outline"></ion-icon></span>
+      現在{{ this.dayAccess() }}名のお客様が閲覧しています
+    </a>
+  }
+  @if (this.dayConversion() > 0) {
+    <a [class]="this.presentToastConversion() ? 'toast open' : 'toast hide'" (click)="this.presentToastConversion.set(false)">
+      <span class="close"><ion-icon name="close-outline"></ion-icon></span>
+      現在{{ this.dayConversion() }}名のお客様が閲覧しています
+    </a>
+  }
+</section>

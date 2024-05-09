@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, signal, ViewEncapsulation } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { GuidelineComponent } from './guideline/guideline.component';
 import { IonicModule } from '@ionic/angular';
@@ -20,4 +20,10 @@ export class AppComponent {
   readonly launch = launch;
   readonly dinnerPrefix = dinnerPrefix;
   readonly dinnerChef = dinnerChief;
+
+  dayAccess = signal<number>(5);
+  dayConversion = signal<number>(5);
+
+  presentToastAccess = signal<boolean>(true);
+  presentToastConversion = signal<boolean>(true);
 }
