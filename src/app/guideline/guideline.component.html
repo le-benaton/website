@@ -6,7 +6,7 @@
         class="button"
         href="https://reserve.resebook.jp/resty/webrsv/rsv_vacants/vacant/s014049701/5580?show=3"
         rel="noopener"
-        onClick="{this.handleConversion}"
+        (click)="this.handleConversion()"
         target="_blank"
       >
         <ion-icon name="book-outline"></ion-icon>
@@ -14,7 +14,7 @@
       </a>
     </li>
     <li>
-      <a class="button" href="tel:0798-37-2655" onClick="{this.handleConversion}">
+      <a class="button" href="tel:0798-37-2655" (click)="this.handleConversion()">
         <ion-icon name="call-outline"></ion-icon>
         0798-37-2655
       </a>
