@@ -49,10 +49,10 @@ section.equidistant-outer {
         justify-content: space-between;
         background: rgb(0, 0, 0, 0.6);
         width: 100%;
-        padding: 4px 8px 6px;
+        padding: 2px 8px 8px;
 
         h4 {
-          margin: 0 16px 0 0;
+          margin: 6px 16px 0 0;
           padding: 0;
           font-size: 1.2rem;
         }
@@ -62,7 +62,7 @@ section.equidistant-outer {
           font-family: cursive;
           font-size: 1.2rem;
           position: relative;
-          top: 3px;
+          top: 4px;
           padding: 0;
           color: var(--accent-color);
 
