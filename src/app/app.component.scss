@@ -132,6 +132,22 @@ section > .wrap {
   margin: auto;
   padding: 0 8px 0;
 
+  &.menu-wanted {
+    h2 {
+      font-size: 1.6rem;
+      text-align: left;
+      padding-top: 64px;
+      margin: 0 0 8px;
+    }
+
+    h3 {
+      text-align: left;
+      border-bottom: 1px solid var(--dark-color);
+      margin-bottom: 0;
+    }
+  }
+
+
   h3 {
     text-align: center;
     font-weight: bold;
@@ -214,14 +230,6 @@ ul.contact-wrapper {
       border-bottom: none;
     }
   }
-}
-
-#menu-lunch,
-#menu-wine,
-#copy-reserved {
-  background-color: var(--background-color);
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
 }
 
 h2 {

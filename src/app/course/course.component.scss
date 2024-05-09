@@ -18,6 +18,10 @@ section.equidistant-outer {
 }
 
 .equidistant-container {
+  &.around {
+    justify-content: space-around;
+  }
+
   max-width: 1200px;
   margin: auto;
   @media screen and (min-width: 800px) {

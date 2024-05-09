@@ -33,10 +33,20 @@ body {
   --success-color-contrast: #ffffff;
 }
 
+#menu-lunch,
+#menu-wine,
+#copy-reserved,
+#menu-wanted {
+  background-color: var(--background-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
 h1,
 h2,
 h3,
 h4,
+h5,
 nav ul li a {
   font-family: 'Droid Serif', serif;
   font-feature-settings: 'palt';
