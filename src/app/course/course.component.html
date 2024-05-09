@@ -1,0 +1,24 @@
+<div class="equidistant-container-inner">
+  <div class="menu-hero-image">
+    <img [src]="item().image" decoding="async" width="800" height="533" alt="{{ title() }} {{ item().title }}" />
+    <div class="menu-title">
+      <h4>{{ item().title }}</h4>
+      <h5 class="cursive">{{ item().subTitle }}</h5>
+    </div>
+  </div>
+  <div class="equidistant-container-inner-content">
+    <p class="price">{{ item().price }}</p>
+    @if (item().option) {
+      <p class="option">
+        <span>{{ item().option }}</span>
+      </p>
+    }
+    @if (item().menu.length > 0) {
+      <ul>
+        @for (menu of item().menu; track menu) {
+          <li>{{ menu }}</li>
+        }
+      </ul>
+    }
+  </div>
+</div>

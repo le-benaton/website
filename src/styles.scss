@@ -1,0 +1,146 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import './reset.scss';
+
+html {
+  font-size: 93.8%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  color: #333333;
+  font-family: Helvetica Neue, Arial, Hiragino Kaku Gothic ProN, Hiragino Sans, Meiryo, sans-serif;
+  //font-family: "Noto Serif JP", Helvetica Neue, Arial, Hiragino Kaku Gothic ProN, Hiragino Sans, Meiryo, serif;
+  --dark-color: #333333;
+  --dark-color-contrast: #ffffff;
+  --accent-color: #aa9652;
+  --medium-color: #6d4c41;
+  --light-color: #efebe9;
+  --border-color: #d7ccc8;
+  --background-color: #efebe9;
+  --background-shade-color: #4e342e;
+  --dangar-color: #cf3c4f;
+  --success-color: #28ba62;
+  --success-color-contrast: #ffffff;
+}
+
+#menu-lunch,
+#menu-wine,
+#copy-reserved,
+#menu-wanted {
+  background-color: var(--background-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+nav ul li a {
+  font-family: "Noto Serif JP", serif;
+  font-feature-settings: 'palt';
+  letter-spacing: 1px;
+}
+
+h4 {
+  ion-icon {
+    position: relative;
+    right: 2px;
+    top: 2px;
+  }
+}
+
+.cursive {
+  font-family: "Allura", cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+address {
+  line-height: 2rem;
+  font-style: normal;
+}
+
+a.button,
+button {
+  ion-icon {
+    margin-right: 4px;
+    position: relative;
+    top: 2px;
+  }
+
+  display: inline-block;
+  border-radius: 8px;
+  padding: 6px 12px 4px;
+  border: 1px solid var(--dark-color);
+  color: var(--dark-color);
+  background: var(--dark-color-contrast);
+  font-size: 1rem;
+  margin: 0;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    outline: 0;
+  }
+}
+
+
+table {
+  width: 100%;
+  margin-top: 8px;
+
+  th, td {
+    vertical-align: top;
+    font-size: 1.1rem;
+    padding: 4px 0;
+  }
+
+  tr.vertical-center {
+    th, td {
+      vertical-align: middle;
+    }
+  }
+
+  th {
+    width: 104px;
+    padding-right: 24px;
+    text-align: right;
+    font-weight: normal;
+
+    span {
+      padding-right: 32px;
+      border-right: 4px dotted var(--medium-color);
+    }
+  }
+
+  td {
+    p {
+      margin-top: 0;
+    }
+
+    button {
+      position: relative;
+      top: 8px;
+    }
+
+    a.button.button-google-map {
+      margin-top: 4px;
+    }
+  }
+}
+
+img {
+  height: auto;
+}

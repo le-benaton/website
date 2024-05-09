@@ -1,0 +1,379 @@
+<header>
+  <div class="logo-area">
+    <a href="/" class="logo-brand">
+      <img src="/assets/images/logo.svg" [alt]="title" decoding="async" height="16" width="16" />
+    </a>
+    <a href="#menu-reserved" class="logo-area-reserved">
+      <ion-icon name="bookmark"></ion-icon>
+      <span>ご予約</span>
+    </a>
+  </div>
+  <h1 class="title">{{ title }}</h1>
+  <nav>
+    <ul>
+      <li>
+        <a href="#menu-lunch"><ion-icon name="caret-down-outline"></ion-icon>ランチ</a>
+      </li>
+      <li>
+        <a href="#menu-dinner"><ion-icon name="caret-down-outline"></ion-icon>ディナー</a>
+      </li>
+      <li>
+        <a href="#menu-profile"><ion-icon name="caret-down-outline"></ion-icon>プロフィール</a>
+      </li>
+      <li>
+        <a href="#menu-contact"><ion-icon name="caret-down-outline"></ion-icon>お問い合せ</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="main-visual">
+    <div class="hero-image">
+      <div>
+        <img src="assets/images/slides/104380ga10000008.jpg" decoding="async" width="800" height="400" alt="ジビエ コルベールのロースト" />
+      </div>
+      <div>
+        <img src="assets/images/slides/104380ga10000003.jpg" decoding="async" width="800" height="400" alt="{{ title }}　店内の様子" />
+      </div>
+      <div>
+        <img src="assets/images/slides/104380ga10000007.jpg" decoding="async" width="800" height="400" alt="鮮魚のカルパッチョ" />
+      </div>
+      <a class="button cursive" href="https://www.instagram.com/le_benaton/" rel="noopener" target="_blank">
+        <ion-icon name="logo-instagram"></ion-icon>Instagram<span>でもっとみる</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="menu-reserved">
+    <app-guideline></app-guideline>
+  </section>
+
+  <section id="menu-lunch">
+    <div class="wrap">
+      <h2 class="subtitle">
+        ランチ
+        <span>
+          <ion-icon name="sunny-outline"></ion-icon>
+          11：45～14：00（ラストオーダー）
+        </span>
+      </h2>
+      <div class="leading-container">
+        <h3>日々の疲れを癒やし、ゆっくりと過ごす贅沢時間</h3>
+        <div class="parenthesis">
+          <p>
+            魚介は瀬戸内、野菜は兵庫県産をメインに、肉は各々の時期にもっともおいしいものを日本全国から仕入れ、ヨーロッパ各地からも、オマール海老、秋から冬にかけて旬をむかえるハト、カモなどのジビエも仕入れ、本格的なフランス料理を、満足のいくボリュームでご提供しています。
+          </p>
+          <p>
+            お客様に贅沢な時間を過ごしていただきたいという思いから、ランチでも、<strong
+              >ディナーでご提供しているコース・ワインもご注文いただくことができます。</strong
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="equidistant-outer">
+      <div class="wrap leading-description">
+        <h3>選べるランチコース</h3>
+        <p>
+          ランチでも、コースのお皿をご用意しているメニューの中からお客様にお選びいただく「プリフィックススタイル」と、「お任せコース」の両方をお選びいただけます。お客様のお好みにあわせて、減塩やボリュームの調整も承りますので、気軽にお申し付けください。
+        </p>
+      </div>
+      <div class="equidistant-container">
+        @for (item of launch; track item.title) {
+          <app-course [item]="item" [title]="title"></app-course>
+        }
+      </div>
+    </section>
+  </section>
+
+  <section id="menu-dinner">
+    <div class="wrap">
+      <h2 class="subtitle">
+        ディナー
+        <span>
+          <ion-icon name="moon-outline"></ion-icon>
+          17：30～21：00（ラストオーダー）
+        </span>
+      </h2>
+      <div class="leading-container">
+        <h3>フランス・ブルゴーニュ「ボーヌ」仕込みのディナーをご堪能ください</h3>
+        <div class="parenthesis">
+          <p>
+            フランス・ブルゴーニュ地方は食とワインの宝庫として知られています。<strong>その中心部に位置する「ボーヌ」の星付きレストラン</strong>で修業した当店シェフは、カモ、シカ、イノシシなどのお肉への最高の火入れの技術を有し、本場のフランス料理だけではなく<strong>ワインにも精通</strong>しています。
+          </p>
+          <p>
+            ブルゴーニュワインに特化したワインセラーも店内に完備。現地の風土を知り尽くした<strong>選び抜かれたブルゴーニュワイン</strong>と<strong>本格的なフランス料理</strong>は、あたかも<strong>ブルゴーニュを旅したような食体験</strong>です。旬の食材からコース料理をご提案いたしますので、ゆったりとした時間をお楽しみください。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="equidistant-outer">
+      <div class="wrap leading-description">
+        <h3>プリフィックススタイル</h3>
+        <p>
+          コースのお皿をご用意しているメニューの中からお客様にお選びいただく「プリフィックススタイル」で、お料理をご提供いたします。お好きなお料理を、お好きな組み合わせでお楽しみください。お客様のお好みにあわせて、減塩やボリュームの調整も承りますので、気軽にお申し付けください。
+        </p>
+      </div>
+
+      <div class="equidistant-container around">
+        @for (item of dinnerPrefix; track item.title) {
+          <app-course class="item-2" [item]="item" [title]="title"></app-course>
+        }
+      </div>
+    </section>
+
+    <section class="equidistant-outer">
+      <div class="wrap leading-description">
+        <h3>おまかせコース</h3>
+        <p>
+          ベナトンの料理と技術を味わい尽くすスペシャルコースです。お客様とご相談の上、その日の食材をもとに、お料理をご提案させていただきます。ご予約の状況次第では、モンラッシェコース、コルトンコースはご提供が難しい場合がございますので、事前にご相談ください。
+        </p>
+      </div>
+
+      <div class="equidistant-container">
+        @for (item of dinnerChef; track item.title) {
+          <app-course [item]="item" [title]="title"></app-course>
+        }
+      </div>
+    </section>
+  </section>
+
+  <section id="menu-wine">
+    <div class="wrap">
+      <h2>ワイン</h2>
+      <div class="leading-container">
+        <h3>ワインの名産地「黄金の丘」より選び抜いたワインをご提案いたします</h3>
+        <div class="parenthesis">
+          <p>
+            「ボーヌ」は、ワインの名産地である黄金の丘でも知られているブルゴーニュ地方の中心部に位置しています。そこの星付きレストランで修業した当店シェフは、<strong>毎週のようにドメーヌを巡り、作り手と、香りやマリアージュ、飲み頃について意見を交わしましてきました。</strong>そこで身につけた知識と感性で、ワインをおすすめいたします。
+          </p>
+          <p>
+            当店ではブルゴーニュワインに特化したワインセラーを店内に完備し、当店シェフが選びぬいたブルゴーニュワインからお料理にあわせてワインを提案させていただきます。
+          </p>
+        </div>
+      </div>
+
+      <div class="winecode-guide">
+        <a class="button" href="https://winecode.app/publish/2362-5951/gytuwze7JQTnrDtO2ucFzwqI11l2" target="_blank">
+          <ion-icon name="wine-outline"></ion-icon>
+          ワインリストをみる
+        </a>
+      </div>
+      <div class="leading-container">
+        <p>
+          当店ではワインのお持ち込みも歓迎しております。お客様のお気に入りのワインをお持ち下さい。
+          持ち込み料金ですが、ボトル一本に付き「3,000円」、又はお店にグラス一杯分を分けて頂くことで持ち込み料金とさせて頂いております。
+          お持込頂きます際には、本数、銘柄を事前にお店までお伝えください。
+          当日突然のお持込には対応させていただけない場合もございます、ご了承ください。 （グラス等の準備のためご協力お願いいたします）
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu-profile">
+    <div class="wrap">
+      <h2>プロフィール</h2>
+      <div class="leading-container-flex">
+        <img src="assets/images/takaya.jpg" decoding="async" width="600" height="600" alt="{{ title }}オーナー・シェフ　高谷慶" />
+        <div>
+          <h3>本格「ボーヌ」仕込みの味<br />ヨーロッパと日本の食材で地元・夙川で提供いたします</h3>
+          <div class="parenthesis">
+            <p>
+              フランスのブルゴーニュ「ボーヌ」の星付きレストラン「ル
+              ベナトン」での4年間の修業を経て、2008年に生まれ育った夙川に、その名前を引き継いだ自らの店をオープンいたしました。ブルゴーニュはワインの名産地である黄金の丘でも知られ、ボーヌはその中心地に位置しています。2015年には「ブルゴーニュ地方のクリマ（ブドウ畑や気候）」は世界遺産に登録されました。ボーヌでは11月の第３週末には「栄光の3日間
+              LES TROIS GLORIEUSES」と呼ばれるワインと食の祭典が催され、普段はブドウ畑に囲まれた小さな街が「フランス
+              ワインの都」となります。
+            </p>
+            <p>
+              本場ブルゴーニュの味を引き継ぎ、ヨーロッパから仕入れた食材、地元の兵庫県の食材を取り入れたりしながら、故郷である夙川の地で発展させていきたいと思っています。
+            </p>
+            <p>オーナー・シェフ 高谷慶 <span class="cursive">(Kei Takaya)</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="equidistant-container">
+        <div class="equidistant-container-inner">
+          <p>
+            <img src="assets/images/outside.jpg" decoding="async" width="800" height="534" alt="{{ title }}外観" />
+          </p>
+          <p class="text-center">ミシュランガイド兵庫版にも掲載されました。</p>
+        </div>
+
+        <div class="equidistant-container-inner">
+          <p>
+            <img src="assets/images/inside.jpg" decoding="async" width="800" height="534" alt="{{ title }}内観" />
+          </p>
+          <p class="text-center">客席からワインセラーを一覧いただけます</p>
+        </div>
+
+        <div class="equidistant-container-inner">
+          <p>
+            <img src="assets/images/inside2.jpg" decoding="async" width="800" height="534" alt="{{ title }}テーブル" />
+          </p>
+          <p class="text-center">１０テーブル、２０名様までご利用いただけます</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="copy-reserved">
+    <app-guideline></app-guideline>
+  </section>
+
+  <section id="menu-contact">
+    <div class="wrap">
+      <h2>お問い合せ</h2>
+      <div class="leading-container">
+        @if (isSend()) {
+          <h3>問い合わせの送信が完了しました。</h3>
+          <p>
+            お申し出に対しては順次対応させていただいておりますが、受付時間外に送信いただいたものや、内容によりましてはお返事にお時間を頂戴する場合がございます。また、ご入力いただいたEメールアドレスや電話番号が誤っている場合やシステム障害が発生した場合等には回答ができない場合がございます。一週間以上経っても回答未着の場合、お手数ですが再度お問い合わせいただけると幸いです。
+          </p>
+
+          <p class="text-center">
+            <button (click)="isSend.set(false)" class="submitButton" aria-label="別のメッセージを送信する">別のメッセージを送信する</button>
+          </p>
+        } @else {
+          <ul class="contact-wrapper">
+            <li>
+              ご予約は、<a href="tel:0798-37-2655">電話</a>または
+              <a href="https://reserve.resebook.jp/resty/webrsv/rsv_vacants/vacant/s014049701/5580?show=3" rel="noopener">予約サイト</a
+              >より承ります。お急ぎの場合は、お電話ください。
+            </li>
+            <li>
+              お申し出に対しては順次対応させていただいておりますが、受付時間外に送信いただいたものや、内容によりましてはお返事にお時間を頂戴する場合がございます。
+            </li>
+            <li>
+              ご入力いただいたEメールアドレスや電話番号が誤っている場合やシステム障害が発生した場合等には回答ができない場合がございます。一週間以上経っても回答未着の場合、お手数ですがお電話ください。
+            </li>
+          </ul>
+          <form #f="ngForm" (ngSubmit)="send()">
+            <div class="form-line">
+              <label for="name"><span class="form-label required">必須</span>お名前</label>
+              <input id="name" type="text" name="name" [(ngModel)]="contactModel.name" required placeholder="例）山田太郎" />
+            </div>
+            <div class="form-line">
+              <label for="mail"><span class="form-label required">必須</span>メールアドレス（半角）</label>
+              <input
+                id="mail"
+                name="email"
+                [(ngModel)]="contactModel.email"
+                type="text"
+                inputMode="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                required
+                placeholder="例）info@example.com"
+              />
+            </div>
+
+            <div class="form-line">
+              <label for="tel">お電話番号（半角）</label>
+              <input
+                id="tel"
+                type="text"
+                name="tel"
+                [(ngModel)]="contactModel.tel"
+                placeholder="例）09012345678"
+                inputMode="tel"
+                pattern="\d{2,4}-?\d{3,4}-?\d{3,4}"
+              />
+            </div>
+
+            <div class="form-line">
+              <label for="message"><span class="form-label required">必須</span>メッセージ</label>
+              <textarea
+                id="message"
+                name="message"
+                [(ngModel)]="contactModel.message"
+                rows="5"
+                required
+                placeholder="お問い合わせ内容をご記入ください。"
+              ></textarea>
+            </div>
+            <p class="text-center">
+              <button type="submit" class="submitButton" [disabled]="f.form.invalid" aria-label="問い合わせ送信">問い合わせ送信</button>
+            </p>
+          </form>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="menu-wanted">
+    <div class="wrap">
+      <div class="leading-container menu-wanted">
+        <h2 class="wanted-title">求人情報</h2>
+        <p>
+          フランスのブルゴーニュ「ボーヌ」で経験を積んだシェフの下で、様々なスキルを磨きませんか。
+          目標の達成度合いやスキルアップの度合いによって、給与はアップしていきます。ボーナス支給もあるので、毎日モチベーション高く働ける環境です。
+          詳しくはお店までお問い合せください。
+        </p>
+
+        <h3>ホール・サービススタッフ、ソムリエ</h3>
+        <p>
+          未経験、年齢は問いません、経験してみたい方お待ちしています。 社会保険、雇用保険有り、交通費支給。
+          昇給年1回、資格取得の応援もしています。
+        </p>
+
+        <h3>調理スタッフ、パティシエ</h3>
+        <p>
+          フランス料理に興味のある方一緒にお仕事しませんか？ 未経験、年齢は問いません、取り組んでみたい方お待ちしています。
+          社会保険、雇用保険有り、交通費支給。 昇給年1回、資格取得の応援もしています。
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <section>
+    <div class="wrap">
+      <h1>le benaton</h1>
+      <table>
+        <tbody>
+          <tr>
+            <th>代表者名</th>
+            <td>高谷　慶</td>
+          </tr>
+          <tr>
+            <th>登録番号</th>
+            <td>
+              T2810243268764 (
+              <a href="https://www.invoice-kohyo.nta.go.jp/regno-search/detail?selRegNo=2810243268764">適格請求書事業者公開サイト</a>
+              )
+            </td>
+          </tr>
+          <tr>
+            <th>電話</th>
+            <td>0798-37-2655</td>
+          </tr>
+          <tr>
+            <th>FAX</th>
+            <td>0798-37-2656</td>
+          </tr>
+          <tr>
+            <th>住所</th>
+            <td>〒662-0047　兵庫県西宮市寿町4-12</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</footer>
+<section class="toast-area">
+  @if (this.dayAccess() > 0) {
+    <a [class]="this.presentToastAccess() ? 'toast open' : 'toast hide'" (click)="this.presentToastAccess.set(false)">
+      <span class="close"><ion-icon name="close-outline"></ion-icon></span>
+      現在{{ this.dayAccess() }}名のお客様が閲覧しています
+    </a>
+  }
+  @if (this.dayConversion() > 0) {
+    <a [class]="this.presentToastConversion() ? 'toast open' : 'toast hide'" (click)="this.presentToastConversion.set(false)">
+      <span class="close"><ion-icon name="close-outline"></ion-icon></span>
+      過去24時間でご予約が{{ this.dayConversion() }}件ありました
+    </a>
+  }
+</section>

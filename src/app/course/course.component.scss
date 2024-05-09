@@ -1,0 +1,122 @@
+section.equidistant-outer {
+  background: var(--dark-color);
+  color: var(--dark-color-contrast);
+  padding: 16px 32px 16px;
+  margin: 0 auto 32px;
+  border-radius: 8px;
+  max-width: 1400px;
+
+  @media screen and (max-width: 1400px) {
+    margin: 0 32px 32px;
+  }
+
+  @media screen and (max-width: 800px) {
+    .wrap {
+      padding: 0 !important;
+    }
+  }
+}
+
+.equidistant-container {
+  &.around {
+    justify-content: space-around;
+  }
+
+  max-width: 1200px;
+  margin: auto;
+  @media screen and (min-width: 800px) {
+    display: flex;
+  }
+
+  & > app-course, & > .equidistant-container-inner {
+    @media screen and (min-width: 800px) {
+      &.item-2 {
+        width: 40%;
+      }
+    }
+
+    padding: 8px;
+    .menu-hero-image {
+      position: relative;
+      img {
+        border-radius: 8px 8px 0 0;
+      }
+      div.menu-title {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgb(0, 0, 0, 0.6);
+        width: 100%;
+        padding: 2px 8px 8px;
+
+        h4 {
+          margin: 6px 0 0 0;
+          padding: 0;
+          font-size: 1.2rem;
+        }
+
+        h5 {
+          font-weight: normal;
+          font-size: 1.6rem;
+          margin: -4px 0 -6px;
+          position: relative;
+          top: 4px;
+          padding: 0;
+          color: var(--accent-color);
+
+          @media (800px < width < 1100px) {
+            display: none;
+          }
+
+          @media (width < 800px) or (1220px < width) {
+            padding: 0 0 0 48px;
+            &:before {
+              content: '';
+              border-top: 0.1px solid var(--accent-color);
+              display: block;
+              width: 40px;
+              position: relative;
+              top: 18px;
+              right: 48px;
+            }
+          }
+
+        }
+      }
+    }
+
+    .equidistant-container-inner-content {
+      padding: 0 8px 0;
+
+      ul {
+        font-size: 0.9rem;
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 4px;
+        }
+      }
+
+      p.price {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      p.option {
+        margin: -12px 0 0 0;
+        text-align: center;
+        span {
+          background-color: var(--medium-color);
+          color: var(--dark-color-contrast);
+          padding: 4px 6px;
+          font-size: 0.8rem !important;
+          border-radius: 4px;
+        }
+      }
+    }
+
+  }
+}

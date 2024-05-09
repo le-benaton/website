@@ -1,0 +1,15 @@
+export {
+  bookOutline,
+  bookmark,
+  callOutline,
+  caretDownOutline,
+  closeOutline,
+  homeOutline,
+  logoInstagram,
+  mapOutline,
+  moonOutline,
+  newspaperOutline,
+  sunnyOutline,
+  timeOutline,
+  wineOutline,
+} from 'ionicons/icons';
