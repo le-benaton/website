@@ -233,51 +233,77 @@
     <div class="wrap">
       <h2>お問い合せ</h2>
       <div class="leading-container">
-        <ul class="contact-wrapper">
-          <li>
-            ご予約は、<a href="tel:0798-37-2655">電話</a>または
-            <a href="https://reserve.resebook.jp/resty/webrsv/rsv_vacants/vacant/s014049701/5580?show=3" rel="noopener">予約サイト</a
-            >より承ります。お急ぎの場合は、お電話ください。
-          </li>
-          <li>
-            お申し出に対しては順次対応させていただいておりますが、受付時間外に送信いただいたものや、内容によりましてはお返事にお時間を頂戴する場合がございます。
-          </li>
-          <li>
-            ご入力いただいたEメールアドレスや電話番号が誤っている場合やシステム障害が発生した場合等には回答ができない場合がございます。一週間以上経っても回答未着の場合、お手数ですがお電話ください。
-          </li>
-        </ul>
-        <form>
-          <div class="form-line">
-            <label for="name"><span class="form-label required">必須</span>お名前</label>
-            <input id="name" name="name" type="text" required placeholder="例）山田太郎" />
-          </div>
-          <div class="form-line">
-            <label for="mail"><span class="form-label required">必須</span>メールアドレス（半角）</label>
-            <input
-              id="mail"
-              type="text"
-              name="mail"
-              inputMode="email"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-              required
-              placeholder="例）info@example.com"
-            />
-          </div>
+        @if (isSend()) {
+          <h3>問い合わせの送信が完了しました。</h3>
+          <p>
+            お申し出に対しては順次対応させていただいておりますが、受付時間外に送信いただいたものや、内容によりましてはお返事にお時間を頂戴する場合がございます。また、ご入力いただいたEメールアドレスや電話番号が誤っている場合やシステム障害が発生した場合等には回答ができない場合がございます。一週間以上経っても回答未着の場合、お手数ですが再度お問い合わせいただけると幸いです。
+          </p>
 
-          <div class="form-line">
-            <label for="tel">お電話番号（半角）</label>
-            <input id="tel" type="text" name="電話番号" placeholder="例）09012345678" inputMode="tel" pattern="\d{2,4}-?\d{3,4}-?\d{3,4}" />
-          </div>
+          <p class="text-center">
+            <button (click)="isSend.set(false)" class="submitButton" aria-label="別のメッセージを送信する">別のメッセージを送信する</button>
+          </p>
+        } @else {
+          <ul class="contact-wrapper">
+            <li>
+              ご予約は、<a href="tel:0798-37-2655">電話</a>または
+              <a href="https://reserve.resebook.jp/resty/webrsv/rsv_vacants/vacant/s014049701/5580?show=3" rel="noopener">予約サイト</a
+              >より承ります。お急ぎの場合は、お電話ください。
+            </li>
+            <li>
+              お申し出に対しては順次対応させていただいておりますが、受付時間外に送信いただいたものや、内容によりましてはお返事にお時間を頂戴する場合がございます。
+            </li>
+            <li>
+              ご入力いただいたEメールアドレスや電話番号が誤っている場合やシステム障害が発生した場合等には回答ができない場合がございます。一週間以上経っても回答未着の場合、お手数ですがお電話ください。
+            </li>
+          </ul>
+          <form #f="ngForm" (ngSubmit)="send()">
+            <div class="form-line">
+              <label for="name"><span class="form-label required">必須</span>お名前</label>
+              <input id="name" type="text" name="name" [(ngModel)]="contactModel.name" required placeholder="例）山田太郎" />
+            </div>
+            <div class="form-line">
+              <label for="mail"><span class="form-label required">必須</span>メールアドレス（半角）</label>
+              <input
+                id="mail"
+                name="email"
+                [(ngModel)]="contactModel.email"
+                type="text"
+                inputMode="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                required
+                placeholder="例）info@example.com"
+              />
+            </div>
 
-          <div class="form-line">
-            <label for="message"><span class="form-label required">必須</span>メッセージ</label>
-            <textarea id="message" name="message" rows="5" required placeholder="※ご予約は、電話または予約サイトより承ります。"></textarea>
-          </div>
+            <div class="form-line">
+              <label for="tel">お電話番号（半角）</label>
+              <input
+                id="tel"
+                type="text"
+                name="tel"
+                [(ngModel)]="contactModel.tel"
+                placeholder="例）09012345678"
+                inputMode="tel"
+                pattern="\d{2,4}-?\d{3,4}-?\d{3,4}"
+              />
+            </div>
 
-          <div class="text-center">
-            <button type="submit" class="submitButton">問い合せ送信</button>
-          </div>
-        </form>
+            <div class="form-line">
+              <label for="message"><span class="form-label required">必須</span>メッセージ</label>
+              <textarea
+                id="message"
+                name="message"
+                [(ngModel)]="contactModel.message"
+                rows="5"
+                required
+                placeholder="お問い合わせ内容をご記入ください。"
+              ></textarea>
+            </div>
+            <p class="text-center">
+              <button type="submit" class="submitButton" [disabled]="f.form.invalid" aria-label="問い合わせ送信">問い合わせ送信</button>
+            </p>
+          </form>
+        }
       </div>
     </div>
   </section>

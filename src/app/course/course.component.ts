@@ -1,5 +1,5 @@
 import { Component, input, ViewEncapsulation } from '@angular/core';
-import { IMenu } from '../../data/data.interface';
+import { IMenu } from '../types';
 
 @Component({
   selector: 'app-course',

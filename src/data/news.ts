@@ -1,4 +1,4 @@
-import { IItem } from './data.interface';
+import { IItem } from '../app/types';
 
 export const news: IItem[] = [
   {

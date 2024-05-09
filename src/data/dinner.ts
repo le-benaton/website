@@ -1,4 +1,4 @@
-import { IMenu } from './data.interface';
+import { IMenu } from '../app/types';
 
 export const dinnerPrefix: IMenu[] = [
   {

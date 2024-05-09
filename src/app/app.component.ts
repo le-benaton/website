@@ -6,11 +6,16 @@ import { launch } from '../data/lunch';
 import { dinnerChief, dinnerPrefix } from '../data/dinner';
 import { CourseComponent } from './course/course.component';
 import { collection, doc, Firestore, setDoc, query, getDocs, where } from '@angular/fire/firestore';
+import { ContactModel, IRequestRdlaboMail } from './types';
+import { defaultContactModel } from './constant';
+import { HttpClient } from '@angular/common/http';
+import { firstValueFrom } from 'rxjs';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, GuidelineComponent, IonIcon, NgOptimizedImage, CourseComponent],
+  imports: [CommonModule, GuidelineComponent, IonIcon, NgOptimizedImage, CourseComponent, FormsModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss', './header.scss', './footer.scss'],
   encapsulation: ViewEncapsulation.None,
@@ -25,14 +30,17 @@ export class AppComponent implements OnInit {
   dayConversion = signal<number>(0);
   presentToastAccess = signal<boolean>(false);
   presentToastConversion = signal<boolean>(false);
+  isSend = signal<boolean>(false);
+  contactModel = defaultContactModel();
 
-  readonly firestore = inject(Firestore);
-  readonly platformId = inject(PLATFORM_ID);
-  readonly isBrowser = isPlatformBrowser(this.platformId);
+  #firestore = inject(Firestore);
+  #platformId = inject(PLATFORM_ID);
+  #isBrowser = isPlatformBrowser(this.#platformId);
+  #http = inject(HttpClient);
 
   constructor() {
-    if (this.isBrowser) {
-      setDoc(doc(collection(this.firestore, 'access'), this.#getUserId()), {
+    if (this.#isBrowser) {
+      setDoc(doc(collection(this.#firestore, 'access'), this.#getUserId()), {
         timestamp: new Date().getTime(),
       }).catch((e) => console.log(e));
     }
@@ -40,13 +48,13 @@ export class AppComponent implements OnInit {
 
   async ngOnInit() {
     const accessQuery = query(
-      collection(this.firestore, 'access'),
+      collection(this.#firestore, 'access'),
       where('timestamp', '>', new Date(new Date().getTime() - 1000 * 60 * 15).getTime()),
     );
     const accessSnapshot = await getDocs(accessQuery);
 
     const conversionQuery = query(
-      collection(this.firestore, 'conversion'),
+      collection(this.#firestore, 'conversion'),
       where('timestamp', '>', new Date(new Date().getTime() - 1000 * 60 * 60 * 24).getTime()),
     );
     const conversionSnapshot = await getDocs(conversionQuery);
@@ -59,6 +67,26 @@ export class AppComponent implements OnInit {
 
     setTimeout(() => this.presentToastConversion.set(true), 2000 * 2);
     setTimeout(() => this.presentToastConversion.set(false), 2000 * 2 + 10000);
+  }
+
+  async send() {
+    const preMessage = this.contactModel.tel ? `電話番号： ${this.contactModel.tel}\r\n\r\n` : '';
+    const result = await firstValueFrom(
+      this.#http.post('https://api.v5.tipsys.me/thirdparty/rdlabo/mail', {
+        from: this.contactModel.email,
+        name: this.contactModel.name,
+        message: preMessage + this.contactModel.message,
+      } as IRequestRdlaboMail),
+    )
+      .then(() => true)
+      .catch(() => false);
+
+    if (result) {
+      this.isSend.set(true);
+      this.contactModel = defaultContactModel();
+    } else {
+      alert('メッセージの送信に失敗しました。時間を置いてから再度お試しください。');
+    }
   }
 
   #getUserId = (): string => {
