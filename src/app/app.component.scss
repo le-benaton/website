@@ -1,31 +1,3 @@
-a.instagram {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding: 4px 8px;
-  text-decoration: none;
-  background: linear-gradient(
-      to right,
-      rgba(247, 207, 0, 1),
-      rgba(246, 37, 2, 0.8) 45%,
-      rgba(182, 47, 82, 0.8) 75%,
-      rgba(113, 58, 166, 0.8)
-  );
-  color: #ffffff;
-  font-size: 0.8rem;
-
-  &:hover {
-    opacity: 0.8;
-  }
-  ion-icon {
-    font-size: 1.15rem;
-    margin: -1px 4px 0 0;
-  }
-  span {
-    margin: 1px 4px 0 0;
-  }
-}
-
 .hero-image {
   background-color: var(--dark-color);
   border-top: 4px solid var(--dark-color);
@@ -48,12 +20,11 @@ a.instagram {
     bottom: 0;
     right: 8px;
 
-    padding: 6px 12px 4px;
+    padding: 6px 12px 0;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 8px 8px 0 0 / 8px 8px 0 0;
     color: #fff;
-    font-size: 1.2rem;
-    font-family: cursive;
+    font-size: 1.4rem;
     span {
       display: inline-block;
       &:first-letter {
