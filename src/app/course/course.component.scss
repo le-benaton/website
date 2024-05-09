@@ -52,7 +52,7 @@ section.equidistant-outer {
         padding: 2px 8px 8px;
 
         h4 {
-          margin: 6px 16px 0 0;
+          margin: 6px 0 0 0;
           padding: 0;
           font-size: 1.2rem;
         }
@@ -70,7 +70,7 @@ section.equidistant-outer {
             display: none;
           }
 
-          @media (width < 800px) or (width > 1220px) {
+          @media (width < 800px) or (1220px < width) {
             padding: 0 0 0 48px;
             &:before {
               content: '';
