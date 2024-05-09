@@ -2,4 +2,8 @@ footer {
   background: var(--dark-color);
   color: var(--dark-color-contrast);
   padding: 32px;
+
+  a {
+    text-decoration: underline;
+  }
 }
