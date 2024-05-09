@@ -19,8 +19,9 @@ app-guideline {
     display: flex;
     margin: 32px 0;
     justify-content: flex-start;
-    border: 1px solid var(--dark-color);
     border-radius: 8px;
+    background: var(--dark-color);
+    color: var(--dark-color-contrast);
 
     div.announcement-image {
       border-radius: 8px 0 0 8px;
@@ -38,6 +39,10 @@ app-guideline {
     div.announcement-explain {
       h4 {
         font-size: 1.1rem;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.6rem;
       }
       padding: 16px 16px 12px;
     }
