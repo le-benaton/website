@@ -12,7 +12,7 @@ import { CourseComponent } from './course/course.component';
   standalone: true,
   imports: [CommonModule, GuidelineComponent, IonIcon, NgOptimizedImage, CourseComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss', './header.scss'],
+  styleUrls: ['./app.component.scss', './header.scss', './footer.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
