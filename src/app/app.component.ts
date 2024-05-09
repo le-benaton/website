@@ -39,14 +39,18 @@ export class AppComponent implements OnInit {
   #http = inject(HttpClient);
 
   constructor() {
-    if (this.#isBrowser) {
-      setDoc(doc(collection(this.#firestore, 'access'), this.#getUserId()), {
-        timestamp: new Date().getTime(),
-      }).catch((e) => console.log(e));
+    if (!this.#isBrowser) {
+      return;
     }
+    setDoc(doc(collection(this.#firestore, 'access'), this.#getUserId()), {
+      timestamp: new Date().getTime(),
+    }).catch((e) => console.log(e));
   }
 
   async ngOnInit() {
+    if (!this.#isBrowser) {
+      return;
+    }
     const accessQuery = query(
       collection(this.#firestore, 'access'),
       where('timestamp', '>', new Date(new Date().getTime() - 1000 * 60 * 15).getTime()),
@@ -67,6 +71,15 @@ export class AppComponent implements OnInit {
 
     setTimeout(() => this.presentToastConversion.set(true), 2000 * 2);
     setTimeout(() => this.presentToastConversion.set(false), 2000 * 2 + 10000);
+  }
+
+  recordConversion() {
+    if (!this.#isBrowser) {
+      return;
+    }
+    setDoc(doc(collection(this.#firestore, 'conversion'), this.#getUserId()), {
+      timestamp: new Date().getTime(),
+    }).catch((e) => console.log(e));
   }
 
   async send() {
