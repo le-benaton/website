@@ -52,6 +52,30 @@ a.instagram {
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 8px 8px 0 0 / 8px 8px 0 0;
     color: #fff;
+    font-size: 1.2rem;
+    font-family: cursive;
+    span {
+      display: inline-block;
+      &:first-letter {
+        font-size: 0.8rem;
+        padding: 0 1px;
+      }
+      font-size: 0.9rem;
+    }
+
+    ion-icon {
+      background: linear-gradient(
+          to right,
+          rgba(247, 207, 0, 1),
+          rgba(246, 37, 2, 0.8) 45%,
+          rgba(182, 47, 82, 0.8) 75%,
+          rgba(113, 58, 166, 0.8)
+      );
+      border-radius: 4px;
+      font-size: 1.2rem;
+      position: relative;
+      top: 4px;
+    }
     &:hover {
       background-color: rgba(0, 0, 0, 0.7);
     }
