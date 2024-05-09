@@ -63,18 +63,26 @@ section.equidistant-outer {
           font-size: 1.2rem;
           position: relative;
           top: 3px;
-          padding: 0 0 0 48px;
+          padding: 0;
           color: var(--accent-color);
 
-          &:before {
-            content: '';
-            border-top: 0.1px solid var(--accent-color);
-            display: block;
-            width: 40px;
-            position: relative;
-            top: 14px;
-            right: 48px;
+          @media (800px < width < 1100px) {
+            display: none;
           }
+
+          @media (width < 800px) or (width > 1220px) {
+            padding: 0 0 0 48px;
+            &:before {
+              content: '';
+              border-top: 0.1px solid var(--accent-color);
+              display: block;
+              width: 40px;
+              position: relative;
+              top: 14px;
+              right: 48px;
+            }
+          }
+
         }
       }
     }
