@@ -169,10 +169,6 @@ section > .wrap {
   margin: 32px 0 48px;
 }
 
-
-/**
-* <form>
-*/
 form {
   margin-top: 32px;
   .form-label {
@@ -220,9 +216,6 @@ ul.contact-wrapper {
   }
 }
 
-/**
- * 背景色の設定
- */
 #menu-lunch,
 #menu-wine,
 #copy-reserved {
@@ -230,10 +223,6 @@ ul.contact-wrapper {
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
-
-/**
- * Main
- */
 
 h2 {
   font-size: 2rem;
