@@ -45,12 +45,10 @@ header {
   }
 
   nav {
-    max-width: 1024px;
-    margin: auto;
-
     ul {
       list-style-type: none;
-      margin: 16px 0;
+      max-width: 1024px;
+      margin: 0 auto 0;
       padding: 0;
       display: flex;
       justify-content: space-around;
@@ -58,10 +56,13 @@ header {
 
       li {
         display: block;
-        margin: 0 10px;
+        margin: 0;
+        padding: 0;
 
         a {
           font-size: 1.1rem;
+          padding: 16px 10px;
+          display: block;
           @media screen and (max-width: 560px) {
             font-size: 1rem;
           }
