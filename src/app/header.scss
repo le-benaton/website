@@ -29,6 +29,7 @@ header {
       ion-icon {
         position: relative;
         left: -4px;
+        color: var(--accent-color);
       }
     }
 
@@ -61,9 +62,19 @@ header {
 
         a {
           font-size: 1.1rem;
+          @media screen and (max-width: 560px) {
+            font-size: 1rem;
+          }
+          @media screen and (max-width: 400px) {
+            font-size: 0.9rem;
+          }
         }
 
         ion-icon {
+          @media screen and (max-width: 480px) {
+            display: none;
+          }
+
           position: relative;
           top: 2px;
           right: 4px;
