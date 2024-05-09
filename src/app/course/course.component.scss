@@ -11,6 +11,7 @@ section.equidistant-outer {
   }
 
   @media screen and (max-width: 800px) {
+    margin: 0 16px 32px;
     .wrap {
       padding: 0 !important;
     }

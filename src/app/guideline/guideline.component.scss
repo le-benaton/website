@@ -20,7 +20,7 @@ app-guideline {
 
   .announcement {
     display: flex;
-    margin: 32px 0;
+    margin: 32px 8px;
     justify-content: flex-start;
     border-radius: 8px;
     background: var(--dark-color);
@@ -78,7 +78,7 @@ app-guideline {
     max-width: 800px;
     list-style: none;
     padding: 0;
-    margin: 0 !important;
+    margin: 0 8px 0;
 
     & > li {
       padding: 8px;
