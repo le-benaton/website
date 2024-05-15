@@ -98,6 +98,10 @@ button {
     background-color: rgba(0, 0, 0, 0.05);
     outline: 0;
   }
+
+  &[disabled] {
+    opacity: 0.5;
+  }
 }
 
 
