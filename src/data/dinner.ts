@@ -44,7 +44,7 @@ export const dinnerChief: IMenu[] = [
   {
     title: 'モンラッシェコース',
     subTitle: 'Montrachet',
-    image: 'assets/images/dinner1.jpg',
+    image: 'assets/images/dinner4.jpg',
     price: '¥19,800（税込、サービス料10%別途）',
     option: '事前にご相談ください',
     menu: [],
@@ -52,7 +52,7 @@ export const dinnerChief: IMenu[] = [
   {
     title: 'コルトンコース',
     subTitle: 'Corton',
-    image: 'assets/images/dinner2.jpg',
+    image: 'assets/images/dinner5.jpg',
     price: '¥26,400（税込、サービス料10%別途）',
     option: '事前にご相談ください',
     menu: [],
