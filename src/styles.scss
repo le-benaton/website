@@ -152,3 +152,9 @@ table {
 img {
   height: auto;
 }
+
+@import "app/app.component";
+@import "app/header";
+@import "app/footer";
+@import "app/course/course.component";
+@import "app/guideline/guideline.component";
