@@ -17,7 +17,6 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, GuidelineComponent, IonIcon, NgOptimizedImage, CourseComponent, FormsModule],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss', './header.scss', './footer.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent implements OnInit {

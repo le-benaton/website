@@ -8,7 +8,6 @@ import { IonIcon } from '@ionic/angular/standalone';
   standalone: true,
   imports: [IonIcon],
   templateUrl: './guideline.component.html',
-  styleUrl: './guideline.component.scss',
   encapsulation: ViewEncapsulation.None,
 })
 export class GuidelineComponent {

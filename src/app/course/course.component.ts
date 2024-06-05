@@ -6,7 +6,6 @@ import { IMenu } from '../types';
   standalone: true,
   imports: [],
   templateUrl: './course.component.html',
-  styleUrl: './course.component.scss',
   encapsulation: ViewEncapsulation.None,
 })
 export class CourseComponent {
