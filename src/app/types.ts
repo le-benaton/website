@@ -13,12 +13,12 @@ export interface IMenu {
   menu: string[];
 }
 
-export type ContactModel = {
+export interface ContactModel {
   name: string;
   email: string;
   tel: string;
   message: string;
-};
+}
 
 // endpoint: https://api.v5.tipsys.me/thirdparty/concent/mail
 export interface IRequestRdlaboMail {

@@ -1,4 +1,4 @@
-import { IItem, IMenu } from '../app/types';
+import { IMenu } from '../app/types';
 
 export const launch: IMenu[] = [
   {

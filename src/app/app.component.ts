@@ -1,12 +1,12 @@
-import { Component, inject, signal, ViewEncapsulation, PLATFORM_ID, OnInit } from '@angular/core';
-import { CommonModule, NgOptimizedImage, isPlatformBrowser } from '@angular/common';
+import { Component, inject, OnInit, PLATFORM_ID, signal, ViewEncapsulation } from '@angular/core';
+import { CommonModule, isPlatformBrowser, NgOptimizedImage } from '@angular/common';
 import { GuidelineComponent } from './guideline/guideline.component';
 import { IonIcon } from '@ionic/angular/standalone';
 import { launch } from '../data/lunch';
 import { dinnerChief, dinnerPrefix } from '../data/dinner';
 import { CourseComponent } from './course/course.component';
-import { collection, doc, Firestore, setDoc, query, getDocs, where } from '@angular/fire/firestore';
-import { ContactModel, IRequestRdlaboMail } from './types';
+import { collection, doc, Firestore, getDocs, query, setDoc, where } from '@angular/fire/firestore';
+import { IRequestRdlaboMail } from './types';
 import { defaultContactModel } from './constant';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';

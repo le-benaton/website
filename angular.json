@@ -25,7 +25,11 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/assets", "src/robots.txt", "src/sitemap.xml"],
+            "assets": [
+              "src/assets",
+              "src/robots.txt",
+              "src/sitemap.xml"
+            ],
             "styles": [
               "src/styles.scss"
             ],
@@ -101,17 +105,33 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/assets", "src/robots.txt", "src/sitemap.xml"],
+            "assets": [
+              "src/assets",
+              "src/robots.txt",
+              "src/sitemap.xml"
+            ],
             "styles": [
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "37d7da1d-6c5d-4897-9134-04389ef24da2"
+    "analytics": "37d7da1d-6c5d-4897-9134-04389ef24da2",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
