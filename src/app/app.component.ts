@@ -82,6 +82,7 @@ export class AppComponent implements OnInit {
   }
 
   async send() {
+    this.isSend.set(true);
     const preMessage = this.contactModel.tel ? `電話番号： ${this.contactModel.tel}\r\n\r\n` : '';
     const result = await firstValueFrom(
       this.#http.post('https://api.v5.tipsys.me/thirdparty/benaton/mail', {
@@ -94,9 +95,9 @@ export class AppComponent implements OnInit {
       .catch(() => false);
 
     if (result) {
-      this.isSend.set(true);
       this.contactModel = defaultContactModel();
     } else {
+      this.isSend.set(false);
       alert('メッセージの送信に失敗しました。時間を置いてから再度お試しください。');
     }
   }
