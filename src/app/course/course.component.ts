@@ -3,9 +3,9 @@ import { IMenu } from '../types';
 
 @Component({
   selector: 'app-course',
-  standalone: true,
   imports: [],
   templateUrl: './course.component.html',
+  standalone: true,
   encapsulation: ViewEncapsulation.None,
 })
 export class CourseComponent {

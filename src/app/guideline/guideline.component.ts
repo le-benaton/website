@@ -5,9 +5,9 @@ import { IonIcon } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-guideline',
-  standalone: true,
   imports: [IonIcon],
   templateUrl: './guideline.component.html',
+  standalone: true,
   encapsulation: ViewEncapsulation.None,
 })
 export class GuidelineComponent {

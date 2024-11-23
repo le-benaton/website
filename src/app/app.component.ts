@@ -14,9 +14,9 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, GuidelineComponent, IonIcon, NgOptimizedImage, CourseComponent, FormsModule],
+  imports: [CommonModule, GuidelineComponent, IonIcon, CourseComponent, FormsModule],
   templateUrl: './app.component.html',
+  standalone: true,
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent implements OnInit {
