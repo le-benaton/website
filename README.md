@@ -6,15 +6,15 @@
 ## 更新用リンク
 | 項目         | ファイル                                                                     |
 |------------|--------------------------------------------------------------------------|
-| お知らせ（画像あり） | https://github.com/le-benaton/benaton.com/edit/main/src/data/announcement.ts |
-| お知らせ       | https://github.com/le-benaton/benaton.com/edit/main/src/data/news.ts         |
-| ランチ        | https://github.com/le-benaton/benaton.com/edit/main/src/data/lunch.ts        |
-| ディナー      | https://github.com/le-benaton/benaton.com/edit/main/src/data/dinner.ts       |
+| お知らせ（画像あり） | https://github.com/le-benaton/benaton.net/edit/main/src/data/announcement.ts |
+| お知らせ       | https://github.com/le-benaton/benaton.net/edit/main/src/data/news.ts         |
+| ランチ        | https://github.com/le-benaton/benaton.net/edit/main/src/data/lunch.ts        |
+| ディナー      | https://github.com/le-benaton/benaton.net/edit/main/src/data/dinner.ts       |
 
 ### お知らせ（画像あり）に利用する画像をアップロードする方法
 1. 画像を用意します。事前に、縦横300px程度にリサイズしてください。
 2. 画像ファイル名に日本語が使われている場合、英数字のファイル名に変更します
-3. https://github.com/le-benaton/benaton.com/tree/main/src/assets/images/announcement にアクセスして、右上の `Add file` > `Upload files` からファイルをアップロードしてコミットします。
+3. https://github.com/le-benaton/benaton.net/tree/main/src/assets/images/announcement にアクセスして、右上の `Add file` > `Upload files` からファイルをアップロードしてコミットします。
 3. URLは、 `images/announcement/` + ファイル名となります。例えば `104380ga10000003.jpg` というファイルをアップロードした場合、 `images/announcement/104380ga10000003.jpg` を以下のように `image` に指定ください。
 
 ```ts
